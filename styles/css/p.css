@@ -1,0 +1,48 @@
+html {
+  height: 100%;
+  background-color: #37063c;
+  color: white; }
+
+body {
+  height: calc(100% - 16px);
+  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif; }
+
+main {
+  height: 100%; }
+
+section {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  flex-direction: column; }
+
+section.info {
+  height: 15vh; }
+
+section.leagues {
+  height: 5vh; }
+
+h1 {
+  font-size: 6vmin;
+  margin: 0;
+  margin-bottom: .1vmin; }
+
+section.points {
+  height: 75vh; }
+
+h1.score {
+  font-size: 60vmin;
+  margin: 0; }
+
+h2 {
+  font-size: 5vmin;
+  margin: 0; }
+
+p, span {
+  font-size: 3vmin;
+  margin: 5px; }
+
+span {
+  display: none; }

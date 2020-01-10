@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <title>FPL Points</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta name="Description" content="FPL Points">
+    <meta name="theme-color" content="#37063c">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/css/p.css?0.5">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=0.2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=0.2">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=0.2">
+    <link rel="manifest" href="/favicon/site.webmanifest?v=0.2">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=0.2" color="#00e187">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=0.2">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=0.2">
+</head>
+<body>
+    <main>
+        <section class="info">
+            <span><?PHP include 'php/points.php'; ?></span>
+            <h1>Gameweek <?php echo $leagues['current_event']; ?></h1>
+            <h2>Overall - <?php echo $leagues['summary_overall_points']; ?></h1>
+        </section>
+        <section class="points">
+            <h1 id="score" class="score"></h1>
+        </section>
+        <section class="leagues">
+            <p><?PHP echo $leagues['leagues']['classic'][4]['name']; ?> rank - <?PHP echo ordinal($leagues['leagues']['classic'][4]['entry_rank']); ?></p>
+            <p><?PHP echo $leagues['leagues']['classic'][5]['name']; ?> rank - <?PHP echo ordinal($leagues['leagues']['classic'][5]['entry_rank']); ?></p>
+        </section>
+    </main>
+    <script>
+        $(document).ready(function () {
+            totalPoints();
+        });
+
+        causeRepaintsOn = $("h1, h2, h3, p");
+        $(window).resize(function() {
+            causeRepaintsOn.css("z-index", 1);
+        });
+
+        function totalPoints() {
+            var a = document.getElementById("player_0").innerText;
+            var b = document.getElementById("player_1").innerText;
+            var c = document.getElementById("player_2").innerText;
+            var d = document.getElementById("player_3").innerText;
+            var e = document.getElementById("player_4").innerText;
+            var f = document.getElementById("player_5").innerText;
+            var g = document.getElementById("player_6").innerText;
+            var h = document.getElementById("player_7").innerText;
+            var i = document.getElementById("player_8").innerText;
+            var j = document.getElementById("player_9").innerText;
+            var k = document.getElementById("player_10").innerText;
+
+            var z = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e) + parseInt(f) + parseInt(g) + parseInt(h) + parseInt(i) + parseInt(j) + parseInt(k);
+            document.getElementById("score").innerHTML = z;
+        }  
+    </script>
+</body>
+</html>

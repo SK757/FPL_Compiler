@@ -1,0 +1,8 @@
+node_modules/
+**/.DS_Store
+analysis/
+gruntfile.js
+gulpfile.js
+package.json
+team2.php
+teamOLD.php

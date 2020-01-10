@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SWCCHKEVF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-3SWCCHKEVF');
+    </script>
+    <title>Fantasy Premier League Compiler</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="FPL Compiler">
+    <meta name="theme-color" content="#00e187">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.35">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=0.2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=0.2">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=0.2">
+    <link rel="manifest" href="/favicon/site.webmanifest?v=0.2">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=0.2" color="#00e187">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=0.2">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=0.2">
+    <script src="js/sortable.js?=0.02"></script>
+</head>
+<body>
+    <div class="loadWrapper">
+        <div class="loading">
+            <span class="loading__anim"></span>
+        </div>
+    </div>
+    <main style="display: none;">
+        <div class="flex-container" style="margin-top: 1rem">
+            <div id="basic-btn" style="flex-grow: 1.5; margin-left: 0">
+                <button class="basic" style="margin-right: 5px"><b>Basic View</b></button>
+            </div>
+            <div id="advanced-btn" style="flex-grow: 1.5; margin-left: 0">
+                <button class="adv" style="margin-right: 5px"><b>Advanced View</b></button>
+            </div>
+            <?php
+                
+                $json = file_get_contents("https://fantasy.premierleague.com/api/bootstrap-static/");
+
+                $data = json_decode($json, true);
+            ?>
+            <div id="in" style="flex-grow: 8.5; margin-right: 0"><input type="text" id="myInput" onkeyup="search()" placeholder="Search for player" title="Type in a name" autofocus></div>
+        </div>
+
+        <div class="flex-container">
+            <div style="flex-grow: 2;margin-left: 0px"><button id="filterGK" onclick="keeper()"><b>GK</b></button></div>
+            <div style="flex-grow: 2"><button id="filterDEF" onclick="defender()"><b>DEF</b></button></div>
+            <div style="flex-grow: 2"><button id="filterMID" onclick="midfielder()"><b>MID</b></button></div>
+            <div style="flex-grow: 2"><button id="filterFWD" onclick="forward()"><b>FWD</b></button></div>
+            <div style="flex-grow: 2;margin-right: 0px"><button id="refresh" onclick="reload()"><b>Reset</b></button></div>
+        </div>
+        <div id="table_cont">
+            <table id="player_info" class="sortable">
+                <thead>
+                    <tr>
+                        <th style="display: none;">chance of playing </th>
+                        <th id="nameHead">Name </th>
+                        <th>Team </th>
+                        <th class="pos">Position </th>
+                        <th class="points">Total Points </th>
+                        <th >Price </th>
+                        <th class="ppg">Points Per Game </th>
+                        <th class="gwp">Gameweek Points </th>
+                        <th class="advanced xpt">EXPoints This GW </th>
+                        <th class="advanced xpn">EXPoints Next GW </th>
+                        <th class="goals">Goals </th>
+                        <th class="assists">Assists </th>
+                        <th class="clean_sheets">Clean Sheets </th>
+                        <th class="advanced">Selected </th>
+                        <th class="advanced">Transfers In </th>
+                        <th class="advanced">Transfers Out </th>
+                        <th class="advanced">Minutes </th>
+                        <th class="advanced nocursor sorttable_nosort">News </th>
+                        <th class="advanced gc">Goals Conceded </th>
+                        <th class="advanced og">Own Goals </th>
+                        <th class="advanced pen_save">Penalties Saved </th>
+                        <th class="advanced pen_miss">Penalties Missed </th>
+                        <th class="advanced yc">Yellow Cards </th>
+                        <th class="advanced rc">Red Cards </th>
+                        <th class="advanced">Saves </th>
+                        <th class="advanced">Bonus Points </th>
+                        <th class="advanced">BPS Score </th>
+                        <th class="advanced">Influence </th>
+                        <th class="advanced">Creativity </th>
+                        <th class="advanced">Threat </th>    
+                        <th class="advanced">ICT Index </th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?PHP
+                    // $i = 0;
+                    foreach($data['elements'] as $key=>$item)
+                    {
+                ?>
+    <tr>
+                        <td style="display: none;"><?PHP echo $item['chance_of_playing_next_round']; ?></td>
+                        <td id="name"><?PHP echo $item['first_name']; ?> <?PHP echo $item['second_name']; ?></td>
+                        <td><?PHP include 'php/team.php';?></td>
+                        <td><?PHP include 'php/position.php';?></td>
+                        <td><?PHP echo $item['total_points']; ?></td>
+                        <td><?PHP echo "£".$item['now_cost']/10; ?></td>
+                        <td><?PHP echo $item['points_per_game']; ?></td>
+                        <td><?PHP echo $item['event_points']; ?></td>
+                        <td class="advanced"><?PHP echo $item['ep_this']; ?></td>
+                        <td class="advanced"><?PHP echo $item['ep_next']; ?></td>
+                        <td><?PHP echo $item['goals_scored']; ?></td>
+                        <td><?PHP echo $item['assists']; ?></td>
+                        <td class="clean_sheets_stat"><?PHP echo $item['clean_sheets']; ?></td>
+                        <td class="advanced"><?PHP echo $item['selected_by_percent']."%"; ?></td>
+                        <td class="advanced"><?PHP echo $item['transfers_in_event']; ?></td>
+                        <td class="advanced"><?PHP echo $item['transfers_out_event']; ?></td>
+                        <td class="advanced"><?PHP echo $item['minutes']; ?></td>
+                        <td class="advanced"><?PHP echo $item['news']; ?></td>
+                        <td class="advanced"><?PHP echo $item['goals_conceded']; ?></td>
+                        <td class="advanced"><?PHP echo $item['own_goals']; ?></td>
+                        <td class="advanced"><?PHP echo $item['penalties_saved']; ?></td>
+                        <td class="advanced"><?PHP echo $item['penalties_missed']; ?></td>
+                        <td class="advanced"><?PHP echo $item['yellow_cards']; ?></td>
+                        <td class="advanced"><?PHP echo $item['red_cards']; ?></td>
+                        <td class="advanced"><?PHP echo $item['saves']; ?></td>
+                        <td class="advanced"><?PHP echo $item['bonus']; ?></td>
+                        <td class="advanced"><?PHP echo $item['bps']; ?></td>
+                        <td class="advanced"><?PHP echo $item['influence']; ?></td>
+                        <td class="advanced"><?PHP echo $item['creativity']; ?></td>
+                        <td class="advanced"><?PHP echo $item['threat']; ?></td>
+                        <td class="advanced"><?PHP echo $item['ict_index']; ?></td>
+                    </tr>
+                <?PHP
+                        // if (++$i == 14) {
+                        //     break;
+                        // }
+                    }
+                ?>
+</tbody>
+            </table>
+        </div>
+        <!-- BACK TO TOP BUTTON -->
+        <a href="javascript:" aria-label="Return to the top of the table" id="return-to-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </main>
+
+    <script src="js/javascript.js?=0.4"></script>
+</body>
+</html>
