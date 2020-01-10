@@ -43,9 +43,7 @@
                 <button class="adv" style="margin-right: 5px"><b>Advanced View</b></button>
             </div>
             <?php
-                
                 $json = file_get_contents("https://fantasy.premierleague.com/api/bootstrap-static/");
-
                 $data = json_decode($json, true);
             ?>
             <div id="in" style="flex-grow: 8.5; margin-right: 0"><input type="text" id="myInput" onkeyup="search()" placeholder="Search for player" title="Type in a name" autofocus></div>
@@ -135,11 +133,11 @@
                         <td class="advanced"><?PHP echo $item['ict_index']; ?></td>
                     </tr>
                 <?PHP
-                        // if (++$i == 14) {
-                        //     break;
-                        // }
-                    }
-                ?>
+                    }    // if (++$i == 14) {break;}
+                ?>        
+                        
+                    
+                
 </tbody>
             </table>
         </div>
@@ -149,6 +147,6 @@
         </a>
     </main>
 
-    <script src="js/javascript.js?=0.4"></script>
+    <script src="js/javascript.js?=0.5"></script>
 </body>
 </html>

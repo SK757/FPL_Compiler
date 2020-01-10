@@ -19,6 +19,11 @@
     <script src="js/sortable.js?=0.02"></script>
 </head>
 <body>
+    <script>
+        $(document).ready(function () {
+            totalPoints();
+        });
+    </script>
     <main style="display: block;">
         <?PHP
         $jleagues = file_get_contents("https://fantasy.premierleague.com/api/entry/581004/");
