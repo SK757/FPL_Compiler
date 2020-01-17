@@ -1,1 +1,1 @@
-Fantasy Premier Compiler, Team and Points.
+Fantasy Premier Compiler, Team, Points, Strenght.
