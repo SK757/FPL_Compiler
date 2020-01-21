@@ -54,7 +54,7 @@
             <div style="flex-grow: 2"><button id="filterDEF" onclick="defender()"><b>DEF</b></button></div>
             <div style="flex-grow: 2"><button id="filterMID" onclick="midfielder()"><b>MID</b></button></div>
             <div style="flex-grow: 2"><button id="filterFWD" onclick="forward()"><b>FWD</b></button></div>
-            <div style="flex-grow: 2;margin-right: 0px"><button id="refresh" onclick="reload()"><b>Reset</b></button></div>
+            <div style="flex-grow: 2;margin-right: 0px"><button id="refresh" onclick="window.location.reload()"><b>Reset</b></button></div>
         </div>
         <div id="table_cont">
             <table id="player_info" class="sortable">
