@@ -22,7 +22,7 @@
 								if ($item2['element'] === $item1['id'] && $item2['element'] === $item['id']) {
 					?><tr>
 						<td style="display: none;"><?PHP echo $item['chance_of_playing_next_round']; ?></td>
-						<td><?PHP
+						<td class="deffo"><?PHP
 						if ($item['web_name'] === 'Alexander-Arnold') {
 							echo 'Trent';
 						} else {
