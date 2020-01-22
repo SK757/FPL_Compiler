@@ -7,7 +7,7 @@
     <meta name="Description" content="FPL Points">
     <meta name="theme-color" content="#37063c">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/p.css?0.5">
+    <link rel="stylesheet" type="text/css" href="styles/css/p.css?0.7">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=0.2">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=0.2">
@@ -19,7 +19,7 @@
     <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=0.2">
 </head>
 <body>
-    <main>
+    <main class="grid-container">
         <section class="info">
             <span><?PHP include 'php/points.php'; ?></span>
             <h1>Gameweek <?php echo $leagues['current_event']; ?></h1>
@@ -34,31 +34,34 @@
         </section>
     </main>
     <script>
-        $(document).ready(function () {
-            totalPoints();
-        });
-
         causeRepaintsOn = $("h1, h2, h3, p");
         $(window).resize(function() {
             causeRepaintsOn.css("z-index", 1);
         });
 
-        function totalPoints() {
-            var a = document.getElementById("player_0").innerText;
-            var b = document.getElementById("player_1").innerText;
-            var c = document.getElementById("player_2").innerText;
-            var d = document.getElementById("player_3").innerText;
-            var e = document.getElementById("player_4").innerText;
-            var f = document.getElementById("player_5").innerText;
-            var g = document.getElementById("player_6").innerText;
-            var h = document.getElementById("player_7").innerText;
-            var i = document.getElementById("player_8").innerText;
-            var j = document.getElementById("player_9").innerText;
-            var k = document.getElementById("player_10").innerText;
+        var a = document.getElementById("player_0").innerText;
+        var b = document.getElementById("player_1").innerText;
+        var c = document.getElementById("player_2").innerText;
+        var d = document.getElementById("player_3").innerText;
+        var e = document.getElementById("player_4").innerText;
+        var f = document.getElementById("player_5").innerText;
+        var g = document.getElementById("player_6").innerText;
+        var h = document.getElementById("player_7").innerText;
+        var i = document.getElementById("player_8").innerText;
+        var j = document.getElementById("player_9").innerText;
+        var k = document.getElementById("player_10").innerText;
 
-            var z = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e) + parseInt(f) + parseInt(g) + parseInt(h) + parseInt(i) + parseInt(j) + parseInt(k);
-            document.getElementById("score").innerHTML = z;
-        }  
+        var z = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e) + parseInt(f) + parseInt(g) + parseInt(h) + parseInt(i) + parseInt(j) + parseInt(k);
+        var score = document.getElementById("score");
+
+        var double = '65vmin';
+        var triple = '56vmin';
+        if (z > 99) {
+            score.style.fontSize = triple;
+        } else {
+            score.style.fontSize = double;
+        }
+        score.innerHTML = z;
     </script>
 </body>
 </html>

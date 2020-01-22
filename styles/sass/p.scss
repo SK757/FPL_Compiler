@@ -1,44 +1,60 @@
 $font-stack: "Trebuchet MS", Arial, Helvetica, sans-serif;
 
 html {
-    height: 100%;
-    background-color: #37063c;
-    color: white;
+	background: #37063c;
+	color: white;
 }
+
 body {
-    height: calc(100% - 16px);
-    font-family: $font-stack;
+	margin: 8px;
+	height: calc(100vh - 16px);
+	font-family: $font-stack;
 }
 
-main {
-    height: 100%;
+.grid-container {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 1fr 8fr 1fr;
+	grid-template-areas: 
+		"info"
+		"points"
+		"leagues";
+	height: calc(100vh - 16px);
 }
 
-section {
-    display: flex;
-    display: -webkit-flex;
-    justify-content: center;
-    align-items: center;
-    -webkit-align-items: center;
-    flex-direction: column;
+.info {
+	grid-area: info;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-section.info {
-    height: 15vh;
+.points {
+	grid-area: points;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-section.leagues {
-    height: 5vh;
+
+.leagues {
+	grid-area: leagues;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
 }
+
+span {
+	display: none;
+}
+
 h1 {
     font-size: 6vmin;
     margin: 0;
     margin-bottom: .1vmin;
 }
-section.points {
-    height: 75vh;
-}
 h1.score {
-    font-size: 60vmin;
     margin: 0;
 }
 h2 {
@@ -48,8 +64,4 @@ h2 {
 p, span {
     font-size: 3vmin;
     margin: 5px;
-}
-
-span {
-    display: none;
 }
