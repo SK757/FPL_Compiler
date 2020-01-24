@@ -31,6 +31,8 @@
 		                <?PHP echo '<td id="player_'.$count.'">';
 		                if($item2['multiplier'] === 2) {
 		                	echo $item['event_points'] * 2 . ' (c)';
+		                } elseif($item2['multiplier'] === 3) {
+		                	echo $item['event_points'] * 3 . ' (c)';
 		                } else {
 			        		echo $item['event_points'];
 			        	}?></td>

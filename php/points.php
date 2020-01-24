@@ -18,7 +18,9 @@ foreach($picks['picks'] as $key=>$item) {
         if ($item['element'] === $item1['id']) {
         	if($item['multiplier'] === 2) {
         		echo '<span id="player_'.$count.'" class="player_scores">' . $item1['stats']['total_points'] * 2 . '(c)</span>';
-        	} else {
+        	} elseif($item['multiplier'] === 3) {
+                echo '<span id="player_'.$count.'" class="player_scores">' . $item1['stats']['total_points'] * 3 . '(c)</span>';
+            } else {
         		echo '<span id="player_'.$count.'" class="player_scores">' . $item1['stats']['total_points'] . '</span>';
         	}
             ++$count; 
@@ -26,4 +28,3 @@ foreach($picks['picks'] as $key=>$item) {
 	}
 }
 ?>
-
