@@ -32,7 +32,7 @@
 		                if($item2['multiplier'] === 2) {
 		                	echo $item['event_points'] * 2 . ' (c)';
 		                } elseif($item2['multiplier'] === 3) {
-		                	echo $item['event_points'] * 3 . ' (c)';
+		                	echo $item['event_points'] * 3 . ' (tc)';
 		                } else {
 			        		echo $item['event_points'];
 			        	}?></td>
