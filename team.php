@@ -32,7 +32,9 @@
         <?PHP include 'php/teamPoints.php'; ?>
 
         <section>
-            <h1 id="score">Gameweek <?PHP echo $leagues['current_event']; ?> Points - </h1>
+            <h1 id="score">Gameweek <?PHP echo $leagues['current_event']; ?> Points - 
+        </h1>
+        <span id="chip" style="display: none;"><b>(<?PHP echo $picks['active_chip'] ?>)</b></span>
         </section>
 
         <section id="reset">
@@ -81,6 +83,6 @@
         }
     </style>
     
-    <script src="js/javascript.js?=0.11"></script>
+    <script src="js/javascript.js?=0.12"></script>
 </body>
 </html>
