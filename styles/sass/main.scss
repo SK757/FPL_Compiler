@@ -339,16 +339,7 @@ footer {
     }
 }
 
-@media screen and (max-height: 700px) {
-    #table_cont {
-        // max-height: 505px;
-    }
-}
-
 @media screen and (min-height: 701px) and (max-height: 899px) {
-    #table_cont {
-        // max-height: 569px;
-    }
     #basic-btn, #advanced-btn {
         flex-grow: 2.5;
     }
@@ -367,9 +358,6 @@ footer {
     #player_info th {
         padding-top: 12px;
         padding-bottom: 12px;
-    }
-    #table_cont {
-        // max-height: 800px;
     }
     #basic-btn, #advanced-btn {
         flex-grow: 2.5 !important;
