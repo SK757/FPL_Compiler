@@ -7,8 +7,8 @@
     <meta name="Description" content="FPL Compiler">
     <meta name="theme-color" content="#00e187">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.25">
-    <link rel="stylesheet" type="text/css" href="styles/css/strength.css?0.3">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.26">
+    <link rel="stylesheet" type="text/css" href="styles/css/strength.css?0.4">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=0.2">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=0.2">
@@ -64,6 +64,6 @@
         </div>
 	</main>
 
-    <script src="js/strength.js?=0.2"></script>
+    <script src="js/strength.js?=0.3"></script>
 </body>
 </html>

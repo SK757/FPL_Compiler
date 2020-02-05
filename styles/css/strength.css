@@ -1,7 +1,7 @@
 #table_strength {
   width: calc(100% - 4px);
   height: 100%;
-  max-height: 500px;
+  max-height: calc(92vh - 34px);
   overflow: auto;
   position: relative;
   table-layout: fixed;
@@ -13,18 +13,6 @@
   -moz-border-radius-topright: 7px;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px; }
-
-@media only screen and (min-height: 100px) {
-  #table_strength {
-    max-height: 600px; } }
-
-@media only screen and (min-height: 723px) {
-  #table_strength {
-    max-height: 680px; } }
-
-@media only screen and (min-height: 790px) {
-  #table_strength {
-    max-height: 859px; } }
 
 #player_info td, #player_info th {
   padding: 8px 4px !important; }

@@ -16,7 +16,7 @@
     <meta name="Description" content="FPL Compiler">
     <meta name="theme-color" content="#00e187">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.35">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.36">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=0.2">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=0.2">
@@ -56,7 +56,7 @@
             <div style="flex-grow: 2"><button id="filterFWD" onclick="forward()"><b>FWD</b></button></div>
             <div style="flex-grow: 2;margin-right: 0px"><button id="refresh" onclick="window.location.reload()"><b>Reset</b></button></div>
         </div>
-        <div id="table_cont">
+        <div id="table_cont" class="table_cont_main">
             <table id="player_info" class="sortable">
                 <thead>
                     <tr>
@@ -147,6 +147,6 @@
         </a>
     </main>
 
-    <script src="js/javascript.js?=0.5"></script>
+    <script src="js/javascript.js?=0.6"></script>
 </body>
 </html>

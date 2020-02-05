@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <meta name="Description" content="FPL Team">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.6">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.7">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=0.2">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=0.2">
@@ -17,34 +17,9 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=0.2">
     <script src="js/sortable.js?=0.02"></script>
-</head>
-<body>
-    <script>
-        $(document).ready(function () {
-            totalPoints();
-        });
-    </script>
-    <main style="display: block;">
-        <?PHP
-        $jleagues = file_get_contents("https://fantasy.premierleague.com/api/entry/581004/");
-        $leagues = json_decode($jleagues, true); 
-        ?>
-        <?PHP include 'php/teamPoints.php'; ?>
-
-        <section>
-            <h1 id="score">Gameweek <?PHP echo $leagues['current_event']; ?> Points - 
-        </h1>
-        <span id="chip" style="display: none;"><b>(<?PHP echo $picks['active_chip'] ?>)</b></span>
-        </section>
-
-        <section id="reset">
-            <div style="flex-grow: 8; margin-top: 19.920;"><button onclick="window.location.reload()"><b>Refresh</b></button></div>
-        </section>
-    </main>
-
     <style>
         #table_cont {
-            max-height: 100%;
+            max-height: calc(100vh - 139px);
         }
         #player_info th {
             padding-top: 15px;
@@ -82,7 +57,30 @@
             }
         }
     </style>
-    
-    <script src="js/javascript.js?=0.12"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function () {
+            totalPoints();
+        });
+    </script>
+    <main style="display: block;">
+        <?PHP
+        $jleagues = file_get_contents("https://fantasy.premierleague.com/api/entry/581004/");
+        $leagues = json_decode($jleagues, true); 
+        ?>
+        <?PHP include 'php/teamPoints.php'; ?>
+
+        <section>
+            <h1 id="score">Gameweek <?PHP echo $leagues['current_event']; ?> Points - 
+        </h1>
+        <span id="chip" style="display: none;"><b>(<?PHP echo $picks['active_chip'] ?>)</b></span>
+        </section>
+
+        <section id="reset">
+            <div style="flex-grow: 8; margin-top: 19.920;"><button onclick="window.location.reload()"><b>Refresh</b></button></div>
+        </section>
+    </main>    
+    <script src="js/javascript.js?=0.13"></script>
 </body>
 </html>

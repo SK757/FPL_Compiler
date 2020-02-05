@@ -124,7 +124,6 @@ button:active {
     /**make table can scroll**/
     width: calc(100% - 4px);
     height: 100%;
-    max-height: 500px;
     overflow: auto; 
     position: relative;
     table-layout: fixed;
@@ -136,6 +135,16 @@ button:active {
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
 }
+
+.table_cont_main {
+    max-height: calc(100vh - 152px)
+}
+
+.table_cont_history {
+    max-height: calc(90vh - 67.906px)
+}
+
+
 
 #player_info {
     border-collapse: collapse;
@@ -208,7 +217,7 @@ thead th:nth-child(2) {
 }
 
 /** Sticky Name Column **/
-tbody #name {
+tbody #name, tbody #gameweek {
     position: -webkit-sticky; /* for Safari */
     position: sticky;
     left: 0;
@@ -332,13 +341,13 @@ footer {
 
 @media screen and (max-height: 700px) {
     #table_cont {
-        max-height: 505px;
+        // max-height: 505px;
     }
 }
 
 @media screen and (min-height: 701px) and (max-height: 899px) {
     #table_cont {
-        max-height: 569px;
+        // max-height: 569px;
     }
     #basic-btn, #advanced-btn {
         flex-grow: 2.5;
@@ -360,7 +369,7 @@ footer {
         padding-bottom: 12px;
     }
     #table_cont {
-        max-height: 800px;
+        // max-height: 800px;
     }
     #basic-btn, #advanced-btn {
         flex-grow: 2.5 !important;
