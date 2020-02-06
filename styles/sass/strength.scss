@@ -20,6 +20,9 @@
 }
 
 @media only screen and (min-width: 500px) {
+    #table_strength {
+        max-height: calc(98vh - 34px);
+    }
     #player_info td, #player_info th {
         padding: 8px !important;
     }
