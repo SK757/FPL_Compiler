@@ -100,6 +100,10 @@ button:active {
 .table_cont_history {
   max-height: calc(90vh - 67.906px); }
 
+@media screen and (min-width: 500px) {
+  .table_cont_history {
+    max-height: calc(99vh - 67.906px); } }
+
 #player_info {
   border-collapse: collapse;
   width: 100%;
