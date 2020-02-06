@@ -1,3 +1,6 @@
+$(document).ready(function () {
+	change();
+});
 function change() {
 	$("#change_1").html('<i class="fas fa-minus"></i>');
 	

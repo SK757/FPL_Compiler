@@ -3,7 +3,6 @@ $(document).ready(function () {
 	$("main").show();
 	availability();
 	notAvailable();
-	change();
 });
 
 $("#advanced-btn").click(function() {
