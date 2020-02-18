@@ -57,6 +57,8 @@ function notAvailable() {
 	$("tr:contains('Joined')").addClass("filterPosition");
 	$("tr:contains('by mutual consent')").addClass("filterPosition");
 	$("tr:contains('Not included')").addClass("filterPosition");
+	$("tr:contains('Loan deal ended')").addClass("filterPosition");
+	$("tr:contains('Contract terminated')").addClass("filterPosition");
 }
 
 

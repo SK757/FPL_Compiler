@@ -145,6 +145,6 @@
         </a>
     </main>
 
-    <script src="js/javascript.js?=0.6"></script>
+    <script src="js/javascript.js?=0.7"></script>
 </body>
 </html>
