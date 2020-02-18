@@ -45,10 +45,8 @@
             <?php
                 $json = file_get_contents("https://fantasy.premierleague.com/api/bootstrap-static/");
                 $data = json_decode($json, true);
-            ?>
-            <div id="in" style="flex-grow: 8.5; margin-right: 0"><input type="text" id="myInput" onkeyup="search()" placeholder="Search for player" title="Type in a name" autofocus></div>
+            ?><div id="in" style="flex-grow: 8.5; margin-right: 0"><input type="text" id="myInput" onkeyup="search()" placeholder="Search for player" title="Type in a name" autofocus></div>
         </div>
-
         <div class="flex-container">
             <div style="flex-grow: 2;margin-left: 0px"><button id="filterGK" onclick="keeper()"><b>GK</b></button></div>
             <div style="flex-grow: 2"><button id="filterDEF" onclick="defender()"><b>DEF</b></button></div>
@@ -132,11 +130,7 @@
                     </tr>
                 <?PHP
                     }    // if (++$i == 14) {break;}
-                ?>        
-                        
-                    
-                
-</tbody>
+                ?></tbody>
             </table>
         </div>
         <!-- BACK TO TOP BUTTON -->
@@ -144,7 +138,6 @@
             <i class="fa fa-chevron-up"></i>
         </a>
     </main>
-
     <script src="js/javascript.js?=0.7"></script>
 </body>
 </html>
