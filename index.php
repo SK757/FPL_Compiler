@@ -62,7 +62,6 @@
                     <tr>
                         <th style="display: none;">chance of playing </th>
                         <th id="nameHead">Name </th>
-                        <th>Team </th>
                         <th class="pos">Position </th>
                         <th class="points">Total Points </th>
                         <th >Price </th>
@@ -101,8 +100,7 @@
                 ?>
     <tr>
                         <td style="display: none;"><?PHP echo $item['chance_of_playing_next_round']; ?></td>
-                        <td id="name"><?PHP echo $item['first_name']; ?> <?PHP echo $item['second_name']; ?></td>
-                        <td><?PHP include 'php/team.php';?></td>
+                        <td id="name"><b><?PHP echo $item['web_name']; ?></b><br><p style="font-size: 11px;margin: 0;margin-block-start: 0;margin-block-end: 0;"><?PHP include 'php/team.php';?></p></td>
                         <td><?PHP include 'php/position.php';?></td>
                         <td><?PHP echo $item['total_points']; ?></td>
                         <td><?PHP echo "£".$item['now_cost']/10; ?></td>

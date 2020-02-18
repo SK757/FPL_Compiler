@@ -38,7 +38,6 @@ body {
 
 main {
     max-width: 1500px;
-    max-height: 993px;
     margin: auto;
     display: none;
     padding: 8px;
@@ -394,7 +393,7 @@ footer {
     td.end-border {
         border-right: none !important;
     }
-    h1#score {
+    h1#score, h1#total_transfers {
         color: #fff;
     }
 }

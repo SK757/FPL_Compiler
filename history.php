@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="FPL Gameweek History">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.37">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.38">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=0.2">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=0.2">
@@ -18,13 +18,25 @@
     <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=0.2">
     <script src="js/sortable.js?=0.02"></script>
     <style type="text/css">
-        tr:nth-child(odd) {
+        @media (prefers-color-scheme: light) {
+            tr:nth-child(odd) {
+                background-color: #fff !important;
+                color: #000;
+            }
+            tr:nth-child(even) {
+                background-color: #f2f2f2 !important;
+                color: #000;
+            }
+        }
+        .twentyfive {
             background-color: #fff !important;
             color: #000;
         }
-        tr:nth-child(even) {
-            background-color: #f2f2f2 !important;
-            color: #000;
+        @media (prefers-color-scheme: dark) {
+            .twentyfive {
+                background-color: #323639 !important;
+                color: #fff !important;
+            }
         }
         section {
             display: flex;

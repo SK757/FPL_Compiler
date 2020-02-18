@@ -65,7 +65,7 @@ function keeper() {
 	availability();
 	var rows = document.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 	for (i = 0; i < rows.length; i++){cells = rows[i].getElementsByTagName('td');
-	    if (cells[3].innerHTML === 'GK') {
+	    if (cells[2].innerHTML === 'GK') {
 	        rows[i].classList.remove("filterPosition");
 	    } else {
 	    	rows[i].className = "filterPosition";
@@ -78,7 +78,7 @@ function defender() {
 	availability();
 	var rows = document.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 	for (i = 0; i < rows.length; i++){cells = rows[i].getElementsByTagName('td');
-	    if (cells[3].innerHTML === 'DEF') {
+	    if (cells[2].innerHTML === 'DEF') {
 	        rows[i].classList.remove("filterPosition");
 	    } else {
 	    	rows[i].className = "filterPosition";
@@ -91,7 +91,7 @@ function midfielder() {
 	availability();
 	var rows = document.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 	for (i = 0; i < rows.length; i++){cells = rows[i].getElementsByTagName('td');
-	    if (cells[3].innerHTML === 'MID') {
+	    if (cells[2].innerHTML === 'MID') {
 	        rows[i].classList.remove("filterPosition");
 	    } else {
 	    	rows[i].className = "filterPosition";
@@ -104,7 +104,7 @@ function forward() {
 	availability();
 	var rows = document.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 	for (i = 0; i < rows.length; i++){cells = rows[i].getElementsByTagName('td');
-	    if (cells[3].innerHTML === 'FWD') {
+	    if (cells[2].innerHTML === 'FWD') {
 	        rows[i].classList.remove("filterPosition");
 	    } else {
 	    	rows[i].className = "filterPosition";
