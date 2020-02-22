@@ -1,8 +1,6 @@
 <?PHP
 include 'dates.php';
-$jleagues = file_get_contents("https://fantasy.premierleague.com/api/entry/581004/");
-
-$leagues = json_decode($jleagues, true);
+$leagues = json_decode(file_get_contents("https://fantasy.premierleague.com/api/entry/581004/"), true);
 
 function ordinal($number) {
     $ends = array('th','st','nd','rd','th','th','th','th','th','th');
