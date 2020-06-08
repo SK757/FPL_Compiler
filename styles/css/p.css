@@ -5,7 +5,7 @@ html {
 body {
   margin: 8px;
   height: calc(100vh - 16px);
-  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif; }
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; }
 
 .grid-container {
   display: grid;

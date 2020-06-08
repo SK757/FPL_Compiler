@@ -1,4 +1,5 @@
 #table_strength {
+  /**make table can scroll**/
   width: calc(100% - 4px);
   height: 100%;
   max-height: calc(92vh - 34px);

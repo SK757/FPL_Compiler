@@ -22,6 +22,7 @@
     <main class="grid-container">
         <section class="info">
             <span><?PHP include 'php/points.php'; ?></span>
+            <span id="chip"><b>(<?PHP echo $picks['active_chip'] ?>)</b></span>
             <h1>Gameweek <?php echo $leagues['current_event']; ?></h1>
             <h2>Overall - <?php echo $leagues['summary_overall_points']; ?></h1>
         </section>
@@ -50,8 +51,17 @@
         var i = document.getElementById("player_8").innerText;
         var j = document.getElementById("player_9").innerText;
         var k = document.getElementById("player_10").innerText;
+        // BENCH
+        var l = document.getElementById("player_11").innerText;
+        var m = document.getElementById("player_12").innerText;
+        var n = document.getElementById("player_13").innerText;
+        var o = document.getElementById("player_14").innerText;
 
-        var z = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e) + parseInt(f) + parseInt(g) + parseInt(h) + parseInt(i) + parseInt(j) + parseInt(k);
+        if (document.getElementById("chip").innerText === '(bboost)') {
+            var z = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e) + parseInt(f) + parseInt(g) + parseInt(h) + parseInt(i) + parseInt(j) + parseInt(k) + parseInt(l) + parseInt(m) + parseInt(n) + parseInt(o);
+        } else {
+            var z = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e) + parseInt(f) + parseInt(g) + parseInt(h) + parseInt(i) + parseInt(j) + parseInt(k);
+        }
         var score = document.getElementById("score");
 
         var double = '65vmin';

@@ -4,7 +4,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif; }
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; }
 
 main {
   max-width: 1500px;
@@ -80,6 +80,7 @@ button:active {
   outline: none; }
 
 #table_cont {
+  /**make table can scroll**/
   width: calc(100% - 4px);
   height: 100%;
   overflow: auto;
@@ -114,6 +115,7 @@ button:active {
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+  /* Step 2: Reference Individual Icons */
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f0dc"; }
@@ -139,8 +141,10 @@ button:active {
 #player_info tr:hover {
   background-color: lightgreen; }
 
+/** Sticky Header **/
 #player_info th {
   position: -webkit-sticky;
+  /* for Safari */
   position: sticky;
   top: 0;
   padding-top: 5px;
@@ -157,8 +161,10 @@ thead th:nth-child(2) {
   border-left: none;
   border-top: none; }
 
+/** Sticky Name Column **/
 tbody #name, tbody #gameweek {
   position: -webkit-sticky;
+  /* for Safari */
   position: sticky;
   left: 0;
   border-right: 1px solid #ddd;
@@ -197,6 +203,7 @@ footer {
   padding: 1em;
   text-align: center; }
 
+/* Back to top button */
 #return-to-top {
   position: fixed;
   bottom: 20px;
@@ -238,6 +245,12 @@ footer {
   color: #000;
   top: 5px; }
 
+/*
+//
+// LOADING
+// SCREEN
+//
+*/
 .loadWrapper {
   display: flex;
   justify-content: center;
@@ -251,16 +264,15 @@ footer {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center; }
-
-.loading__anim {
-  width: 35px;
-  height: 35px;
-  display: inline-block;
-  border: 5px solid rgba(189, 189, 189, 0.25);
-  border-left-color: #38003C;
-  border-top-color: #38003C;
-  border-radius: 50%;
-  animation: rotate 600ms infinite linear; }
+  .loading__anim {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border: 5px solid rgba(189, 189, 189, 0.25);
+    border-left-color: #38003C;
+    border-top-color: #38003C;
+    border-radius: 50%;
+    animation: rotate 600ms infinite linear; }
 
 @keyframes rotate {
   to {
