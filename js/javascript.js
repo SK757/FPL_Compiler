@@ -137,7 +137,7 @@ function search() {
 	for (i = 0; i < tr.length; i++) {
 		td = tr[i].getElementsByTagName("td")[1];
 		if (td) {
-			txtValue = td.textContent || td.innerText;
+			txtValue = td.textContent.normalize('NFD').replace(/[\u0300-\u036f]/g, '') || td.innerText.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 			if (txtValue.toUpperCase().indexOf(filter) > -1) {
 				tr[i].style.display = "";
 			} else {
