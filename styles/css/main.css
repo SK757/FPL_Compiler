@@ -95,7 +95,7 @@ button:active {
   border-top-right-radius: 7px; }
 
 .table_cont_main {
-  max-height: calc(100vh - 152px); }
+  max-height: calc(100vh - 156px); }
 
 .table_cont_history {
   max-height: calc(90vh - 67.906px); }
