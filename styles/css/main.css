@@ -65,9 +65,10 @@ button:active {
   display: none; }
 
 #myInput {
-  background-image: url("/favicon/searchicon.png");
-  background-position: 10px 10px;
+  background-image: url("/favicon/searchicon2.svg");
+  background-position: 10px 12px;
   background-repeat: no-repeat;
+  background-size: 18px 18px;
   width: calc(100% - 54px);
   font-size: 16px;
   padding: 12px 12px 12px 40px;
@@ -300,6 +301,9 @@ footer {
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #323639; }
+  #myInput {
+    background-color: #323639;
+    color: lightgrey; }
   #player_info tr:nth-child(odd), #player_info tr:nth-child(even) {
     background-color: #323639;
     color: #fff; }
