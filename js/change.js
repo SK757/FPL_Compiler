@@ -264,5 +264,68 @@ function change() {
 	    document.getElementById("change_38").innerHTML = "<i style='color: #00e187' class='fas fa-caret-up'></i>";
 	} else {
 	    document.getElementById("change_38").innerHTML = "<i style='color: #ff2882' class='fas fa-caret-down'></i>";
-	}	
+	}
+	var thirtynine = document.getElementById("week_39").innerText;
+	thirtynine = thirtynine.replace(/,/g, "");
+	if (parseInt(thirtyeight) > parseInt(thirtynine)) {
+	    document.getElementById("change_39").innerHTML = "<i style='color: #00e187' class='fas fa-caret-up'></i>";
+	} else {
+	    document.getElementById("change_39").innerHTML = "<i style='color: #ff2882' class='fas fa-caret-down'></i>";
+	}
+	var forty = document.getElementById("week_40").innerText;
+	forty = forty.replace(/,/g, "");
+	if (parseInt(thirtynine) > parseInt(forty)) {
+	    document.getElementById("change_40").innerHTML = "<i style='color: #00e187' class='fas fa-caret-up'></i>";
+	} else {
+	    document.getElementById("change_40").innerHTML = "<i style='color: #ff2882' class='fas fa-caret-down'></i>";
+	}
+	var fortyone = document.getElementById("week_41").innerText;
+	fortyone = fortyone.replace(/,/g, "");
+	if (parseInt(forty) > parseInt(fortyone)) {
+	    document.getElementById("change_41").innerHTML = "<i style='color: #00e187' class='fas fa-caret-up'></i>";
+	} else {
+	    document.getElementById("change_41").innerHTML = "<i style='color: #ff2882' class='fas fa-caret-down'></i>";
+	}
+	var fortytwo = document.getElementById("week_42").innerText;
+	fortytwo = fortytwo.replace(/,/g, "");
+	if (parseInt(fortyone) > parseInt(fortytwo)) {
+	    document.getElementById("change_42").innerHTML = "<i style='color: #00e187' class='fas fa-caret-up'></i>";
+	} else {
+	    document.getElementById("change_42").innerHTML = "<i style='color: #ff2882' class='fas fa-caret-down'></i>";
+	}
+	var fortythree = document.getElementById("week_43").innerText;
+	fortythree = fortythree.replace(/,/g, "");
+	if (parseInt(fortytwo) > parseInt(fortythree)) {
+	    document.getElementById("change_43").innerHTML = "<i style='color: #00e187' class='fas fa-caret-up'></i>";
+	} else {
+	    document.getElementById("change_43").innerHTML = "<i style='color: #ff2882' class='fas fa-caret-down'></i>";
+	}
+	var fortyfour = document.getElementById("week_44").innerText;
+	fortyfour = fortyfour.replace(/,/g, "");
+	if (parseInt(fortythree) > parseInt(fortyfour)) {
+	    document.getElementById("change_44").innerHTML = "<i style='color: #00e187' class='fas fa-caret-up'></i>";
+	} else {
+	    document.getElementById("change_44").innerHTML = "<i style='color: #ff2882' class='fas fa-caret-down'></i>";
+	}
+	var fortyfive = document.getElementById("week_45").innerText;
+	fortyfive = fortyfive.replace(/,/g, "");
+	if (parseInt(fortyfour) > parseInt(fortyfive)) {
+	    document.getElementById("change_45").innerHTML = "<i style='color: #00e187' class='fas fa-caret-up'></i>";
+	} else {
+	    document.getElementById("change_45").innerHTML = "<i style='color: #ff2882' class='fas fa-caret-down'></i>";
+	}
+	var fortysix = document.getElementById("week_46").innerText;
+	fortysix = fortysix.replace(/,/g, "");
+	if (parseInt(fortyfive) > parseInt(fortysix)) {
+	    document.getElementById("change_46").innerHTML = "<i style='color: #00e187' class='fas fa-caret-up'></i>";
+	} else {
+	    document.getElementById("change_46").innerHTML = "<i style='color: #ff2882' class='fas fa-caret-down'></i>";
+	}
+	var fortyseven = document.getElementById("week_47").innerText;
+	fortyseven = fortyseven.replace(/,/g, "");
+	if (parseInt(fortysix) > parseInt(fortyseven)) {
+	    document.getElementById("change_47").innerHTML = "<i style='color: #00e187' class='fas fa-caret-up'></i>";
+	} else {
+	    document.getElementById("change_47").innerHTML = "<i style='color: #ff2882' class='fas fa-caret-down'></i>";
+	}
 }

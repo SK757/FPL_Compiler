@@ -108,7 +108,7 @@
     </main>
 
     <script src="js/javascript.js?=0.6"></script>
-    <script src="js/change.js"></script>
+    <script src="js/change.js?=1"></script>
     <script>
 
         var cls = document.getElementById("player_info").getElementsByTagName("td");
