@@ -5,7 +5,7 @@ foreach($picks['picks'] as $key=>$item) {
 	    foreach($data['elements'] as $key=>$item2) {
 	        if ($item['element'] === $item1['id'] && $item['element'] === $item2['id']) {
 	        	if($item['position'] === 1) {
-	        		echo $item2['second_name'];
+	        		echo $item2['web_name'];
 	        	}
 	        }
 	    }
