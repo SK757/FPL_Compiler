@@ -4,9 +4,7 @@ $date = date("Y-m-d H:i:s");
 
 $data = json_decode(file_get_contents("https://fantasy.premierleague.com/api/bootstrap-static/"), true);
 
-if ($date >= '2020-06-23 17:45:00' && $date < '2020-06-27 12:15:00') {
-    $jpicks = file_get_contents("https://fantasy.premierleague.com/api/entry/581004/event/40/picks/");
-} elseif ($date >= '2020-06-27 12:15:00' && $date < '2020-07-04 12:15:00') {
+if ($date >= '2020-06-27 12:15:00' && $date < '2020-07-04 12:15:00') {
     $jpicks = file_get_contents("https://fantasy.premierleague.com/api/entry/581004/event/41/picks/");
 } elseif ($date >= '2020-07-04 12:15:00' && $date < '2020-07-07 17:45:00') {
     $jpicks = file_get_contents("https://fantasy.premierleague.com/api/entry/581004/event/42/picks/");
@@ -24,9 +22,7 @@ if ($date >= '2020-06-23 17:45:00' && $date < '2020-06-27 12:15:00') {
 // }
 
 
-if ($date >= '2020-06-23 17:45:00' && $date < '2020-06-27 12:45:00') {
-    $jlive = file_get_contents("https://fantasy.premierleague.com/api/event/40/live/");
-} elseif ($date >= '2020-06-27 12:15:00' && $date < '2020-07-04 12:15:00') {
+if ($date >= '2020-06-27 12:15:00' && $date < '2020-07-04 12:15:00') {
     $jlive = file_get_contents("https://fantasy.premierleague.com/api/event/41/live/");
 } elseif ($date >= '2020-07-04 12:15:00' && $date < '2020-07-07 17:45:00') {
     $jlive = file_get_contents("https://fantasy.premierleague.com/api/event/42/live/");
