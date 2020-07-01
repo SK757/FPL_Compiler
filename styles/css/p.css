@@ -52,3 +52,7 @@ h2 {
 p, span {
   font-size: 3vmin;
   margin: 5px; }
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background: #323639; } }

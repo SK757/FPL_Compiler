@@ -54,3 +54,7 @@ tr:last-child {
 .t7 {
   background-color: #1f3f0f !important;
   color: #ffffff; }
+
+@media (prefers-color-scheme: dark) {
+  #table_strength {
+    border: 2px solid #000; } }
