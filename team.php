@@ -63,10 +63,6 @@
         });
     </script>
     <main style="display: block;">
-        <?PHP
-        $jleagues = file_get_contents("https://fantasy.premierleague.com/api/entry/581004/");
-        $leagues = json_decode($jleagues, true); 
-        ?>
         <?PHP include 'php/teamPoints.php'; ?>
 
         <section>

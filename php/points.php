@@ -1,6 +1,5 @@
 <?PHP
 include 'dates.php';
-$leagues = json_decode(file_get_contents("https://fantasy.premierleague.com/api/entry/581004/"), true);
 
 function ordinal($number) {
     $ends = array('th','st','nd','rd','th','th','th','th','th','th');
@@ -11,6 +10,7 @@ function ordinal($number) {
     }
 }
 $count = 0;
+include 'dates.php';
 foreach($picks['picks'] as $key=>$item) {
     foreach($live['elements'] as $key=>$item1) {
         if ($item['element'] === $item1['id']) {
