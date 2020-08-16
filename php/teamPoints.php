@@ -15,11 +15,12 @@
 		        </thead>
 		        <tbody>
 		        	<?PHP
-		        	$count = 0; 
-		        	foreach($picks['picks'] as $key=>$item) {
-						foreach($live['elements'] as $key=>$item1) {
-							foreach($data['elements'] as $key=>$item2) {
-								if ($item['element'] === $item1['id'] && $item['element'] === $item2['id']) {
+		        	$count = 0;
+		        	if(is_array($picks)){ 
+			        	foreach($picks['picks'] as $key=>$item) {
+							foreach($live['elements'] as $key=>$item1) {
+								foreach($data['elements'] as $key=>$item2) {
+									if ($item['element'] === $item1['id'] && $item['element'] === $item2['id']) {
 					?><tr>
 						<td style="display: none;"><?PHP echo $item2['chance_of_playing_next_round']; ?></td>
 						<td class="deffo"><?PHP
@@ -75,11 +76,14 @@
 						 
 					</tr>
 					<?PHP
-								}
-				        	}
-				        }
-						++$count;
-				    }
+									}
+					        	}
+					        }
+							++$count;
+					    }
+					} else {
+					    echo "<h2 style='text-align:center'>Gameweek Is Being Updated</h2>";
+					}
 				?></tbody>
 			</table>
 		</div>

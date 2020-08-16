@@ -21,7 +21,7 @@
 <body>
     <main class="grid-container">
         <section class="info">
-            <span><?PHP include 'php/points.php'; ?></span>
+            <?PHP include 'php/points.php'; ?>
             <span id="chip"><b>(<?PHP echo $picks['active_chip'] ?>)</b></span>
             <h1>Gameweek <?php echo $leagues['current_event']; ?></h1>
             <h2>Overall - <?php echo $leagues['summary_overall_points']; ?></h1>

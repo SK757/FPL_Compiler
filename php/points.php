@@ -11,6 +11,7 @@ function ordinal($number) {
 }
 $count = 0;
 include 'dates.php';
+if(is_array($picks)){
 foreach($picks['picks'] as $key=>$item) {
     foreach($live['elements'] as $key=>$item1) {
         if ($item['element'] === $item1['id']) {
@@ -24,5 +25,8 @@ foreach($picks['picks'] as $key=>$item) {
             ++$count; 
         }
 	}
+}
+} else {
+    echo "<h2 style='text-align:center'>Gameweek Is Being Updated</h2>";
 }
 ?>
