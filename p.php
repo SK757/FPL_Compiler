@@ -23,7 +23,7 @@
         <section class="info">
             <span><?PHP include 'php/points.php'; ?></span>
             <span id="chip"><b>(<?PHP echo $picks['active_chip'] ?>)</b></span>
-            <h1>Gameweek <?php echo $leagues['current_event'] - 9; ?></h1>
+            <h1>Gameweek <?php echo $leagues['current_event']; ?></h1>
             <h2>Overall - <?php echo $leagues['summary_overall_points']; ?></h1>
         </section>
         <section class="points">
