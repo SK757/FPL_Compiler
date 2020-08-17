@@ -60,6 +60,7 @@ function notAvailable() {
 	$("tr:contains('Loan deal ended')").addClass("filterPosition");
 	$("tr:contains('Contract terminated')").addClass("filterPosition");
 	$("tr:contains('Loan ended')").addClass("filterPosition");
+	$("tr:contains('Transferred')").addClass("filterPosition");
 }
 
 

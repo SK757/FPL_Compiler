@@ -69,11 +69,12 @@
                         <th class="goals">Goals </th>
                         <th class="assists">Assists </th>
                         <th class="clean_sheets">Clean Sheets </th>
+                        <th class="advanced">Price Change </th>
                         <th class="advanced">Selected </th>
-                        <th class="advanced">Transfers In </th>
-                        <th class="advanced">Transfers Out </th>
                         <th class="advanced">Minutes </th>
                         <th class="advanced nocursor sorttable_nosort">News </th>
+                        <th class="advanced">Transfers In </th>
+                        <th class="advanced">Transfers Out </th>
                         <th class="advanced gc">Goals Conceded </th>
                         <th class="advanced og">Own Goals </th>
                         <th class="advanced pen_save">Penalties Saved </th>
@@ -108,11 +109,12 @@
                         <td><?PHP echo $item['goals_scored']; ?></td>
                         <td><?PHP echo $item['assists']; ?></td>
                         <td class="clean_sheets_stat"><?PHP echo $item['clean_sheets']; ?></td>
+                        <td class="advanced"><?PHP echo "£".$item['cost_change_start']/10; ?></td>
                         <td class="advanced"><?PHP echo $item['selected_by_percent']."%"; ?></td>
-                        <td class="advanced"><?PHP echo $item['transfers_in_event']; ?></td>
-                        <td class="advanced"><?PHP echo $item['transfers_out_event']; ?></td>
                         <td class="advanced"><?PHP echo $item['minutes']; ?></td>
                         <td class="advanced"><?PHP echo $item['news']; ?></td>
+                        <td class="advanced"><?PHP echo $item['transfers_in_event']; ?></td>
+                        <td class="advanced"><?PHP echo $item['transfers_out_event']; ?></td>
                         <td class="advanced"><?PHP echo $item['goals_conceded']; ?></td>
                         <td class="advanced"><?PHP echo $item['own_goals']; ?></td>
                         <td class="advanced"><?PHP echo $item['penalties_saved']; ?></td>
@@ -137,6 +139,6 @@
             <i class="fa fa-chevron-up"></i>
         </a>
     </main>
-    <script src="js/javascript.js?=0.81"></script>
+    <script src="js/javascript.js?=0.82"></script>
 </body>
 </html>
