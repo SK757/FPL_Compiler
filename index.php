@@ -91,7 +91,7 @@
                 </thead>
                 <tbody>
                 <?PHP
-                    $i = 0;
+                    // $i = 0;
                     foreach($data['elements'] as $key=>$item)
                     {
                 ?>
@@ -128,7 +128,7 @@
                         <td class="advanced"><?PHP echo $item['ict_index']; ?></td>
                     </tr>
                 <?PHP
-                    if (++$i == 14) {break;}}     
+                    }   //if (++$i == 14) {break;}  
                 ?></tbody>
             </table>
         </div>
