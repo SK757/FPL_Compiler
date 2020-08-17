@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="FPL Compiler">
     <meta name="theme-color" content="#00e187">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.27">
     <link rel="stylesheet" type="text/css" href="styles/css/strength.css?0.6">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css" crossorigin="anonymous" SameSite="none Secure">

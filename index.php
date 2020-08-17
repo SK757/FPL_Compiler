@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="FPL Compiler">
     <!-- <meta name="theme-color" content="#00e187"> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.41">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=0.2">
@@ -91,7 +91,7 @@
                 </thead>
                 <tbody>
                 <?PHP
-                    // $i = 0;
+                    $i = 0;
                     foreach($data['elements'] as $key=>$item)
                     {
                 ?>
@@ -128,7 +128,7 @@
                         <td class="advanced"><?PHP echo $item['ict_index']; ?></td>
                     </tr>
                 <?PHP
-                    }    // if (++$i == 14) {break;}
+                    if (++$i == 14) {break;}}     
                 ?></tbody>
             </table>
         </div>
