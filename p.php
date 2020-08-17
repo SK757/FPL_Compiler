@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <meta name="Description" content="FPL Points">
     <meta name="theme-color" content="#37063c">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/css/p.css?0.7">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=0.2">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=0.2">
@@ -18,8 +19,8 @@
 </head>
 <body>
     <main class="grid-container">
+        <?PHP include 'php/points.php'; ?>
         <section class="info">
-            <?PHP include 'php/points.php'; ?>
             <span id="chip"><b>(<?PHP echo $picks['active_chip'] ?>)</b></span>
             <h1>Gameweek <?php echo $leagues['current_event']; ?></h1>
             <h2>Overall - <?php echo $leagues['summary_overall_points']; ?></h1>

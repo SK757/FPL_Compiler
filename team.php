@@ -64,7 +64,6 @@
     </script>
     <main style="display: block;">
         <?PHP include 'php/teamPoints.php'; ?>
-
         <section>
             <h1 id="score">Gameweek <?PHP echo $leagues['current_event']; ?> Points - 
         </h1>

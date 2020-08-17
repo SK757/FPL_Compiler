@@ -10,23 +10,28 @@ function ordinal($number) {
     }
 }
 $count = 0;
-include 'dates.php';
+// include 'dates.php';
 if(is_array($picks)){
-foreach($picks['picks'] as $key=>$item) {
-    foreach($live['elements'] as $key=>$item1) {
-        if ($item['element'] === $item1['id']) {
-        	if($item['multiplier'] === 2) {
-        		echo '<span id="player_'.$count.'" class="player_scores">' . $item1['stats']['total_points'] * 2 . '(c)</span>';
-        	} elseif($item['multiplier'] === 3) {
-                echo '<span id="player_'.$count.'" class="player_scores">' . $item1['stats']['total_points'] * 3 . '(tc)</span>';
-            } else {
-        		echo '<span id="player_'.$count.'" class="player_scores">' . $item1['stats']['total_points'] . '</span>';
-        	}
-            ++$count; 
-        }
-	}
-}
+    foreach($picks['picks'] as $key=>$item) {
+        foreach($live['elements'] as $key=>$item1) {
+            if ($item['element'] === $item1['id']) {
+            	if($item['multiplier'] === 2) {
+            		echo '<span id="player_'.$count.'" class="player_scores">' . $item1['stats']['total_points'] * 2 . '(c)</span>';
+            	} elseif($item['multiplier'] === 3) {
+                    echo '<span id="player_'.$count.'" class="player_scores">' . $item1['stats']['total_points'] * 3 . '(tc)</span>';
+                } else {
+            		echo '<span id="player_'.$count.'" class="player_scores">' . $item1['stats']['total_points'] . '</span>';
+            	}
+                ++$count; 
+            }
+    	}
+    }
 } else {
     echo "<h2 style='text-align:center'>Gameweek Is Being Updated</h2>";
+?>
+    <style type="text/css">main section{
+        display:none !important;
+    }</style>
+<?php
 }
 ?>
