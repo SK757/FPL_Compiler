@@ -7,3 +7,8 @@ package.json
 team2.php
 teamOLD.php
 package-lock.json
+db_inc.php
+db_inc_oop.php
+db_inc_pdo.php
+lineup.php
+phpmyadmin/
