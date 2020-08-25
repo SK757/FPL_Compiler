@@ -73,12 +73,12 @@
                         <th class="advanced">Selected </th>
                         <th class="advanced">Minutes </th>
                         <th class="advanced nocursor sorttable_nosort">News </th>
-                        <th class="advanced">Transfers In </th>
-                        <th class="advanced">Transfers Out </th>
+                        <th class="advanced in">Transfers In </th>
+                        <th class="advanced out">Transfers Out </th>
                         <th class="advanced gc">Goals Conceded </th>
                         <th class="advanced og">Own Goals </th>
-                        <th class="advanced pen_save">Penalties Saved </th>
-                        <th class="advanced pen_miss">Penalties Missed </th>
+                        <th class="advanced">Pens Saved </th>
+                        <th class="advanced">Pens Missed </th>
                         <th class="advanced yc">Yellow Cards </th>
                         <th class="advanced rc">Red Cards </th>
                         <th class="advanced">Saves </th>
@@ -139,6 +139,6 @@
             <i class="fa fa-chevron-up"></i>
         </a>
     </main>
-    <script src="js/javascript.js?=0.82"></script>
+    <script src="js/javascript.js?=0.83"></script>
 </body>
 </html>

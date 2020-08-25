@@ -161,10 +161,10 @@ function headers(x) {
 		$(".goals").html("GS ");
 		$(".assists").html("A ");
 		$(".clean_sheets").html("CS ");
+		$(".in").html("In ");
+		$(".out").html("Out ");
 		$(".gc").html("GC ");
 		$(".og").html("OG ");
-		$(".pen_save").html("Pens Saved ");
-		$(".pen_miss").html("Pens Missed ");
 		$(".yc").html("YC ");
 		$(".rc").html("RC ");
 		$(".basic").html("<b>Basic</b>");
@@ -182,10 +182,10 @@ function headers(x) {
 		$(".goals").html("Goals ");
 		$(".assists").html("Assists ");
 		$(".clean_sheets").html("Clean Sheets ");
+		$(".in").html("Transfers In ");
+		$(".out").html("Transfers Out ");
 		$(".gc").html("Goals Conceded ");
 		$(".og").html("Own Goal ");
-		$(".pen_save").html("Penalties Saved ");
-		$(".pen_miss").html("Penalties Missed ");
 		$(".yc").html("Yellow Cards ");
 		$(".rc").html("Red Cards ");
 		$(".basic").html("<b>Basic View</b>");
