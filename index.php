@@ -139,6 +139,6 @@
             <i class="fa fa-chevron-up"></i>
         </a>
     </main>
-    <script src="js/javascript.js?=0.83"></script>
+    <script src="js/javascript.js?=0.84"></script>
 </body>
 </html>

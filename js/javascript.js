@@ -54,13 +54,7 @@ function availability() {
 
 // ===== Player Not Available ==== 
 function notAvailable() {
-	$("tr:contains('Joined')").addClass("filterPosition");
-	$("tr:contains('by mutual consent')").addClass("filterPosition");
-	$("tr:contains('Not included')").addClass("filterPosition");
-	$("tr:contains('Loan deal ended')").addClass("filterPosition");
-	$("tr:contains('Contract terminated')").addClass("filterPosition");
-	$("tr:contains('Loan ended')").addClass("filterPosition");
-	$("tr:contains('Transferred')").addClass("filterPosition");
+	$("tr:contains('Joined'), tr:contains('Contract'), tr:contains('Transferred')").addClass("filterPosition");
 }
 
 
