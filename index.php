@@ -16,8 +16,8 @@
     <meta name="Description" content="FPL Compiler">
     <!-- <meta name="theme-color" content="#00e187"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.41">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css" crossorigin="anonymous" SameSite="none Secure">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.42">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=0.2">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=0.2">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=0.2">
@@ -136,7 +136,7 @@
         </div>
         <!-- BACK TO TOP BUTTON -->
         <a href="javascript:" aria-label="Return to the top of the table" id="return-to-top">
-            <i class="fa fa-chevron-up"></i>
+            <i class="fas fa-chevron-up"></i>
         </a>
     </main>
     <script src="js/javascript.js?=0.84"></script>
