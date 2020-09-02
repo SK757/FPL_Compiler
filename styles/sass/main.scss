@@ -316,7 +316,7 @@ footer {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: $green;
+    background: #fff;
 }
 
 .loading {
@@ -330,9 +330,9 @@ footer {
         width: 35px;
         height: 35px;
         display: inline-block;
-        border: 5px solid rgba(56,0,60, 0.1);
-        border-left-color: #38003C;
-        border-top-color: #38003C;
+        border: 5px solid rgba(0,225,135, 0.1);
+        border-left-color: $green;
+        border-top-color: $green;
         border-radius: 50%;
         animation: rotate 600ms infinite linear;
     }
