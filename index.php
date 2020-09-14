@@ -59,13 +59,12 @@
                     <tr>
                         <th style="display: none;">chance of playing </th>
                         <th id="nameHead">Name </th>
-                        <th class="pos">Position </th>
                         <th class="points">Total Points </th>
                         <th >Price </th>
                         <th class="ppg">Points Per Game </th>
                         <th class="gwp">Gameweek Points </th>
                         <th class="advanced xpt">EXPoints This GW </th>
-                        <th class="advanced xpn">EXPoints Next GW </th>
+                        <th class="xpn">EXPoints Next GW </th>
                         <th class="goals">Goals </th>
                         <th class="assists">Assists </th>
                         <th class="clean_sheets">Clean Sheets </th>
@@ -98,14 +97,13 @@
                 ?>
     <tr>
                         <td style="display: none;"><?PHP echo $item['chance_of_playing_next_round']; ?></td>
-                        <td id="name"><b><?PHP echo $item['web_name']; ?></b><br><p style="font-size: 11px;margin: 0;margin-block-start: 0;margin-block-end: 0;"><?PHP include 'php/team.php';?></p></td>
-                        <td><?PHP include 'php/position.php';?></td>
+                        <td id="name"><b><?PHP echo $item['web_name']; ?></b><br><p style="font-size: 11px;margin: 0;margin-block-start: 0;margin-block-end: 0;"><?PHP include 'php/team.php';?> - <?PHP include 'php/position.php';?></p></td>
                         <td><?PHP echo $item['total_points']; ?></td>
                         <td><?PHP echo "£".$item['now_cost']/10; ?></td>
                         <td><?PHP echo $item['points_per_game']; ?></td>
                         <td><?PHP echo $item['event_points']; ?></td>
                         <td class="advanced"><?PHP echo $item['ep_this']; ?></td>
-                        <td class="advanced"><?PHP echo $item['ep_next']; ?></td>
+                        <td><?PHP echo $item['ep_next']; ?></td>
                         <td><?PHP echo $item['goals_scored']; ?></td>
                         <td><?PHP echo $item['assists']; ?></td>
                         <td class="clean_sheets_stat"><?PHP echo $item['clean_sheets']; ?></td>
@@ -139,6 +137,6 @@
             <i class="fas fa-chevron-up"></i>
         </a>
     </main>
-    <script src="js/javascript.js?=0.84"></script>
+    <script src="js/javascript.js?=0.85"></script>
 </body>
 </html>

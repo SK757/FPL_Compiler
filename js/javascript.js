@@ -63,7 +63,7 @@ function keeper() {
 	availability();
 	var rows = document.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 	for (i = 0; i < rows.length; i++){cells = rows[i].getElementsByTagName('td');
-	    if (cells[2].innerHTML === 'GK') {
+	    if (cells[1].innerHTML.indexOf('GK') != -1) {
 	        rows[i].classList.remove("filterPosition");
 	    } else {
 	    	rows[i].className = "filterPosition";
@@ -76,7 +76,7 @@ function defender() {
 	availability();
 	var rows = document.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 	for (i = 0; i < rows.length; i++){cells = rows[i].getElementsByTagName('td');
-	    if (cells[2].innerHTML === 'DEF') {
+	    if (cells[1].innerHTML.indexOf('DEF') != -1) {
 	        rows[i].classList.remove("filterPosition");
 	    } else {
 	    	rows[i].className = "filterPosition";
@@ -89,7 +89,7 @@ function midfielder() {
 	availability();
 	var rows = document.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 	for (i = 0; i < rows.length; i++){cells = rows[i].getElementsByTagName('td');
-	    if (cells[2].innerHTML === 'MID') {
+	    if (cells[1].innerHTML.indexOf('MID') != -1) {
 	        rows[i].classList.remove("filterPosition");
 	    } else {
 	    	rows[i].className = "filterPosition";
@@ -102,7 +102,7 @@ function forward() {
 	availability();
 	var rows = document.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 	for (i = 0; i < rows.length; i++){cells = rows[i].getElementsByTagName('td');
-	    if (cells[2].innerHTML === 'FWD') {
+	    if (cells[1].innerHTML.indexOf('FWD') != -1) {
 	        rows[i].classList.remove("filterPosition");
 	    } else {
 	    	rows[i].className = "filterPosition";
@@ -146,7 +146,6 @@ function search() {
 // ===== Shorten Headers if Small Viewport ==== 
 function headers(x) {
 	if (x.matches) { // If media query matches
-		$(".pos").html("Pos ");
 		$(".points").html("TP ");
 		$(".ppg").html("PPG ");
 		$(".gwp").html("GWP ");
@@ -166,8 +165,7 @@ function headers(x) {
 		$(".goals2").html("G/A/CS");
 		$(".gwga").html("GW G/A");
 	} else {
-	// ===== Extend Headers if Large Viewport ==== 
-		$(".pos").html("Position ");
+	// ===== Extend Headers if Large Viewport ====
 		$(".points").html("Total Points ");
 		$(".ppg").html("Points Per Game ");
 		$(".gwp").html("Gameweek Points ");
