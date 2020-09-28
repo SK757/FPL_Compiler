@@ -7,7 +7,7 @@
     <meta name="Description" content="FPL Points">
     <meta name="theme-color" content="#37063c">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/p.css?0.7">
+    <link rel="stylesheet" type="text/css" href="styles/css/p.css?0.8">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=0.2">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=0.2">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=0.2">
@@ -26,7 +26,7 @@
             <h2>Overall - <?php echo $leagues['summary_overall_points']; ?></h1>
         </section>
         <section class="points">
-            <h1 id="score" class="score"></h1>
+            <a href="team" target="_top"><h1 id="score" class="score"></h1></a>
         </section>
         <section class="leagues">
             <p><?PHP echo $leagues['leagues']['classic'][4]['name']; ?> rank - <?PHP echo ordinal($leagues['leagues']['classic'][4]['entry_rank']); ?></p>
