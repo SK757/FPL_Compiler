@@ -84,12 +84,7 @@
                 ?>
     <tr>
                         <td style="display: none;"><?PHP echo $item['event']; ?></td>
-                        <td id="gameweek"><b><?PHP 
-                            if ($item['event'] > 38) {
-                                echo $item['event'] - 9 . "+";
-                            } else {
-                                echo $item['event'];
-                            } ?></b></td>
+                        <td id="gameweek"><b><?PHP echo $item['event']; ?></b></td>
                         <td><?PHP echo $item['points']; ?></td>
                         <td><?PHP echo number_format($item['rank']); ?></td>
                         <td><?PHP echo number_format($item['total_points']); ?></td>
