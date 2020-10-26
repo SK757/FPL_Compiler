@@ -42,38 +42,27 @@
 						<td><?PHP echo $item2['goals_scored']; ?>/<?PHP echo $item2['assists']; ?>/<?PHP echo $item2['clean_sheets']; ?></td>
 						<?PHP
 						// Yellow Card Ban #1
-						if ($date < '2019-12-28') {
+						if ($leagues['current_event'] < 18) {
 							if ($item2['yellow_cards'] === 4) {
 								echo '<td style="background: #ffab1b;">' . $item2['yellow_cards'] . '</td>';
-							} elseif ($item2['yellow_cards'] > 4) {
-								echo '<td style="background: #c0020d; color: #fff;">' . $item2['yellow_cards'] . '</td>';
 							} else {
 								echo '<td>' . $item2['yellow_cards'] . '</td>';
 							}
-						// Yellow Card Ban #2
-						} elseif ($date >= '2019-12-28' && $date < '2020-04-10') {
-							if ($item2['yellow_cards'] === 8) {
-								echo '<td style="background: #ffe65b;">' . $item2['yellow_cards'] . '</td>';
-							} elseif ($item2['yellow_cards'] === 9) {
+						} // Yellow Card Ban #2
+						elseif ($leagues['current_event'] < 31) {
+							if ($item2['yellow_cards'] === 9) {
 								echo '<td style="background: #ffab1b;">' . $item2['yellow_cards'] . '</td>';
-							} elseif ($item2['yellow_cards'] > 9) {
-								echo '<td style="background: #c0020d; color: #fff;">' . $item2['yellow_cards'] . '</td>';
 							} else {
 								echo '<td>' . $item2['yellow_cards'] . '</td>';
 							}
-						// Yellow Card Ban #3
-						} elseif ($date >= '2020-04-10') {
-							if ($item2['yellow_cards'] === 13) {
-								echo '<td style="background: #ffe65b;">' . $item2['yellow_cards'] . '</td>';
-							} elseif ($item2['yellow_cards'] === 14) {
+						} // Yellow Card Ban #3
+						elseif ($leagues['current_event'] < 37) {
+							if ($item2['yellow_cards'] === 15) {
 								echo '<td style="background: #ffab1b;">' . $item2['yellow_cards'] . '</td>';
-							} elseif ($item2['yellow_cards'] > 14) {
-								echo '<td style="background: #c0020d; color: #fff;">' . $item2['yellow_cards'] . '</td>';
 							} else {
 								echo '<td>' . $item2['yellow_cards'] . '</td>';
 							}
 						} ?>
-						 
 					</tr>
 					<?PHP
 									}
