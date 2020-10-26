@@ -63,6 +63,7 @@
 								echo '<td>' . $item2['yellow_cards'] . '</td>';
 							}
 						} ?>
+						
 					</tr>
 					<?PHP
 									}
