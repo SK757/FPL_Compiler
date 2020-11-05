@@ -80,7 +80,8 @@
                 <tbody>
                 <?PHP
                     $count = 1;
-                    foreach($data['current'] as $key=>$item) {
+                    if(is_array($data)){
+                        foreach($data['current'] as $key=>$item) {
                 ?>
     <tr>
                         <td style="display: none;"><?PHP echo $item['event']; ?></td>
@@ -94,7 +95,10 @@
                         <td class="transfers" style="display: none;"><?PHP echo $item['event_transfers'] ?></td>
                     </tr>
                 <?PHP
-            ++$count; }
+                        ++$count; }
+                    }  else {
+                        echo "<h2 style='text-align:center'>Gameweek Is Being Updated</h2>";
+                    }
                 ?></tbody>
             </table>
         </div>
