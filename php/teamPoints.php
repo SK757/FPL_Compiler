@@ -26,6 +26,12 @@
 						<td class="deffo"><?PHP
 						if ($item2['web_name'] === 'Alexander-Arnold') {
 							echo 'Trent';
+						} elseif ($item2['web_name'] === 'Neco Williams') {
+							echo 'N Williams';
+						} elseif ($item2['web_name'] === 'Walker-Peters') {
+							echo 'KWP';
+						} elseif ($item2['web_name'] === 'Calvert-Lewin') {
+							echo 'DCL';
 						} else {
 							echo $item2['web_name'];
 						} ?></td>
