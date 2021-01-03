@@ -58,7 +58,7 @@
                 <thead>
                     <tr>
                         <th style="display: none;">chance of playing </th>
-                        <th id="nameHead">TEST </th>
+                        <th id="nameHead">Name </th>
                         <th class="points">Total Points </th>
                         <th >Price </th>
                         <th class="ppg">Points Per Game </th>
