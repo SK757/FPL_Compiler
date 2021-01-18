@@ -18,14 +18,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.44">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" SameSite="none Secure">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=0.2">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=0.2">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=0.2">
-    <link rel="manifest" href="/favicon/site.webmanifest?v=0.3">
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=0.2" color="#00e187">
+    <link rel="manifest" href="/favicon/manifest.json?v=0.2">
+    <link rel="apple-touch-icon" href="/favicon/maskable_icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?v=0.2">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=0.2">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=0.2" color="#00e187">
     <script src="js/sortable.js?=0.02"></script>
 </head>
 <body>
@@ -137,6 +133,11 @@
             <i class="fas fa-chevron-up"></i>
         </a>
     </main>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
     <script src="js/javascript.js?=0.87"></script>
 </body>
 </html>

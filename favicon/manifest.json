@@ -1,0 +1,25 @@
+{
+    "name": "Fantasy Premier League Compiler",
+    "short_name": "FPL",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "https://fpl.seankirk.co.uk/",
+    "description": "Compiler for Fantasy Premier League statistics",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "/favicon/maskable_icon.png",
+            "sizes": "320x320",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/favicon/maskable_icon.png",
+            "sizes": "320x320",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+}
