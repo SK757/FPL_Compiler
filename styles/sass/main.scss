@@ -60,7 +60,7 @@ button {
     width: 100%;
     font-size: 1rem;
     display: inline-block;
-    border: none;
+    border: 0;
     padding: 1rem 1rem;
     text-decoration: none;
     background: $green;
@@ -151,9 +151,10 @@ button:active {
 
 
 #player_info {
-    border-collapse: collapse;
+    // border-collapse: separate;
     width: 100%;
     position: relative;
+    border-spacing: 0;
 }
 
 #player_info.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after {
@@ -216,8 +217,8 @@ thead th:nth-child(2) {
 }
 
 #player_info th {
-    border-left: none;
-    border-top: none;
+    border-left: 0;
+    border-top: 0;
 }
 
 /** Sticky Name Column **/
@@ -227,7 +228,7 @@ tbody #name, tbody #gameweek {
     left: 0;
     border-right: 1px solid #ddd;
     // border-bottom: 1px solid #ddd;
-    border-left: none;
+    border-left: 0;
     background: inherit;
 }
 
@@ -379,24 +380,34 @@ footer {
         background-color: #323639;
         color: lightgrey;
     }
-    #player_info tr:nth-child(odd), #player_info tr:nth-child(even) {
-        background-color: #323639;
-        color: #fff
+    button {
+        color: #000;
     }
     #table_cont {
         border: 2px solid #000;
     }
-    #player_info tr {
-        border-bottom: 1px solid #dddddd;
+    #player_info th {
+        border-right: 1px solid #000;
+        color: #000;
     }
-    #player_info tr:last-child {
-        border-bottom: none;
+    .end-border {
+        border-right: 1px solid #000 !important;
     }
     #player_info td {
-        border-right: none;
+        border-right: 0;
     }
     td.end-border {
-        border-right: none !important;
+        border-right: 0 !important;
+    }
+    #player_info td {
+        border-bottom: 1px solid #dddddd;
+    }
+    #player_info tr:nth-child(odd), #player_info tr:nth-child(even) {
+        background-color: #323639;
+        color: #fff
+    }
+    #player_info tr:last-child td{
+        border-bottom: 0;
     }
     h1#score, h1#total_transfers {
         color: #fff;
@@ -448,10 +459,10 @@ footer {
         padding: 8px !important;
     }
 }
-#table_strength tr {
+#table_strength td {
     border-bottom: 1px solid #dddddd;
 }
-#table_strength tr:last-child {
+#table_strength tr:last-child td{
     border-bottom: 0;
 }
 .t1 {
