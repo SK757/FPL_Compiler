@@ -7,7 +7,7 @@
     <meta name="Description" content="FPL Gameweek History">
     <meta name="theme-color" content="#ffffff">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.51">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.95">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="manifest" href="/favicon/manifest.json?v=0.51">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -70,8 +70,8 @@
                         <th class="points">Total Points </th>
                         <th class="value">Team Value/Bank</th>
                         <th class="overall">Overall </th>
-                        <th class="change nocursor sorttable_nosort"><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></th>
                         <th style="display: none;">Transfers </th>
+                        <th class="change nocursor sorttable_nosort"><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -88,8 +88,8 @@
                         <td><?PHP echo number_format($item['total_points']); ?></td>
                         <td><?PHP echo $item['value']/10; ?></td>
                         <?PHP echo '<td id="week_'.$count.'">' . number_format($item['overall_rank']); ?></td>
-                        <?PHP echo '<td id="change_'.$count.'">'; ?></td>
                         <td class="transfers" style="display: none;"><?PHP echo $item['event_transfers'] ?></td>
+                        <?PHP echo '<td id="change_'.$count.'">'; ?></td>
                     </tr>
                 <?PHP
                         ++$count; }
