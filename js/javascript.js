@@ -54,7 +54,7 @@ function availability() {
 
 // ===== Player Not Available ==== 
 function notAvailable() {
-	$("tr:contains('Joined'), tr:contains('Contract'), tr:contains('Transferred'), tr:contains('Not included in'), tr:contains('Left the club')").addClass("filterPosition");
+	$("tr:contains('Loan'), tr:contains('loan'), tr:contains('Joined'), tr:contains('Contract'), tr:contains('Transferred'), tr:contains('Not included in'), tr:contains('Left the club')").addClass("filterPosition");
 }
 
 
