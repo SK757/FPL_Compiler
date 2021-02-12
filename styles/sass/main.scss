@@ -402,6 +402,11 @@ footer {
     #player_info td {
         border-bottom: 1px solid #dddddd;
     }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+        #player_info td {
+            border-width: 0.8px;
+        }
+    }
     #player_info tr:nth-child(odd), #player_info tr:nth-child(even) {
         background-color: #323639;
         color: #fff
