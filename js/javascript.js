@@ -38,16 +38,16 @@ function availability() {
 	// loops through each row 
 	for (i = 0; i < rows.length; i++){cells = rows[i].getElementsByTagName('td');
 	    if (cells[0].innerHTML === '0') {
-	        rows[i].className = "zero";
+	        rows[i].classList.add('zero');
 	    }
 	    if (cells[0].innerHTML === '25') {
-	        rows[i].className = "twentyfive"; 
+	        rows[i].classList.add('twentyfive'); 
 	    }
 	    if (cells[0].innerHTML === '50') {
-	        rows[i].className = "fifty"; 
+	        rows[i].classList.add('fifty'); 
 	    }
 	    if (cells[0].innerHTML === '75') {
-	        rows[i].className = "seventyfive";         
+	        rows[i].classList.add('seventyfive');         
 	    }
 	}
 }

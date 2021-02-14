@@ -7,7 +7,7 @@
     <meta name="Description" content="FPL Team">
     <meta name="theme-color" content="#ffffff">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.95">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.97">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="manifest" href="/favicon/manifest.json?v=0.51">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -43,12 +43,25 @@
         .hello {
             color:red;
         }
+        tr.explain_head td, tr.explain td {
+            border-right: 0 !important;
+        }
+        .explain_head, .explain {
+            display: none;
+            overflow: hidden;
+        }
+
         @media screen and (min-width: 900px) {
             section#reset {
                 display: none;
             }
             #table_cont {
                 max-height: calc(100vh - 69.1px);
+            }
+        }
+        @media (prefers-color-scheme: dark) {
+            tr.explain_head td {
+                border-bottom: 0 !important;
             }
         }
     </style>
@@ -77,6 +90,6 @@
             navigator.serviceWorker.register('/sw.js');
         }
     </script>   
-    <script src="js/javascript.js?=0.13"></script>
+    <script src="js/javascript.js?=0.14"></script>
 </body>
 </html>

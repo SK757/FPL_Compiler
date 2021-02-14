@@ -411,8 +411,14 @@ footer {
         background-color: #323639;
         color: #fff
     }
-    #player_info tr:last-child td{
+    #player_info tr:last-child td {
         border-bottom: 0;
+    }
+    #player_info tr.accordion:nth-last-child(3) td {
+        border-bottom: 0;
+    }
+    #player_info tr.explain_head:nth-last-child(2) td {
+        border-top: 1px solid #dddddd;
     }
     h1#score, h1#total_transfers {
         color: #fff;
@@ -499,6 +505,9 @@ footer {
 @media (prefers-color-scheme: dark) {
     #table_strength {
         border: 2px solid #000;
+    }
+    #table_strength tr {
+    border-bottom: 1px solid #000;
     }
     #table_strength tr {
     border-bottom: 1px solid #000;

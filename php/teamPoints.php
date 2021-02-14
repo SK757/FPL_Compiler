@@ -21,7 +21,7 @@
 							foreach($live['elements'] as $key=>$item1) {
 								foreach($data['elements'] as $key=>$item2) {
 									if ($item['element'] === $item1['id'] && $item['element'] === $item2['id']) {
-					?><tr>
+					?><tr class="accordion">
 						<td style="display: none;"><?PHP echo $item2['chance_of_playing_next_round']; ?></td>
 						<td class="deffo"><?PHP
 						if ($item2['web_name'] === 'Alexander-Arnold') {
@@ -71,6 +71,62 @@
 						} ?>
 						
 					</tr>
+					<tr class="explain_head">
+						<td colspan="6">
+							<div style="float: left;width: 40%;">
+								Statistic
+							</div>
+							<div style="float: left;width: 30%;">
+								Value
+							</div>
+							<div style="float: left;width: 30%;">
+								Points
+							</div>
+						</td>
+					</tr>
+					<tr class="explain">
+						<td colspan="6"><?PHP 
+							$game = 0;
+							foreach($item1['explain'] as $key=>$explain) {
+								foreach($explain['stats'] as $key=>$stats) {
+							?>
+
+							<div style="float: left;width: 40%;"><?PHP
+								if ($stats['identifier'] === 'minutes') {
+									echo 'Minutes';
+									'<div id="game_'.$game.'"></div>'
+								} elseif ($stats['identifier'] === 'goals_scored') {
+									echo 'Goals Scored';
+								} elseif ($stats['identifier'] === 'assists') {
+									echo 'Assists';
+								} elseif ($stats['identifier'] === 'clean_sheets') {
+									echo 'Clean Sheets';
+								} elseif ($stats['identifier'] === 'goals_conceded') {
+									echo 'Goals Conceded';
+								} elseif ($stats['identifier'] === 'saves') {
+									echo 'Saves';
+								} elseif ($stats['identifier'] === 'penalties_missed') {
+									echo 'Penalties Missed';
+								} elseif ($stats['identifier'] === 'penalties_saved') {
+									echo 'Penalties Saved';
+								} elseif ($stats['identifier'] === 'own_goals') {
+									echo 'Own Goals';
+								} elseif ($stats['identifier'] === 'yellow_cards') {
+									echo 'Yellow Cards';
+								} elseif ($stats['identifier'] === 'red_cards') {
+									echo 'Red Cards';
+								} elseif ($stats['identifier'] === 'bonus') {
+									echo 'Bonus';
+								}  else {
+									echo $stats['identifier'];
+								}
+							?></div>
+							<div style="float: left;width: 30%;"><?PHP echo $stats['value'];?></div>
+							<div style="float: left;width: 30%;"><?PHP echo $stats['points'];?></div>
+						<?PHP 
+								}++$game;
+							} ?></td>
+					</tr>
 					<?PHP
 									}
 					        	}
@@ -84,7 +140,24 @@
         					display:none;
 	    				}</style>
 					<?php
-					}
-				?></tbody>
+					} ?></tbody>
 			</table>
 		</div>
+		<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+				for (i = 0; i < acc.length; i++) {
+					acc[i].addEventListener("click", function() {
+						/* Toggle between hiding and showing the active panel */
+						var explain_head = this.nextElementSibling;
+						var explain = explain_head.nextElementSibling;
+						if (explain_head.style.display === "table-row" && explain.style.display === "table-row") {
+							explain_head.style.display = "none";
+							explain.style.display = "none";
+						} else {
+							explain_head.style.display = "table-row";
+							explain.style.display = "table-row";
+						}
+					});
+				}
+		</script>

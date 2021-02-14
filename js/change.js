@@ -142,7 +142,7 @@ function change() {
 	var twentyone = document.getElementById("week_21").innerText;
 	twentyone = twentyone.replace(/,/g, "");
 	if (parseInt(twenty) > parseInt(twentyone)) {
-	    document.getElementById("change_").innerHTML = "<i style='color: #00e187' class='fas fa-caret-up'></i>";
+	    document.getElementById("change_21").innerHTML = "<i style='color: #00e187' class='fas fa-caret-up'></i>";
 	} else {
 	    document.getElementById("change_21").innerHTML = "<i style='color: #ff2882' class='fas fa-caret-down'></i>";
 	}
