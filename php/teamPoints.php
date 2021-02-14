@@ -73,15 +73,9 @@
 					</tr>
 					<tr class="explain_head">
 						<td colspan="6">
-							<div style="float: left;width: 40%;">
-								Statistic
-							</div>
-							<div style="float: left;width: 30%;">
-								Value
-							</div>
-							<div style="float: left;width: 30%;">
-								Points
-							</div>
+							<div style="float: left;width: 40%;">Statistic</div>
+							<div style="float: left;width: 30%;">Value</div>
+							<div style="float: left;width: 30%;">Points</div>
 						</td>
 					</tr>
 					<tr class="explain">
