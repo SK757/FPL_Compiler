@@ -50,6 +50,9 @@
             display: none;
             overflow: hidden;
         }
+        td #game_1 {
+            padding-top: 10px;
+        }
 
         @media screen and (min-width: 900px) {
             section#reset {
@@ -62,6 +65,9 @@
         @media (prefers-color-scheme: dark) {
             tr.explain_head td {
                 border-bottom: 0 !important;
+            }
+            .explain {
+                background: #494e52 !important;
             }
         }
     </style>

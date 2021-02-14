@@ -93,8 +93,7 @@
 
 							<div style="float: left;width: 40%;"><?PHP
 								if ($stats['identifier'] === 'minutes') {
-									echo 'Minutes';
-									'<div id="game_'.$game.'"></div>'
+									echo '<div id="game_'.$game.'">Minutes</div>';
 								} elseif ($stats['identifier'] === 'goals_scored') {
 									echo 'Goals Scored';
 								} elseif ($stats['identifier'] === 'assists') {
@@ -121,8 +120,20 @@
 									echo $stats['identifier'];
 								}
 							?></div>
-							<div style="float: left;width: 30%;"><?PHP echo $stats['value'];?></div>
-							<div style="float: left;width: 30%;"><?PHP echo $stats['points'];?></div>
+							<div style="float: left;width: 30%;"><?PHP 
+								if ($stats['identifier'] === 'minutes') {
+									echo '<div id="game_'.$game.'">'.$stats['value'].'</div>';
+								} else {
+									echo $stats['value'];
+								}
+							?></div>
+							<div style="float: left;width: 30%;"><?PHP 
+								if ($stats['identifier'] === 'minutes') {
+									echo '<div id="game_'.$game.'">'.$stats['points'].'</div>';
+								} else {
+									echo $stats['points'];
+								}
+							?></div>
 						<?PHP 
 								}++$game;
 							} ?></td>
