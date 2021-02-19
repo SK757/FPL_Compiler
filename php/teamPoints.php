@@ -1,16 +1,20 @@
 		<?PHP include 'dates.php'; ?>
 
 		<div id="table_cont">
-			<table id="player_info" class="sortable">
+			<!-- <table id="player_info" class="sortable"> -->
+			<table id="player_info">
 		    	<thead>
 		        	<tr>
 		                <th style="display: none;">chance of playing </th>
-		            	<th id="nameHead" class="nocursor sorttable_nosort">Name</th>
-		                <th class="gwp">Gameweek Points</th>
-		                <th class="gwga nocursor sorttable_nosort">Gameweek Goals/Assists</th>
-		                <th class="xpn">EXPoints Next GW</th>
-		                <th class="goals2 nocursor sorttable_nosort">Goals/Assists/Clean Sheets</th>
-		                <th class="yc">Yellow Cards</th>
+		            	<!-- <th id="nameHead" class="nocursor sorttable_nosort">Name</th> -->
+		            	<th id="nameHead" class="nocursor">Name</th>
+		                <th class="gwp nocursor">Gameweek Points</th>
+		                <!-- <th class="gwga nocursor sorttable_nosort">Gameweek Goals/Assists</th> -->
+		                <th class="gwga nocursor">Gameweek Goals/Assists</th>
+		                <th class="xpn nocursor">EXPoints Next GW</th>
+		                <!-- <th class="goals2 nocursor sorttable_nosort">Goals/Assists/Clean Sheets</th> -->
+		                <th class="goals2 nocursor">Goals/Assists/Clean Sheets</th>
+		                <th class="yc nocursor">Yellow Cards</th>
 		            </tr>
 		        </thead>
 		        <tbody>
@@ -80,14 +84,15 @@
 					</tr>
 					<tr class="explain">
 						<td colspan="6"><?PHP 
-							$game = 0;
-							foreach($item1['explain'] as $key=>$explain) {
+							$game = 1;
+							foreach(array_reverse($item1['explain']) as $key=>$explain) {
+								echo '<div id="game_'.$game.'" style="float: left;width: 100%;"><b>Game ' . $game . '</b></div>';
 								foreach($explain['stats'] as $key=>$stats) {
 							?>
 
 							<div style="float: left;width: 40%;"><?PHP
 								if ($stats['identifier'] === 'minutes') {
-									echo '<div id="game_'.$game.'">Minutes</div>';
+									echo 'Minutes';
 								} elseif ($stats['identifier'] === 'goals_scored') {
 									echo 'Goals Scored';
 								} elseif ($stats['identifier'] === 'assists') {
@@ -114,20 +119,8 @@
 									echo $stats['identifier'];
 								}
 							?></div>
-							<div style="float: left;width: 30%;"><?PHP 
-								if ($stats['identifier'] === 'minutes') {
-									echo '<div id="game_'.$game.'">'.$stats['value'].'</div>';
-								} else {
-									echo $stats['value'];
-								}
-							?></div>
-							<div style="float: left;width: 30%;"><?PHP 
-								if ($stats['identifier'] === 'minutes') {
-									echo '<div id="game_'.$game.'">'.$stats['points'].'</div>';
-								} else {
-									echo $stats['points'];
-								}
-							?></div>
+							<div style="float: left;width: 30%;"><?PHP echo $stats['value']; ?></div>
+							<div style="float: left;width: 30%;"><?PHP echo $stats['points']; ?></div>
 						<?PHP 
 								}++$game;
 							} ?></td>

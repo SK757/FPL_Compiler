@@ -7,13 +7,13 @@
     <meta name="Description" content="FPL Team">
     <meta name="theme-color" content="#ffffff">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.97">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.98">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="manifest" href="/favicon/manifest.json?v=0.51">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?v=0.4">
     <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=0.3" color="#37003c">
-    <script src="js/sortable.js?=0.02"></script>
+    <!-- <script src="js/sortable.js?=0.02"></script> -->
     <style>
         #table_cont {
             max-height: calc(100vh - 139px);
@@ -22,8 +22,8 @@
             padding-top: 15px;
             padding-bottom: 15px;
         }
-        #player_info tbody tr:nth-child(11) {
-            border-bottom: 1px solid #c0020d;
+        #player_info tbody tr.accordion:nth-child(34) td {
+            border-top: 1px solid #c0020d;
         }
         section {
             display: flex;
@@ -50,9 +50,13 @@
             display: none;
             overflow: hidden;
         }
-        td #game_1 {
+        td #game_2, td #game_3 {
             padding-top: 10px;
         }
+        td #game_1, td #game_2, td #game_3 {
+            padding-bottom: 5px;
+        }
+
 
         @media screen and (min-width: 900px) {
             section#reset {
