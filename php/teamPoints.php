@@ -85,7 +85,7 @@
 					<tr class="explain">
 						<td colspan="6"><?PHP 
 							$game = 1;
-							foreach(array_reverse($item1['explain']) as $key=>$explain) {
+							foreach($item1['explain'] as $key=>$explain) {
 								echo '<div id="game_'.$game.'" style="float: left;width: 100%;"><b>Game ' . $game . '</b></div>';
 								foreach($explain['stats'] as $key=>$stats) {
 							?>
