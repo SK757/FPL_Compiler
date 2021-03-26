@@ -1,27 +1,33 @@
-self.addEventListener('install', function(e) {
- e.waitUntil(
-   caches.open('airhorner').then(function(cache) {
-     return cache.addAll([
-       '/',
-       '/index.php',
-       '/styles/css/main.css?0.98',
-       '/styles/css/p.css?0.9',
-       '/js/javascript.js?=0.14',
-       '/favicon/favicon.ico?v=0.4',
-       'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'
-     ]);
-   })
- );
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open('cache').then((cache) => {
+      return cache.addAll([
+        "/",
+        "/index.php",
+        "/php/dates.php",
+        "/php/points.php",
+        "/php/teamPoints.php",
+        "/styles/css/main.css",
+        "/styles/css/p.css",
+        "/js/javascript.js",
+        "/js/change.js",
+        "/js/sortable.js",
+        "/js/strength.js"
+        ]);
+    })
+  );
 });
 
 self.addEventListener('fetch', function(event) {
- console.log(event.request.url);
-
- event.respondWith(
-   caches.match(event.request).then(function(response) {
-     return response || fetch(event.request);
-   })
- );
+  event.respondWith(async function() {
+    try {
+      var res = await fetch(event.request);
+      var cache = await caches.open('cache');
+      cache.put(event.request.url, res.clone());
+      return res;
+    }
+    catch(error) {
+      return caches.match(event.request);
+    }
+  }());
 });
-// self.addEventListener('fetch', (event) => {});
-

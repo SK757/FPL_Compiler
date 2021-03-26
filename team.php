@@ -97,9 +97,9 @@
     </main> 
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker
-                     .register('/sw.js')
-                     .then(function() {console.log("Service Worker Registered"); });
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
         }
     </script>   
     <script src="js/javascript.js?=0.14"></script>
