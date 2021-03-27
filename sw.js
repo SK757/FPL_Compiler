@@ -4,16 +4,21 @@ self.addEventListener('install', (event) => {
       return cache.addAll([
         "/",
         "/index.php",
+        "/p",
+        "/team",
+        "/history",
+        "/strength",
         "/php/dates.php",
         "/php/points.php",
         "/php/teamPoints.php",
-        "/styles/css/main.css",
-        "/styles/css/p.css",
-        "/js/javascript.js",
-        "/js/change.js",
-        "/js/sortable.js",
-        "/js/strength.js"
-        ]);
+        "/styles/css/main.css?=0.98",
+        "/styles/css/p.css?=0.9",
+        "/js/javascript.js?=0.89",
+        "/js/change.js?=1.1",
+        "/js/sortable.js?=0.02",
+        "/js/strength.js?=0.89",
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      ]);
     })
   );
 });

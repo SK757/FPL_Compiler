@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <meta name="Description" content="FPL Points">
     <meta name="theme-color" content="#37063c">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/p.css?0.9">
-    <link rel="manifest" href="/favicon/manifest.json?v=0.51">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/css/p.css?=0.9">
+    <link rel="manifest" href="/favicon/manifest.json?=0.51">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="shortcut icon" href="/favicon/favicon.ico?v=0.4">
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=0.3" color="#37003c">
-    
+    <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?=0.3" color="#37003c">   
 </head>
 <body>
     <main class="grid-container">
@@ -31,6 +30,12 @@
         </section>
     </main>
     <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+
         causeRepaintsOn = $("h1, h2, h3, p");
         $(window).resize(function() {
             causeRepaintsOn.css("z-index", 1);
@@ -68,12 +73,6 @@
             score.style.fontSize = double;
         }
         score.innerHTML = z;
-
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js');
-            });
-        }
     </script>
 </body>
 </html>

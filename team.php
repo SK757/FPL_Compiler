@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <meta name="Description" content="FPL Team">
     <meta name="theme-color" content="#ffffff">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/main.css?0.98">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?=0.98">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" SameSite="none Secure">
-    <link rel="manifest" href="/favicon/manifest.json?v=0.51">
+    <link rel="manifest" href="/favicon/manifest.json?=0.51">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="shortcut icon" href="/favicon/favicon.ico?v=0.4">
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=0.3" color="#37003c">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?=0.3" color="#37003c">
     <!-- <script src="js/sortable.js?=0.02"></script> -->
     <style>
         #table_cont {
@@ -102,6 +102,6 @@
             });
         }
     </script>   
-    <script src="js/javascript.js?=0.14"></script>
+    <script src="js/javascript.js?=0.89"></script>
 </body>
 </html>
