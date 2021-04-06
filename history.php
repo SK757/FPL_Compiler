@@ -31,7 +31,7 @@
         }
         @media (prefers-color-scheme: dark) {
             .twentyfive {
-                background-color: #323639 !important;
+                background-color: #35363A !important;
                 color: #fff !important;
             }
         }
