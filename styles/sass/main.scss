@@ -374,10 +374,10 @@ footer {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #323639;
+        background-color: #35363A;
     }
     #myInput {
-        background-color: #323639;
+        background-color: #35363A;
         color: lightgrey;
     }
     button {
@@ -408,7 +408,7 @@ footer {
         }
     }
     #player_info tr:nth-child(odd), #player_info tr:nth-child(even) {
-        background-color: #323639;
+        background-color: #35363A;
         color: #fff
     }
     #player_info tr:last-child td {
@@ -424,7 +424,7 @@ footer {
         color: #fff;
     }
     .loadWrapper {
-        background: #323639;
+        background: #35363A;
     }
     .loading__anim {
         border: 5px solid rgba(0,225,135, 0.25);

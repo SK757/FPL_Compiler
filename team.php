@@ -7,13 +7,12 @@
     <meta name="Description" content="FPL Team">
     <meta name="theme-color" content="#ffffff">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/main.css?=0.98">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?=0.99">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="manifest" href="/favicon/manifest.json?=0.51">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
     <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?=0.3" color="#37003c">
-    <!-- <script src="js/sortable.js?=0.02"></script> -->
     <style>
         #table_cont {
             max-height: calc(100vh - 139px);
@@ -21,6 +20,9 @@
         #player_info th {
             padding-top: 15px;
             padding-bottom: 15px;
+        }
+        #player_info tbody tr.explain:nth-child(33) td {
+            border-bottom: none;
         }
         #player_info tbody tr.accordion:nth-child(34) td {
             border-top: 1px solid #c0020d;

@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <meta name="Description" content="FPL Points">
-    <meta name="theme-color" content="#37063c">
+    <meta name="theme-color" content="#37003c">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/p.css?=0.9">
+    <link rel="stylesheet" type="text/css" href="styles/css/p.css?=0.91">
     <link rel="manifest" href="/favicon/manifest.json?=0.51">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">

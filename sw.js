@@ -1,5 +1,5 @@
-const CACHE_NAME = "v1";
-const urlsToCache = [ 'index.php', '/p', '/team', '/history', '/strength', '/offline.html' ];
+const CACHE_NAME = "v1.6";
+const urlsToCache = [ '/', '/p', '/team', '/history', '/strength', '/offline.html', '/favicon/favicon.ico' ];
 
 const self = this;
 
