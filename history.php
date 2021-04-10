@@ -46,6 +46,9 @@
         section h1 {
             margin-bottom: 0;
         }
+        .change {
+            padding: 5px !important;
+        }
     </style>
 </head>
 <body>
@@ -89,7 +92,7 @@
                         <td><?PHP echo $item['value']/10; ?></td>
                         <?PHP echo '<td id="week_'.$count.'">' . number_format($item['overall_rank']); ?></td>
                         <td class="transfers" style="display: none;"><?PHP echo $item['event_transfers'] ?></td>
-                        <?PHP echo '<td id="change_'.$count.'">'; ?></td>
+                        <?PHP echo '<td class="change" id="change_'.$count.'">'; ?></td>
                     </tr>
                 <?PHP
                         ++$count; }
