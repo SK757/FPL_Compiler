@@ -72,7 +72,7 @@
         } else {
             score.style.fontSize = double;
         }
-        score.innerHTML = z;
+        score.textContent = z;
     </script>
 </body>
 </html>
