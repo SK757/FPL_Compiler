@@ -3,7 +3,7 @@
 <head>
     <title>Team Strength</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
     <meta name="Description" content="FPL Team Strength">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" type="text/css" href="styles/css/main.css?=0.99">
