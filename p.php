@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
     <meta name="Description" content="FPL Points">
     <meta name="theme-color" content="#37003c">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/css/p.css?=0.91">
     <link rel="manifest" href="/favicon/manifest.json?=0.51">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -35,11 +34,6 @@
                 navigator.serviceWorker.register('/sw.js');
             });
         }
-
-        causeRepaintsOn = $("h1, h2, h3, p");
-        $(window).resize(function() {
-            causeRepaintsOn.css("z-index", 1);
-        });
 
         var a = document.getElementById("player_0").innerText;
         var b = document.getElementById("player_1").innerText;
