@@ -4,17 +4,17 @@
     } elseif ($item['team'] == 2) {
         echo "AVL";
     } elseif ($item['team'] == 3) {
-    	echo "BHA";
+        echo "BRE";
     } elseif ($item['team'] == 4) {
-    	echo "BUR";
+    	echo "BHA";
     } elseif ($item['team'] == 5) {
-    	echo "CHE";
+    	echo "BUR";
     } elseif ($item['team'] == 6) {
-    	echo "CRY";
+    	echo "CHE";
     } elseif ($item['team'] == 7) {
-    	echo "EVE";
+    	echo "CRY";
     } elseif ($item['team'] == 8) {
-    	echo "FUL";
+    	echo "EVE";
     } elseif ($item['team'] == 9) {
     	echo "LEI";
     } elseif ($item['team'] == 10) {
@@ -28,13 +28,13 @@
     } elseif ($item['team'] == 14) {
         echo "NEW";
     } elseif ($item['team'] == 15) {
-        echo "SHU";
+        echo "NOR";
     } elseif ($item['team'] == 16) {
         echo "SOU";
     } elseif ($item['team'] == 17) {
         echo "TOT";
     } elseif ($item['team'] == 18) {
-        echo "WBA";
+        echo "WAT";
     } elseif ($item['team'] == 19) {
         echo "WHU";
     } elseif ($item['team'] == 20) {
