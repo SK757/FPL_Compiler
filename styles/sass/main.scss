@@ -178,9 +178,9 @@ button:active {
     text-align: center;
 }
 
-#player_info td:last-child, #player_info th:last-child, #player_info th.clean_sheets, #player_info td.clean_sheets_stat {
-    border-right: 0;
-}
+// #player_info td:last-child, #player_info th:last-child, #player_info th.clean_sheets, #player_info td.clean_sheets_stat {
+//     border-right: 0;
+// }
 
 // Adds border when user clicks advanced view
 // and is removed when user goes back to basic view
@@ -411,9 +411,9 @@ footer {
         background-color: #35363A;
         color: #fff
     }
-    #player_info tr:last-child td {
-        border-bottom: 0;
-    }
+    // #player_info tr:last-child td {
+    //     border-bottom: 0;
+    // }
     #player_info tr.accordion:nth-last-child(3) td, #player_info tr.accordion:nth-last-child(15) td {
         border-bottom: 0;
     }
