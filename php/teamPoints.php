@@ -134,7 +134,7 @@
 							++$count;
 					    }
 					} else {
-					    echo "<h2 style='text-align:center'>Gameweek Is Being Updated</h2>";
+					    echo "<h2 style='text-align:center'>Gameweek is Being Updated</h2>";
 					?>
     					<style type="text/css">main section{
         					display:none;

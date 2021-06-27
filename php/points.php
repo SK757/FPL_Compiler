@@ -27,7 +27,7 @@ if(is_array($picks)){
     	}
     }
 } else {
-    echo "<h1 style='grid-area:points;display:flex;justify-content:center;align-items:center;'>Gameweek Is Being Updated</h1>";
+    echo "<h1 style='grid-area:points;display:flex;justify-content:center;align-items:center;'>Gameweek is Being Updated</h1>";
 ?>
     <style type="text/css">main section{
         display:none !important;
