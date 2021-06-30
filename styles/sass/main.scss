@@ -147,8 +147,24 @@ button:active {
     .table_cont_history {
         max-height: calc(99vh - 67.906px)
     }
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #606060;
+        border-radius: 11px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #909090
+    }
+    ::-webkit-scrollbar-track {
+        background: #fff;
+    }
+    ::-webkit-scrollbar-track:horizontal {
+        border-top: 1px solid #dddddd;
+    }
 }
-
 
 #player_info {
     // border-collapse: separate;
@@ -386,6 +402,21 @@ footer {
     #table_cont {
         border: 2px solid #000;
     }
+    ::-webkit-scrollbar-thumb {
+        background: #aaa;
+    }
+    ::-webkit-scrollbar-track {
+        background: #2c2c2c;
+    }
+    ::-webkit-scrollbar-track:vertical {
+        border-left: 1px solid #606060;
+    }
+    ::-webkit-scrollbar-track:horizontal {
+        border-top: 1px solid #606060;
+    }
+    ::-webkit-scrollbar-corner {
+        background: #2c2c2c;
+    }
     #player_info th {
         border-right: 1px solid #000;
         color: #000;
@@ -510,13 +541,13 @@ footer {
         border: 2px solid #000;
     }
     #table_strength tr {
-    border-bottom: 1px solid #000;
-    }
-    #table_strength tr {
-    border-bottom: 1px solid #000;
+        border-bottom: 1px solid #000;
     }
     #table_strength th {
         border-right: 1px solid #000;
+    }
+    #table_strength td:last-child {
+        border-right: 1px solid #606060;
     }
     .t4, .t5, .t6, .t7 {
         color: #000 !important;
