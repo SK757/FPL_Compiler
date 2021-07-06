@@ -1,6 +1,7 @@
 $green: #00e187;
 $purple: #38003C;
 $pink: #e90052;
+$hover-colour: #01fc7a;
 $movement-text: #000;
 $font-stack: "Trebuchet MS", Arial, Helvetica, sans-serif;
 
@@ -210,9 +211,10 @@ button:active {
 #player_info tr:nth-child(even) {
     background-color: #f2f2f2;
 }
-
-#player_info tr:hover {
-    background-color: lightgreen;
+@media(hover: hover) and (pointer: fine) {
+    #player_info tr:hover {
+        background-color: $hover-colour;
+    }
 }
 
 /** Sticky Header **/
@@ -314,8 +316,10 @@ footer {
     font-size: 19px;
     @include transition(all 0.3s ease);
 }
-#return-to-top:hover {
-    background: rgba(2, 137, 78, 0.9);
+@media(hover: hover) and (pointer: fine) {
+    #return-to-top:hover {
+        background: rgba(2, 137, 78, 0.9);
+    }
 }
 #return-to-top:hover i {
     color: $movement-text;

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
     <meta name="Description" content="FPL Team Strength">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" type="text/css" href="styles/css/main.css?=0.994">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?=0.995">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="manifest" href="/favicon/manifest.json?=0.52">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
