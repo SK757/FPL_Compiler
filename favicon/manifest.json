@@ -46,9 +46,9 @@
             ]
         },
         {
-            "name": "FPL Team",
-            "url": "/team",
-            "description": "Fantasy Premier League Gameweek Team",
+            "name": "FPL Lineup",
+            "url": "/lineup",
+            "description": "Fantasy Premier League Gameweek Lineup",
             "icons": [
                 {
                     "src": "/favicon/FPLCompiler192copy.png",
@@ -61,18 +61,6 @@
             "name": "FPL History",
             "url": "/history",
             "description": "Fantasy Premier League Gameweek History",
-            "icons": [
-                {
-                    "src": "/favicon/FPLCompiler192copy.png",
-                    "sizes": "192x192",
-                    "type": "image/png"
-                }
-            ]
-        },
-        {
-            "name": "FPL Lineup",
-            "url": "/lineup",
-            "description": "Fantasy Premier League Gameweek Lineup",
             "icons": [
                 {
                     "src": "/favicon/FPLCompiler192copy.png",
