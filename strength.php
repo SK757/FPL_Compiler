@@ -9,7 +9,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#35363A">
     <link rel="stylesheet" type="text/css" href="styles/css/main.css?=0.995">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" SameSite="none Secure">
-    <link rel="manifest" href="/favicon/manifest.json?=0.53">
+    <link rel="manifest" href="/favicon/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
     <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?=0.3" color="#37003c">
