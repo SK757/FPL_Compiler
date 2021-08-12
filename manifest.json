@@ -5,7 +5,7 @@
     "background_color": "#ffffff",
     "display": "standalone",
     "scope": "/",
-    "start_url": "/",
+    "start_url": "https://fpl.seankirk.co.uk/",
     "description": "Compiler for Fantasy Premier League statistics",
     "orientation": "any",
     "icons": [
