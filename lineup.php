@@ -7,7 +7,7 @@
     <meta name="Description" content="FPL Lineup">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#37003c">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#35363A">
-    <link rel="stylesheet" type="text/css" href="styles/css/lineup.css?=0.3">
+    <link rel="stylesheet" type="text/css" href="styles/css/lineup.css?=0.4">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -19,9 +19,7 @@
         <?PHP include 'php/lineup/check.php'; ?>
         
         <section class="flex-container gk">
-            <div>
-                <b><p id="player_1"><?PHP include 'php/lineup/goalkeeper.php';?></p></b>
-            </div>
+            <?PHP include 'php/lineup/goalkeeper.php';?>
         </section>
 
         <section class="flex-container def">
