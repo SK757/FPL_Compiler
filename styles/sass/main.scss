@@ -1,8 +1,9 @@
 $green: #00e187;
-$purple: #38003C;
+$purple: #37003c;
 $pink: #e90052;
 $hover-colour: #01fc7a;
 $movement-text: #000;
+$grey: #35363A;
 $font-stack: "Trebuchet MS", Arial, Helvetica, sans-serif;
 
 @mixin transform($translate) {
@@ -394,10 +395,10 @@ footer {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #35363A;
+        background-color: $grey;
     }
     #myInput {
-        background-color: #35363A;
+        background-color: $grey;
         color: lightgrey;
     }
     button {
@@ -443,7 +444,7 @@ footer {
         }
     }
     #player_info tr:nth-child(odd), #player_info tr:nth-child(even) {
-        background-color: #35363A;
+        background-color: $grey;
         color: #fff
     }
     // #player_info tr:last-child td {
@@ -459,7 +460,7 @@ footer {
         color: #fff;
     }
     .loadWrapper {
-        background: #35363A;
+        background: $grey;
     }
     .loading__anim {
         border: 5px solid rgba(0,225,135, 0.25);
