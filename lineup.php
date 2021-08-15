@@ -7,7 +7,7 @@
     <meta name="Description" content="FPL Lineup">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#37003c">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#35363A">
-    <link rel="stylesheet" type="text/css" href="styles/css/lineup.css?=0.4">
+    <link rel="stylesheet" type="text/css" href="styles/css/lineup.css?=0.5">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -19,7 +19,11 @@
         <?PHP include 'php/lineup/check.php'; ?>
         
         <section class="flex-container gk">
-            <?PHP include 'php/lineup/goalkeeper.php';?>
+            <div class="column">
+                <?PHP include 'php/lineup/goalkeeper.php';?>
+                <?PHP include 'php/dates.php'; ?>
+                <span>Points <br><b><?PHP echo $picks['entry_history']['points'] ?></b></span>
+            </div>
         </section>
 
         <section class="flex-container def">
