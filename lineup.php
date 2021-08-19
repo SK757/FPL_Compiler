@@ -7,7 +7,7 @@
     <meta name="Description" content="FPL Lineup">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#37003c">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#35363A">
-    <link rel="stylesheet" type="text/css" href="styles/css/lineup.css?=0.5">
+    <link rel="stylesheet" type="text/css" href="styles/css/lineup.css?=0.6">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">

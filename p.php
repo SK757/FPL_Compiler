@@ -7,7 +7,7 @@
     <meta name="Description" content="FPL Points">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#37003c">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#35363A">
-    <link rel="stylesheet" type="text/css" href="styles/css/p.css?=0.91">
+    <link rel="stylesheet" type="text/css" href="styles/css/p.css?=1.0">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
