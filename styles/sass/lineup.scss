@@ -82,6 +82,20 @@ div {
 	// width: 100px;
 	font-size: 6vmin;
 }
+@media screen and (min-height: 300px) and (min-width: 500px) {
+	.player {
+		// width: 100px;
+		font-size: 3vmin;
+	}
+	.points {
+		// width: 100px;
+		font-size: 5vmin;
+	}
+	.image {
+		height: 3.2rem;
+		width: 3.2rem;
+	}
+}
 
 p { 
 	margin: 0;
