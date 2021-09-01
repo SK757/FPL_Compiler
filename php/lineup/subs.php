@@ -1,6 +1,5 @@
 <?PHP
 include 'php/dates.php';
-$count = 12;
 foreach($picks['picks'] as $key=>$item) {
     foreach($live['elements'] as $key=>$item1) {
 	    foreach($data['elements'] as $key=>$item2) {

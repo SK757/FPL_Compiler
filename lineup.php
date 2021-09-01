@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
     <meta name="Description" content="FPL Lineup">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#37003c">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#35363A">
-    <link rel="stylesheet" type="text/css" href="styles/css/lineup.css?=0.6">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
+    <link rel="stylesheet" type="text/css" href="styles/css/lineup.css?=0.7">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">

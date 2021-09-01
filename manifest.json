@@ -1,32 +1,21 @@
 {
     "name": "Fantasy Premier League Compiler",
     "short_name": "FPL",
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone",
-    "scope": "/",
     "start_url": "https://fpl.seankirk.co.uk/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
     "description": "Compiler for Fantasy Premier League statistics",
-    "orientation": "any",
     "icons": [
         {
-            "src": "/favicon/FPLCompiler192copy.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/favicon/FPLCompilercopy.png",
+            "src": "https://fpl.seankirk.co.uk/favicon/FPLCompilercopy.png",
             "sizes": "512x512",
-            "type": "image/png"
-        },
-        {
-            "src": "/favicon/FPLCompiler192.png",
-            "sizes": "192x192",
             "type": "image/png",
-            "purpose": "maskable"
+            "purpose": "any"
         },
         {
-            "src": "/favicon/FPLCompiler.png",
+            "src": "https://fpl.seankirk.co.uk/favicon/FPLCompiler.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
@@ -35,11 +24,12 @@
     "shortcuts": [
         {
             "name": "FPL Points",
+            "short_name": "Points",
+            "description": "Display gameweek points",
             "url": "/p",
-            "description": "Fantasy Premier League Gameweek Points",
             "icons": [
                 {
-                    "src": "/favicon/FPLCompiler192copy.png",
+                    "src": "/favicon/FPLCompiler192copy.png", 
                     "sizes": "192x192",
                     "type": "image/png"
                 }
@@ -47,11 +37,12 @@
         },
         {
             "name": "FPL Lineup",
+            "short_name": "Lineup",
+            "description": "Display gameweek lineup",
             "url": "/lineup",
-            "description": "Fantasy Premier League Gameweek Lineup",
             "icons": [
                 {
-                    "src": "/favicon/FPLCompiler192copy.png",
+                    "src": "/favicon/FPLCompiler192copy.png", 
                     "sizes": "192x192",
                     "type": "image/png"
                 }
@@ -59,11 +50,12 @@
         },
         {
             "name": "FPL History",
+            "short_name": "History",
+            "description": "Display gameweek history",
             "url": "/history",
-            "description": "Fantasy Premier League Gameweek History",
             "icons": [
                 {
-                    "src": "/favicon/FPLCompiler192copy.png",
+                    "src": "/favicon/FPLCompiler192copy.png", 
                     "sizes": "192x192",
                     "type": "image/png"
                 }
