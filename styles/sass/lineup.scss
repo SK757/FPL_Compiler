@@ -57,6 +57,8 @@ div {
 	text-align: center;
 	flex-direction: column;
 	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0%;
 }
 
 .image {
@@ -76,8 +78,15 @@ div {
 
 .player {
 	// width: 100px;
-	font-size: 4vmin;
+	font-size: .68rem;
 }
+
+.player p {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 .points {
 	// width: 100px;
 	font-size: 6vmin;
