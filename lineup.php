@@ -87,20 +87,20 @@
         var span = document.getElementsByClassName("player_modal__btn")[0];
 
 
+        //Player info Modal 
+        // btn.onclick = function() {
+        //     modal.style.display = "flex";
+        // };
 
-        btn.onclick = function() {
-            modal.style.display = "flex";
-        };
+        // span.onclick = function() {
+        //     modal.style.display = "none";
+        // };
 
-        span.onclick = function() {
-            modal.style.display = "none";
-        };
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        };
+        // window.onclick = function(event) {
+        //     if (event.target == modal) {
+        //         modal.style.display = "none";
+        //     }
+        // };
     </script> 
 </body>
 </html>
