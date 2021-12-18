@@ -55,8 +55,6 @@
 						if ($leagues['current_event'] <= 19) {
 							if ($item2['yellow_cards'] === 4) {
 								echo '<td style="background: #ffab1b;">' . $item2['yellow_cards'] . '</td>';
-							} elseif ($item2['yellow_cards'] === 5) {
-								echo '<td style="background: #c0020d;">' . $item2['yellow_cards'] . '</td>';
 							} else {
 								echo '<td>' . $item2['yellow_cards'] . '</td>';
 							}
@@ -64,8 +62,6 @@
 						elseif ($leagues['current_event'] <= 33) {
 							if ($item2['yellow_cards'] === 9) {
 								echo '<td style="background: #ffab1b;">' . $item2['yellow_cards'] . '</td>';
-							} elseif ($item2['yellow_cards'] === 10) {
-								echo '<td style="background: #c0020d;">' . $item2['yellow_cards'] . '</td>';
 							} else {
 								echo '<td>' . $item2['yellow_cards'] . '</td>';
 							}
@@ -73,8 +69,6 @@
 						elseif ($leagues['current_event'] <= 38) {
 							if ($item2['yellow_cards'] === 14) {
 								echo '<td style="background: #ffab1b;">' . $item2['yellow_cards'] . '</td>';
-							} elseif ($item2['yellow_cards'] === 15) {
-								echo '<td style="background: #c0020d;">' . $item2['yellow_cards'] . '</td>';
 							} else {
 								echo '<td>' . $item2['yellow_cards'] . '</td>';
 							}
