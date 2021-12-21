@@ -5,8 +5,8 @@
     "start_url": "/",
     "display": "standalone",
     "orientation": "portrait",
-    "background_color": "#ffffff",
-    "theme_color": "#ffffff",
+    "background_color": "#37003c",
+    "theme_color": "#37003c",
     "description": "Compiler for Fantasy Premier League statistics",
     "icons": [
         {
@@ -36,41 +36,35 @@
     ],
     "shortcuts": [
         {
-            "name": "FPL Points",
-            "short_name": "Points",
-            "description": "Display gameweek points",
-            "url": "/p",
+            "name":"FPL Points",
+            "url":"/p",
             "icons": [
                 {
-                    "src": "/favicon/FPLCompiler192copy.png", 
-                    "sizes": "192x192",
-                    "type": "image/png"
+                    "src":"/favicon/FPLCompiler192copy.png",
+                    "type":"image/png",
+                    "sizes":"192x192"
                 }
             ]
         },
         {
-            "name": "FPL Lineup",
-            "short_name": "Lineup",
-            "description": "Display gameweek lineup",
-            "url": "/lineup",
+            "name":"FPL Lineup",
+            "url":"/lineup",
             "icons": [
                 {
-                    "src": "/favicon/FPLCompiler192copy.png", 
-                    "sizes": "192x192",
-                    "type": "image/png"
+                    "src":"/favicon/FPLCompiler192copy1.png",
+                    "type":"image/png",
+                    "sizes":"192x192"
                 }
             ]
         },
         {
-            "name": "FPL History",
-            "short_name": "History",
-            "description": "Display gameweek history",
-            "url": "/history",
+            "name":"FPL History",
+            "url":"/history",
             "icons": [
                 {
-                    "src": "/favicon/FPLCompiler192copy.png", 
-                    "sizes": "192x192",
-                    "type": "image/png"
+                    "src":"/favicon/FPLCompiler192copy2.png",
+                    "type":"image/png",
+                    "sizes":"192x192"
                 }
             ]
         }
