@@ -41,6 +41,7 @@
             <?PHP include 'php/lineup/subs.php';?>
         </section>
     </section>
+    <span id="chip" style="display: none;"><b>(<?PHP echo $picks['active_chip'] ?>)</b></span>
 
     <!-- <article class="player_modal">
         <div class="player_modal__wrapper">
@@ -83,14 +84,26 @@
             });
         }
 
-        $(function() {
-            var sum = 0;
-            $('.p').each(function(){
-                sum += parseInt(this.innerHTML, 10);
-            });
+        if (document.getElementById("chip").innerText === '(bboost)') {
+            $(".bench .image").removeClass("bench-image"); 
+            $(function() {
+                var sum = 0;
+                $('.p').each(function(){
+                    sum += parseInt(this.innerHTML, 10);
+                });
 
-            $('.total_points b').text(sum);
-        });
+                $('.total_points b').text(sum);
+            });
+        } else {
+            $(function() {
+                var sum = 0;
+                $('.grid-container .p').each(function(){
+                    sum += parseInt(this.innerHTML, 10);
+                });
+
+                $('.total_points b').text(sum);
+            });
+        }
 
 
         //Player info Modal 
