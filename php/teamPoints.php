@@ -39,7 +39,9 @@
 						} else {
 							echo $item2['web_name'];
 						} ?></td>
-		                <?PHP echo '<td id="player_'.$count.'">';
+
+
+		                <?PHP echo '<td class="p">';
 		                if($item['multiplier'] === 2) {
 		                	echo $item1['stats']['total_points'] * 2 . ' (c)';
 		                } elseif($item['multiplier'] === 3) {

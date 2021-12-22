@@ -80,11 +80,11 @@
     </style>
 </head>
 <body>
-    <script>
+    <!-- <script>
         $(document).ready(function () {
             totalPoints();
         });
-    </script>
+    </script> -->
     <main style="display: block;">
         <?PHP include 'php/teamPoints.php'; ?>
         
@@ -104,7 +104,29 @@
                 navigator.serviceWorker.register('/sw.js');
             });
         }
+
+        if (document.getElementById('chip').innerText === '(bboost)') {
+            $(function() {
+                var sum = 0;
+                $('tbody .accordion .p').each(function(){
+                    sum += parseInt(this.innerHTML, 10);
+                });
+
+                $('#score').append(sum);
+            });
+        } else {
+            $(function() {
+                var sum = 0;
+                $('tbody .accordion .p').each(function(i){
+                    sum += parseInt(this.innerHTML, 10);
+                    if (i == 10) {
+                        return false;
+                    }
+                });
+                $('#score').append(sum);
+            });
+        }
     </script>   
-    <script src="js/javascript.js?=0.89"></script>
+    <script src="js/javascript.js?=0.9"></script>
 </body>
 </html>

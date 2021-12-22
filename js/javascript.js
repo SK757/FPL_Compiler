@@ -186,40 +186,40 @@ function headers(x) {
 		$(".gwga").html("Gameweek Goals/Assists");
 	}
 }
-function totalPoints() {
-	var a = document.getElementById("player_0").innerText;
-    var b = document.getElementById("player_1").innerText;
-    var c = document.getElementById("player_2").innerText;
-    var d = document.getElementById("player_3").innerText;
-    var e = document.getElementById("player_4").innerText;
-    var f = document.getElementById("player_5").innerText;
-    var g = document.getElementById("player_6").innerText;
-    var h = document.getElementById("player_7").innerText;
-    var i = document.getElementById("player_8").innerText;
-    var j = document.getElementById("player_9").innerText;
-    var k = document.getElementById("player_10").innerText;
-    // BENCH
-    var l = document.getElementById("player_11").innerText;
-    var m = document.getElementById("player_12").innerText;
-    var n = document.getElementById("player_13").innerText;
-    var o = document.getElementById("player_14").innerText;
+// function totalPoints() {
+// 	var a = document.getElementById("player_0").innerText;
+//     var b = document.getElementById("player_1").innerText;
+//     var c = document.getElementById("player_2").innerText;
+//     var d = document.getElementById("player_3").innerText;
+//     var e = document.getElementById("player_4").innerText;
+//     var f = document.getElementById("player_5").innerText;
+//     var g = document.getElementById("player_6").innerText;
+//     var h = document.getElementById("player_7").innerText;
+//     var i = document.getElementById("player_8").innerText;
+//     var j = document.getElementById("player_9").innerText;
+//     var k = document.getElementById("player_10").innerText;
+//     // BENCH
+//     var l = document.getElementById("player_11").innerText;
+//     var m = document.getElementById("player_12").innerText;
+//     var n = document.getElementById("player_13").innerText;
+//     var o = document.getElementById("player_14").innerText;
 
-    if (document.getElementById("chip").innerText === '(bboost)') {
-    	var z = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e) + parseInt(f) + parseInt(g) + parseInt(h) + parseInt(i) + parseInt(j) + parseInt(k) + parseInt(l) + parseInt(m) + parseInt(n) + parseInt(o);
-	    document.getElementById("score").insertAdjacentHTML('beforeend', z);
-		document.getElementById("player_11").insertAdjacentHTML('beforeend', ' (bb)');
-	    document.getElementById("player_12").insertAdjacentHTML('beforeend', ' (bb)');
-	    document.getElementById("player_13").insertAdjacentHTML('beforeend', ' (bb)');
-	    document.getElementById("player_14").insertAdjacentHTML('beforeend', ' (bb)');
-	} else {
-    	var x = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e) + parseInt(f) + parseInt(g) + parseInt(h) + parseInt(i) + parseInt(j) + parseInt(k);
-	    document.getElementById("score").insertAdjacentHTML('beforeend', x);
-		document.getElementById("player_11").insertAdjacentHTML('beforeend', ' (b)');
-	    document.getElementById("player_12").insertAdjacentHTML('beforeend', ' (b)');
-	    document.getElementById("player_13").insertAdjacentHTML('beforeend', ' (b)');
-	    document.getElementById("player_14").insertAdjacentHTML('beforeend', ' (b)');
-	}
-}
+//     if (document.getElementById("chip").innerText === '(bboost)') {
+//     	var z = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e) + parseInt(f) + parseInt(g) + parseInt(h) + parseInt(i) + parseInt(j) + parseInt(k) + parseInt(l) + parseInt(m) + parseInt(n) + parseInt(o);
+// 	    document.getElementById("score").insertAdjacentHTML('beforeend', z);
+// 		document.getElementById("player_11").insertAdjacentHTML('beforeend', ' (bb)');
+// 	    document.getElementById("player_12").insertAdjacentHTML('beforeend', ' (bb)');
+// 	    document.getElementById("player_13").insertAdjacentHTML('beforeend', ' (bb)');
+// 	    document.getElementById("player_14").insertAdjacentHTML('beforeend', ' (bb)');
+// 	} else {
+//     	var x = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e) + parseInt(f) + parseInt(g) + parseInt(h) + parseInt(i) + parseInt(j) + parseInt(k);
+// 	    document.getElementById("score").insertAdjacentHTML('beforeend', x);
+// 		document.getElementById("player_11").insertAdjacentHTML('beforeend', ' (b)');
+// 	    document.getElementById("player_12").insertAdjacentHTML('beforeend', ' (b)');
+// 	    document.getElementById("player_13").insertAdjacentHTML('beforeend', ' (b)');
+// 	    document.getElementById("player_14").insertAdjacentHTML('beforeend', ' (b)');
+// 	}
+// }
 var x = window.matchMedia("(max-width: 899px)");
 headers(x); // Call listener function at run time
 x.addListener(headers); // Attach listener function on state changes
