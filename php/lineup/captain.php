@@ -7,7 +7,7 @@ if($item['multiplier'] === 2) {
 } elseif($item['is_vice_captain'] === true) {
 	echo '<span class="capt">V</span>';
 }
-echo '</div><div class="player"><b><p>' . $item2['web_name']. '</p></b></div><div class="points"><b><p>';
+echo '</div><div class="player"><b><p>' . $item2['web_name']. '</p></b></div><div class="points"><b><p class="p">';
 if($item['multiplier'] === 2) {
 	echo $item1['stats']['total_points'] * 2;
 } elseif($item['multiplier'] === 3) {

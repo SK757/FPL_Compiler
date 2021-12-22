@@ -7,6 +7,7 @@
     <meta name="Description" content="FPL Lineup">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#37003c">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/css/lineup.css?=0.81">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -20,7 +21,7 @@
         
         <section class="flex-container gk">
             <?PHP include 'php/lineup/goalkeeper.php';?>
-            <span class="total_points">Points <br><b><?PHP echo $picks['entry_history']['points'] ?></b></span>
+            <span class="total_points">Points <br><b></b></span>
         </section>
 
         <section class="flex-container def">
@@ -82,12 +83,21 @@
             });
         }
 
-        var modal = document.getElementsByClassName("player_modal")[0];
-        var btn = document.getElementById("123");
-        var span = document.getElementsByClassName("player_modal__btn")[0];
+        $(function() {
+            var sum = 0;
+            $('.p').each(function(){
+                sum += parseInt(this.innerHTML, 10);
+            });
+
+            $('.total_points b').text(sum);
+        });
 
 
         //Player info Modal 
+        // var modal = document.getElementsByClassName("player_modal")[0];
+        // var btn = document.getElementById("123");
+        // var span = document.getElementsByClassName("player_modal__btn")[0];
+        
         // btn.onclick = function() {
         //     modal.style.display = "flex";
         // };
