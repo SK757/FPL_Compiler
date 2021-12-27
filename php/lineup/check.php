@@ -5,7 +5,7 @@ if (is_array($picks)) {
 		break;
 	}
 } else {
-	echo "<h1 style='grid-area:gk/gk/fwd/fwd;display:flex;justify-content:center;align-items:center;'>Gameweek is Being Updated</h1>"
+	echo "<h1 style='grid-area:gk/gk/fwd/fwd;display:flex;justify-content:center;align-items:center;text-align:center'>Gameweek is Being Updated</h1>"
 ?>
 <style type="text/css">
 	section{
