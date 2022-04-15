@@ -7,7 +7,8 @@
     <meta name="Description" content="FPL Points">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#37003c">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
-    <link rel="stylesheet" type="text/css" href="styles/css/p.css?=1.1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/css/p.css?=1.3">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -19,7 +20,21 @@
         <section class="info">
             <span id="chip"><b>(<?PHP echo $picks['active_chip'] ?>)</b></span>
             <h1>Gameweek <?php echo $leagues['current_event']; ?></h1>
-            <h2>Overall - <?php echo $leagues['summary_overall_points']; ?></h1>
+            <h2>Overall - <?php echo $leagues['summary_overall_points']; ?></h2>
+            <p id="runningTime" style="text-align: center;">
+                Gameweek <?php echo $leagues['current_event']+1; ?> Deadline<br>
+                <?php
+                    $gwdate = $deadline[0]['kickoff_time'];
+                    $fixed = date('D j M G:i', strtotime($gwdate.'-1 hour'.'-30 minute'));
+                    echo $fixed;
+                    // $remaining = $date - time();
+                    // $days = floor($remaining / 86400);
+                    // $hours = floor(($remaining % 86400) / 3600);
+                    // $mins = floor(($remaining % 3600) / 60);
+                    // $sec = ($remaining % 60);
+                    // echo "Gameweek ".$leagues['current_event']." Deadline ".$days."d ".$hours."h ".$mins."m ".$sec."s";
+                ?>
+            </p>
         </section>
         <section class="points">
             <a href="team" target="_top"><h1 id="score" class="score"></h1></a>
