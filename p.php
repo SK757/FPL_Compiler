@@ -27,12 +27,6 @@
                     $gwdate = $deadline[0]['kickoff_time'];
                     $fixed = date('D j M G:i', strtotime($gwdate.'-1 hour'.'-30 minute'));
                     echo $fixed;
-                    // $remaining = $date - time();
-                    // $days = floor($remaining / 86400);
-                    // $hours = floor(($remaining % 86400) / 3600);
-                    // $mins = floor(($remaining % 3600) / 60);
-                    // $sec = ($remaining % 60);
-                    // echo "Gameweek ".$leagues['current_event']." Deadline ".$days."d ".$hours."h ".$mins."m ".$sec."s";
                 ?>
             </p>
         </section>
