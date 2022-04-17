@@ -23,10 +23,13 @@
             <h2>Overall - <?php echo $leagues['summary_overall_points']; ?></h2>
             <p id="runningTime" style="text-align: center;">
                 Gameweek <?php echo $leagues['current_event']+1; ?> Deadline<br>
-                <?php
-                    $gwdate = $deadline[0]['kickoff_time'];
-                    $fixed = date('D j M G:i', strtotime($gwdate.'-1 hour'.'-30 minute'));
-                    echo $fixed;
+                <?php                    
+                    $kickoff = $deadline[0]['kickoff_time'];
+                    $datetime = new DateTime($kickoff);
+                    $timezone = new DateTimeZone('Europe/London');
+                    $datetime->setTimezone($timezone);
+                    $datetime->sub(new DateInterval('PT1H30M'));
+                    echo $datetime->format('D j M G:i');
                 ?>
             </p>
         </section>

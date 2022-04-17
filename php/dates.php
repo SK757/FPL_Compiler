@@ -9,8 +9,7 @@ $standings = json_decode(file_get_contents("https://fantasy.premierleague.com/ap
 $picks = json_decode(file_get_contents("https://fantasy.premierleague.com/api/entry/635855/event/".$leagues['current_event']."/picks/"), true);
 $live = json_decode(file_get_contents("https://fantasy.premierleague.com/api/event/".$leagues['current_event']."/live/"), true);
 
-$deadline = json_decode(file_get_contents("https://fantasy.premierleague.com/api/fixtures/?event=".$leagues['current_event']+1), true);
-
-
+$nextgw = $leagues['current_event']+1;
+$deadline = json_decode(file_get_contents("https://fantasy.premierleague.com/api/fixtures/?event=".$nextgw), true);
 
 ?>
