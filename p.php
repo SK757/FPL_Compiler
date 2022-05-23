@@ -22,14 +22,18 @@
             <h1>Gameweek <?php echo $leagues['current_event']; ?></h1>
             <h2>Overall - <?php echo $leagues['summary_overall_points']; ?></h2>
             <p id="runningTime" style="text-align: center;">
-                Gameweek <?php echo $leagues['current_event']+1; ?> Deadline<br>
-                <?php                    
+                <?php
+                 if (count($deadline) === 0) {              
+                    echo " ";
+                } else {
+                    echo "Gameweek " . $leagues['current_event']+1 . " Deadline<br>";
                     $kickoff = $deadline[0]['kickoff_time'];
                     $datetime = new DateTime($kickoff);
                     $timezone = new DateTimeZone('Europe/London');
                     $datetime->setTimezone($timezone);
                     $datetime->sub(new DateInterval('PT1H30M'));
                     echo $datetime->format('D j M G:i');
+                }
                 ?>
             </p>
         </section>
