@@ -4,11 +4,11 @@
     } elseif ($item['team'] == 2) {
         echo "AVL";
     } elseif ($item['team'] == 3) {
-        echo "BRE";
+        echo "BOU";
     } elseif ($item['team'] == 4) {
-    	echo "BHA";
+        echo "BRE";
     } elseif ($item['team'] == 5) {
-    	echo "BUR";
+    	echo "BHA";
     } elseif ($item['team'] == 6) {
     	echo "CHE";
     } elseif ($item['team'] == 7) {
@@ -16,25 +16,25 @@
     } elseif ($item['team'] == 8) {
     	echo "EVE";
     } elseif ($item['team'] == 9) {
-    	echo "LEI";
+        echo "FUL";
     } elseif ($item['team'] == 10) {
-    	echo "LEE";
+    	echo "LEI";
     } elseif ($item['team'] == 11) {
-    	echo "LIV";
+    	echo "LEE";
     } elseif ($item['team'] == 12) {
-    	echo "MCI";
+    	echo "LIV";
     } elseif ($item['team'] == 13) {
-    	echo "MUN";
+    	echo "MCI";
     } elseif ($item['team'] == 14) {
-        echo "NEW";
+    	echo "MUN";
     } elseif ($item['team'] == 15) {
-        echo "NOR";
+        echo "NEW";
     } elseif ($item['team'] == 16) {
-        echo "SOU";
+        echo "NFO";
     } elseif ($item['team'] == 17) {
-        echo "TOT";
+        echo "SOU";
     } elseif ($item['team'] == 18) {
-        echo "WAT";
+        echo "TOT";
     } elseif ($item['team'] == 19) {
         echo "WHU";
     } elseif ($item['team'] == 20) {
