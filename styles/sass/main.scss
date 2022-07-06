@@ -393,7 +393,7 @@ footer {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+// @media (prefers-color-scheme: dark) {
     body {
         background-color: $grey;
     }
@@ -470,7 +470,7 @@ footer {
     h2 {
         color: white;
     }
-}
+// }
 
 
 /*
@@ -541,7 +541,7 @@ footer {
     color: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
+// @media (prefers-color-scheme: dark) {
     #table_strength {
         border: 2px solid #000;
     }
@@ -557,4 +557,4 @@ footer {
     .t4, .t5, .t6, .t7 {
         color: #000 !important;
     }
-}
+// }
