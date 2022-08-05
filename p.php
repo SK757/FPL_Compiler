@@ -26,7 +26,9 @@
                  if (count($deadline) === 0) {              
                     echo " ";
                 } else {
-                    echo "Gameweek " . $leagues['current_event']+1 . " Deadline<br>";
+                ?>
+                Gameweek <?php echo $leagues['current_event']+1; ?> Deadline<br>
+                <?php
                     $kickoff = $deadline[0]['kickoff_time'];
                     $datetime = new DateTime($kickoff);
                     $timezone = new DateTimeZone('Europe/London');
