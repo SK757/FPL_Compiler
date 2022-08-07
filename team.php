@@ -69,13 +69,12 @@
                 max-height: calc(100vh - 69.1px);
             }
         }
-        @media (prefers-color-scheme: dark) {
-            tr.explain_head td {
-                border-bottom: 0 !important;
-            }
-            .explain {
-                background: #494e52 !important;
-            }
+        tr.explain_head td {
+            border-bottom: 0 !important;
+            background: #1a1a1a !important;
+        }
+        .explain {
+            background: #494e52 !important;
         }
     </style>
 </head>

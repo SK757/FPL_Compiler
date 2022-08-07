@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
     <meta name="Description" content="FPL Gameweek History">
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#1f1f1f">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/main.css?=1.1">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?=1.2">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -16,7 +16,7 @@
     <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?=0.3" color="#37003c">
     <script src="js/sortable.js?=0.02"></script>
     <style type="text/css">
-        @media (prefers-color-scheme: light) {
+        /*@media (prefers-color-scheme: light) {
             tr:nth-child(odd) {
                 background-color: #fff !important;
                 color: #000;
@@ -25,16 +25,20 @@
                 background-color: #f2f2f2 !important;
                 color: #000;
             }
-        }
+        }*//*
         .twentyfive {
             background-color: #fff !important;
             color: #000;
+        }*/
+        /*@media (prefers-color-scheme: dark) {*/
+        .twentyfive {
+            background-color: #1f1f1f !important;
+            color: #fff !important;
         }
-        @media (prefers-color-scheme: dark) {
-            .twentyfive {
-                background-color: #1f1f1f !important;
-                color: #fff !important;
-            }
+
+        /*}*/
+        tbody tr:last-child td {
+            border-bottom: none !important;
         }
         section {
             display: flex;
@@ -60,7 +64,7 @@
     </div>
     <main style="display: none;">
         <?php
-            $data = json_decode(file_get_contents("https://fantasy.premierleague.com/api/entry/635855/history/"), true);
+            $data = json_decode(file_get_contents("https://fantasy.premierleague.com/api/entry/329312/history/"), true);
         ?>
 
         <div id="table_cont" class="table_cont_history">
