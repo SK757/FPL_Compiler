@@ -122,7 +122,7 @@
             });
         }
     </script>
-    <script src="js/javascript.js?=0.89"></script>
+    <script src="js/javascript.js?=0.90"></script>
     <script src="js/change.js?=1.1"></script>
     <script>
 

@@ -41,7 +41,7 @@
             </div>
             <?php
                 $data = json_decode(file_get_contents("https://fantasy.premierleague.com/api/bootstrap-static/"), true);
-            ?><div id="in" style="flex-grow: 8.5; margin-right: 0"><input type="text" id="myInput" onkeyup="search()" placeholder="Search for player" title="Type in a name" autofocus></div>
+            ?><div id="in" style="flex-grow: 8.5; margin-right: 0"><input type="text" id="myInput" onkeyup="search()" placeholder="Search for player" title="Type in a name" autofocus autocomplete="chrome-off"></div>
         </div>
         <div class="flex-container">
             <div style="flex-grow: 1;margin-left: 0px"><button id="filterGK" onclick="keeper()"><b>GK</b></button></div>
@@ -65,25 +65,25 @@
                         <th class="goals">Goals </th>
                         <th class="assists">Assists </th>
                         <th class="clean_sheets">Clean Sheets </th>
-                        <th class="advanced">Price Change </th>
-                        <th class="advanced">Selected </th>
-                        <th class="advanced">Minutes </th>
+                        <th class="advanced price_c">Price Change </th>
+                        <th class="advanced selec">Selected </th>
+                        <th class="advanced min">Minutes </th>
                         <th class="advanced nocursor sorttable_nosort">News </th>
                         <th class="advanced in">Transfers In </th>
                         <th class="advanced out">Transfers Out </th>
                         <th class="advanced gc">Goals Conceded </th>
                         <th class="advanced og">Own Goals </th>
-                        <th class="advanced">Pens Saved </th>
-                        <th class="advanced">Pens Missed </th>
+                        <th class="advanced pens_s">Pens Saved </th>
+                        <th class="advanced pens_m">Pens Missed </th>
                         <th class="advanced yc">Yellow Cards </th>
                         <th class="advanced rc">Red Cards </th>
-                        <th class="advanced">Saves </th>
-                        <th class="advanced">Bonus Points </th>
-                        <th class="advanced">BPS Score </th>
-                        <th class="advanced">Influence </th>
-                        <th class="advanced">Creativity </th>
-                        <th class="advanced">Threat </th>    
-                        <th class="advanced">ICT Index </th>
+                        <th class="advanced saves">Saves </th>
+                        <th class="advanced bonus">Bonus Points </th>
+                        <th class="advanced bps">BPS Score </th>
+                        <th class="advanced inf">Influence </th>
+                        <th class="advanced cre">Creativity </th>
+                        <th class="advanced thr">Threat </th>    
+                        <th class="advanced ict">ICT Index </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -141,6 +141,6 @@
             });
         }
     </script>
-    <script src="js/javascript.js?=0.89"></script>
+    <script src="js/javascript.js?=0.90"></script>
 </body>
 </html>

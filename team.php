@@ -126,6 +126,6 @@
             });
         }
     </script>   
-    <script src="js/javascript.js?=0.9"></script>
+    <script src="js/javascript.js?=0.90"></script>
 </body>
 </html>
