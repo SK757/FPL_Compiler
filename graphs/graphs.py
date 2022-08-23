@@ -5,7 +5,7 @@ import urllib.request
 ################################ Data mining from the FPL API ################################
 # The only 2 parameters to specify are "teamID" and "lastGameweek"
 teamID = 329312
-lastGameweek = 3
+lastGameweek = 4
 
 # Get the detailed info about a given FPL Manager’s Team and a given game week
 gameweekData = {}
@@ -135,6 +135,7 @@ fig.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=0.3, hs
 ax1.plot(gameweek, points, color='b', label='Team FPL points')
 ax1.plot(gameweek, averagePoints, color='black', label='Average FPL points')
 ax1.plot(gameweek, highestPoints, color='r', label='Highest FPL points')
+ax1.set_xticks(gameweek)
 ax1.set_xlabel('Gameweek')
 ax1.set_ylabel('FPL points')
 ax1.legend(loc='best', frameon=True, prop={'size':6})
@@ -146,6 +147,7 @@ ax2.bar(gameweek, gameweekRank, color='b', label='GW Rank', width=0.5)
 ax2.plot(gameweek, overallRank, color='r', label='Overall rank')
 ax2.set_ylim(ymin=0)
 ax2.set_ylim(ymax=max(gameweekRank + 400000))
+ax2.set_xticks(gameweek)
 ax2.get_yaxis().get_major_formatter().set_scientific(False)
 ax2.set_xlabel('Gameweek')
 ax2.set_ylabel('Rank')
@@ -160,6 +162,7 @@ for rect in rects:
 ax3.bar(gameweek, list(map(lambda x: x/10, teamValue)), width=0.5, color='b')
 ax3.set_ylim(ymin=min(list(map(lambda x: x/10, teamValue)))-0.5)
 ax3.set_ylim(ymax=max(list(map(lambda x: x/10, teamValue)))+0.5)
+ax3.set_xticks(gameweek)
 ax3.set_xlabel('Gameweek')
 ax3.set_ylabel('Team Value (incl. bank)')
 rects = ax3.patches
@@ -180,6 +183,7 @@ ax4.legend(loc=2, frameon=True, prop={'size':6})
 ax44.legend(loc=1, frameon=True, prop={'size':6})
 ax44.set_ylim(ymin=0)
 ax44.set_ylim(ymax=max(transfersCost)+1)
+ax4.set_xticks(gameweek)
 ax4.yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 ax44.yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 
@@ -223,4 +227,4 @@ ax6.legend(wedges, positions,
 
 ax6.set_xlabel("Points per position over the season")
 
-fig.savefig('gw3.png')
+fig.savefig('gw4.png')
