@@ -227,4 +227,4 @@ ax6.legend(wedges, positions,
 
 ax6.set_xlabel("Points per position over the season")
 
-fig.savefig('gw4.png')
+fig.savefig('graphs/gw4.png')
