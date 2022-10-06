@@ -56,6 +56,7 @@ div {
 
 .column {
 	margin: 2px;
+	max-width: 198px;
 	text-align: center;
 	flex-direction: column;
 	flex-grow: 1;
@@ -108,6 +109,8 @@ div {
 	position: absolute;
 	top: 0;
 	width: 100%;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
 }
 table {
 	border-collapse: collapse;
@@ -146,6 +149,7 @@ td {
 		position: absolute;
 		transform: scale(1);
 		width: 90%;
+		border-radius: 0.2rem;
 		z-index: 3;
 	}
 	&__bg {
@@ -174,6 +178,8 @@ td {
 		position: absolute;
 		top: .55rem;
 		width: 1.875rem;
+		border-radius: 0.2rem;
+		z-index: 2;
 	}
 	&__btn-txt {
 		display: inline-block;
@@ -218,7 +224,11 @@ td {
 		text-transform: capitalize;
 	}
 	&__details-col1_offset {
+		display: inline-block;
 		padding-left: .42rem;
+		padding-top: .2rem;
+		font-size: 1.1rem;
+
 	}
 	.align_c {
 		text-align: center;
@@ -226,7 +236,13 @@ td {
 	}
 	&__col {
 		width: 21%;
-		
+	}
+	&__value {
+		font-size: 1.5rem;
+	}
+	&__highlight {
+		color: #ebff00;
+		font-size: 1.5rem;
 	}
 }
 
