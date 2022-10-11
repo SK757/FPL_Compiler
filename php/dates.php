@@ -12,4 +12,7 @@ $live = json_decode(file_get_contents("https://fantasy.premierleague.com/api/eve
 $nextgw = $leagues['current_event']+1;
 $deadline = json_decode(file_get_contents("https://fantasy.premierleague.com/api/fixtures/?event=".$nextgw), true);
 
+
+$fixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api/fixtures/?event=".$leagues['current_event']), true);
+
 ?>

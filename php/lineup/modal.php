@@ -15,14 +15,15 @@ echo '</div>';
                 </svg>
             </button>
             <h1 class="player_modal__heading"><?php echo $item2['web_name'] ?></h1>
-            <p style="font-size: 11px;margin: 0;margin-block-start: 0;margin-block-end: 0;"><?PHP include 'php/team.php';?> - <?PHP include 'php/position.php';?></p>
-            <span style="right: 4.75rem;position: absolute;top: 1.3rem;"><?PHP echo "£".$item2['now_cost']/10; ?></span>
+            <p style="font-size: 13px;"><?PHP include 'php/team.php';?> - <?PHP include 'php/position.php';?></p>
+            <span style="right: 17%;position: absolute;top: 1.3rem;"><?PHP echo "£".$item2['now_cost']/10; ?></span>
         </header>
-        <?php
-        	$game = 1;
-			foreach($item1['explain'] as $key=>$explain) {
-		?>
         <section class="player_modal__content">
+        <?php
+        $game = 1;
+        foreach($item1['explain'] as $key=>$explain) {
+            //include 'fixtures.php'
+        ?>
             <table class="player_modal__details">
                 <thead>
                     <tr>
@@ -68,12 +69,23 @@ echo '</div>';
                         </td>
                     </tr>
                     <?php 
-                    	}
-                    } 
+                    	}++$game
                     ?>
                 </tbody>
             </table>
         </section>
+        <?php
+        }
+        ?>
+
+
+
+
+
+
+
+
+
     </div>
     <div onclick="getElementById(<?php echo $item1['id'] ?>).style.display='none'" class="player_modal__bg" aria-hidden="true"></div>
     
