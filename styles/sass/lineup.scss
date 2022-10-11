@@ -12,6 +12,50 @@ body {
 	margin: 6px;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
+
+/*
+//
+// LOADING
+// SCREEN
+//
+*/
+.loadWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #37003c;
+}
+
+.loading {
+    max-width: 50%;
+    line-height: 1.4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+
+    &__anim {
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        border: 5px solid rgba(0,225,135, 0.15);
+        border-left-color: #00e187;
+        border-top-color: #00e187;
+        border-radius: 50%;
+        animation: rotate 600ms infinite linear;
+    }
+    @keyframes rotate {
+        to {
+            transform: rotate(1turn)
+        }
+    }
+}
+/*
+//
+//
+//
+//
+*/
 .grid-container {
 	display: grid;
 	grid-template-rows: repeat(4, 1fr);
@@ -300,5 +344,13 @@ span.capt {
 @media (prefers-color-scheme: dark) {
     html {
         background: #1f1f1f;
+    }
+    .loadWrapper {
+    	background: #1f1f1f;
+    }
+	.loading__anim {
+        border: 5px solid rgba(0,225,135, 0.25);
+        border-left-color: #00e187;
+        border-top-color: #00e187;
     }
 }
