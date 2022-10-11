@@ -4,7 +4,7 @@ $date = date("Y-m-d H:i:s");
 
 $data = json_decode(file_get_contents("https://fantasy.premierleague.com/api/bootstrap-static/"), true);
 $leagues = json_decode(file_get_contents("https://fantasy.premierleague.com/api/entry/329312/"), true);
-$standings = json_decode(file_get_contents("https://fantasy.premierleague.com/api/leagues-classic/114089/standings/?page_new_entries=1&page_standings=1&phase=1"), true);
+$standings = json_decode(file_get_contents("https://fantasy.premierleague.com/api/leagues-classic/66174/standings/?page_new_entries=1&page_standings=1&phase=1"), true);
 
 $picks = json_decode(file_get_contents("https://fantasy.premierleague.com/api/entry/329312/event/".$leagues['current_event']."/picks/"), true);
 $live = json_decode(file_get_contents("https://fantasy.premierleague.com/api/event/".$leagues['current_event']."/live/"), true);

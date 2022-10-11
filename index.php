@@ -89,40 +89,40 @@
                 <tbody>
                 <?PHP
                     // $i = 0;
-                    foreach($data['elements'] as $key=>$item)
+                    foreach($data['elements'] as $key=>$item2)
                     {
                 ?>
     <tr>
-                        <td style="display: none;"><?PHP echo $item['chance_of_playing_next_round']; ?></td>
-                        <td id="name"><b><?PHP echo $item['web_name']; ?></b><br><p style="font-size: 11px;margin: 0;margin-block-start: 0;margin-block-end: 0;"><?PHP include 'php/team.php';?> - <?PHP include 'php/position.php';?></p></td>
-                        <td><?PHP echo $item['total_points']; ?></td>
-                        <td><?PHP echo "£".$item['now_cost']/10; ?></td>
-                        <td><?PHP echo $item['points_per_game']; ?></td>
-                        <td><?PHP echo $item['event_points']; ?></td>
-                        <td class="advanced"><?PHP echo $item['ep_this']; ?></td>
-                        <td><?PHP echo $item['ep_next']; ?></td>
-                        <td><?PHP echo $item['goals_scored']; ?></td>
-                        <td><?PHP echo $item['assists']; ?></td>
-                        <td class="clean_sheets_stat"><?PHP echo $item['clean_sheets']; ?></td>
-                        <td class="advanced"><?PHP echo "£".$item['cost_change_start']/10; ?></td>
-                        <td class="advanced"><?PHP echo $item['selected_by_percent']."%"; ?></td>
-                        <td class="advanced"><?PHP echo $item['minutes']; ?></td>
-                        <td class="advanced"><?PHP echo $item['news']; ?></td>
-                        <td class="advanced"><?PHP echo $item['transfers_in_event']; ?></td>
-                        <td class="advanced"><?PHP echo $item['transfers_out_event']; ?></td>
-                        <td class="advanced"><?PHP echo $item['goals_conceded']; ?></td>
-                        <td class="advanced"><?PHP echo $item['own_goals']; ?></td>
-                        <td class="advanced"><?PHP echo $item['penalties_saved']; ?></td>
-                        <td class="advanced"><?PHP echo $item['penalties_missed']; ?></td>
-                        <td class="advanced"><?PHP echo $item['yellow_cards']; ?></td>
-                        <td class="advanced"><?PHP echo $item['red_cards']; ?></td>
-                        <td class="advanced"><?PHP echo $item['saves']; ?></td>
-                        <td class="advanced"><?PHP echo $item['bonus']; ?></td>
-                        <td class="advanced"><?PHP echo $item['bps']; ?></td>
-                        <td class="advanced"><?PHP echo $item['influence']; ?></td>
-                        <td class="advanced"><?PHP echo $item['creativity']; ?></td>
-                        <td class="advanced"><?PHP echo $item['threat']; ?></td>
-                        <td class="advanced"><?PHP echo $item['ict_index']; ?></td>
+                        <td style="display: none;"><?PHP echo $item2['chance_of_playing_next_round']; ?></td>
+                        <td id="name"><b><?PHP echo $item2['web_name']; ?></b><br><p style="font-size: 11px;margin: 0;margin-block-start: 0;margin-block-end: 0;"><?PHP include 'php/team.php';?> - <?PHP include 'php/position.php';?></p></td>
+                        <td><?PHP echo $item2['total_points']; ?></td>
+                        <td><?PHP echo "£".$item2['now_cost']/10; ?></td>
+                        <td><?PHP echo $item2['points_per_game']; ?></td>
+                        <td><?PHP echo $item2['event_points']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['ep_this']; ?></td>
+                        <td><?PHP echo $item2['ep_next']; ?></td>
+                        <td><?PHP echo $item2['goals_scored']; ?></td>
+                        <td><?PHP echo $item2['assists']; ?></td>
+                        <td class="clean_sheets_stat"><?PHP echo $item2['clean_sheets']; ?></td>
+                        <td class="advanced"><?PHP echo "£".$item2['cost_change_start']/10; ?></td>
+                        <td class="advanced"><?PHP echo $item2['selected_by_percent']."%"; ?></td>
+                        <td class="advanced"><?PHP echo $item2['minutes']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['news']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['transfers_in_event']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['transfers_out_event']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['goals_conceded']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['own_goals']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['penalties_saved']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['penalties_missed']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['yellow_cards']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['red_cards']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['saves']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['bonus']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['bps']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['influence']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['creativity']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['threat']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['ict_index']; ?></td>
                     </tr>
                 <?PHP
                     }   //if (++$i == 14) {break;}  

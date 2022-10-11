@@ -1,11 +1,7 @@
 <?php
-	if ($item['element_type'] == 1) {
-        echo "GK";
-    } elseif ($item['element_type'] == 2) {
-        echo "DEF";
-    } elseif ($item['element_type'] == 3) {
-        echo "MID";
-    } elseif ($item['element_type'] == 4) {
-        echo "FWD";
+    foreach($data['element_types'] as $key=>$positions) {
+        if ($item2['element_type'] === $positions['id']) {
+            echo $positions['singular_name_short'];
+        }
     }
 ?>

@@ -36,15 +36,15 @@
             	</thead>
     			<tbody class="strength">
                 <?php
-                    foreach($data['teams'] as $key=>$item)
+                    foreach($data['teams'] as $key=>$teams)
                     {
-                        $overallHome = $item['strength_overall_home'];
-                        $overallAway = $item['strength_overall_away'];
-                        $attackHome = $item['strength_attack_home'];
-                        $attackAway = $item['strength_attack_away'];
+                        $overallHome = $teams['strength_overall_home'];
+                        $overallAway = $teams['strength_overall_away'];
+                        $attackHome = $teams['strength_attack_home'];
+                        $attackAway = $teams['strength_attack_away'];
                     ?>
             		<tr>
-            			<td><?php echo $item['name']; ?></td>
+            			<td><?php echo $teams['name']; ?></td>
             			<td><?php echo $overallHome; ?></td>
             			<td><?php echo $overallAway; ?></td>
             			<td><?php echo $attackHome; ?></td>
