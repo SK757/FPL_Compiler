@@ -22,7 +22,9 @@ echo '</div>';
         <?php
         $game = 1;
         foreach($item1['explain'] as $key=>$explain) {
-            //include 'fixtures.php'
+            echo "<section class='player_modal__fixture'>";
+            include 'fixtures.php';
+            echo "</section>";
         ?>
             <table class="player_modal__details">
                 <thead>
@@ -65,7 +67,7 @@ echo '</div>';
                         <td class="align_c player_modal__col">	<strong class="player_modal__value"><?php echo $stats['value'] ?></strong>
                         </td>
                         <td class="align_c player_modal__col">
-                        	<strong class="player_modal__highlight"><?php echo $stats['points'] ?><strong>
+                        	<strong class="player_modal__highlight"><?php echo $stats['points'] ?></strong>
                         </td>
                     </tr>
                     <?php 
