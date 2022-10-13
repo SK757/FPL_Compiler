@@ -15,7 +15,7 @@ echo '</div>';
                 </svg>
             </button>
             <h1 class="player_modal__heading"><?php echo $item2['web_name'] ?></h1>
-            <p style="font-size: 13px;"><?PHP include 'php/team.php';?> - <?PHP include 'php/position.php';?></p>
+            <p style="font-size: 0.8rem;"><?PHP include 'php/team.php';?> - <?PHP include 'php/position.php';?></p>
             <span style="right: 17%;position: absolute;top: 1.3rem;"><?PHP echo "£".$item2['now_cost']/10; ?></span>
         </header>
         <section class="player_modal__content">
