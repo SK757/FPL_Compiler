@@ -26,30 +26,6 @@ body {
     min-height: 99vh;
     background: #37003c;
 }
-
-// .loading {
-//     max-width: 50%;
-//     line-height: 1.4;
-//     font-size: 1.2rem;
-//     font-weight: bold;
-//     text-align: center;
-
-//     &__anim {
-//         width: 35px;
-//         height: 35px;
-//         display: inline-block;
-//         border: 5px solid rgba(0,225,135, 0.15);
-//         border-left-color: #00e187;
-//         border-top-color: #00e187;
-//         border-radius: 50%;
-//         animation: rotate 600ms infinite linear;
-//     }
-//     @keyframes rotate {
-//         to {
-//             transform: rotate(1turn)
-//         }
-//     }
-// }
 .loader {
   display: inline-block;
   width: 30px;
@@ -311,7 +287,7 @@ td {
 	&__fixture {
 		align-items: center;
 	    display: grid;
-	    grid-template-columns: 1fr 5rem 1fr;
+	    grid-template-columns: 1fr 5.5rem 1fr;
 	    height: 3.2rem;
 	    margin: 0 -0.75rem;
 	    position: relative;
@@ -322,22 +298,48 @@ td {
 		}
 		strong {
 			color: #ebff00;
-		    font-size: 1.2rem;
+		    font-size: 1.6rem;
 		    font-variant-numeric: tabular-nums;
 		    line-height: 1.25;
 		    margin: 0 0.5rem;
 		    text-align: center;
+		}
+		time {
+			color: #d0bcd3;
+			font-size: .8215rem;
+			font-weight: 400;
+			line-height: 1;
+			margin: -0.1rem 0;
+			text-align: center;
+		}
+		.fixture__ko-item_modal {
+			display: block;
+	    font-size: .8rem;
+	    margin-bottom: -3px;
 		}
 		.away {
 		    text-align: left;
 		    font-size: 1rem;
 		    font-weight: normal;
 		}
-		.minute {
-		    text-align: center;
-		    font-size: 0.7rem;
-		    font-weight: normal;
-		    margin-top: -1rem;
+		.live {
+	    align-items: center;
+	    color: #37003c;
+	    display: flex;
+	    position: absolute;
+	    left: 0.7rem;
+	    padding: 0.2rem;
+	    background: #d0bcd3;
+	    border-radius: 4px;
+		}
+		.minutes {
+	    align-items: center;
+	    color: #d0bcd3;
+	    display: flex;
+	    height: 100%;
+	    position: absolute;
+	    right: .33rem;
+	    top: 0
 		}
 	}
 	&__details {
@@ -443,6 +445,13 @@ span.capt {
     .player_modal__header {
     	color: #1f1f1f;
     }
+    .live {
+    	color: #1d1d1d !important;
+	    background: #d1d1d1 !important;
+    }
+    time, .minutes {
+	    color: #d1d1d1 !important;
+		}
     th {
     	background: #343434;
     }
