@@ -20,6 +20,10 @@ echo '</div>';
         </header>
         <section class="player_modal__content">
         <?php
+        // Blank Gameweek
+        if(empty($item1['explain'])) {
+            echo '<p class="player_modal__blank">No match this gameweek</p>';
+        }
         $game = 1;
         foreach($item1['explain'] as $key=>$explain) {
             echo "<section class='player_modal__fixture'>";

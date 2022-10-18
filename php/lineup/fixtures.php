@@ -7,7 +7,13 @@
                 if ($explain['fixture'] === $fixture['id']) {
                       //fixture home team       //team info
                     if ($fixture['team_h'] === $teams['id']) {
-                        echo '<span class="home">'.$teams['name'].'</span>';
+                        echo '<span class="home">';
+                        if ($teams['name'] === 'Crystal Palace') {
+                            echo 'Palace';
+                        } else {
+                            echo $teams['name'];
+                        }
+                        echo '</span>';
                         if ($fixture['started'] == false) {
                             echo '<strong><time class="fixture__ko" datetime="fixture.kickoff_time"><span class="fixture__ko-item_modal">';
                             $kickoff = $fixture['kickoff_time'];

@@ -287,6 +287,11 @@ td {
 	&__content {
 		padding: 0rem .75rem;
 	}
+	&__blank {
+		font-size: 1.2rem;
+		margin: 0.8rem 0;
+		text-align: center;
+	}
 	&__fixture {
 		align-items: center;
 	    display: grid;
@@ -341,7 +346,7 @@ td {
 	    display: flex;
 	    height: 100%;
 	    position: absolute;
-	    right: .33rem;
+	    right: .7rem;
 	    top: 0
 		}
 	}
@@ -429,6 +434,15 @@ span.capt {
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+@keyframes bg-fade {
+    0% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
 
