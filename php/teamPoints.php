@@ -77,8 +77,13 @@
 					<tr class="explain">
 						<td colspan="6"><?PHP 
 							$game = 1;
+							if(empty($item1['explain'])) {
+					            echo '<p class="player_modal__blank">No match this gameweek</p>';
+					        }
 							foreach($item1['explain'] as $key=>$explain) {
-								echo '<div id="game_'.$game.'" style="float: left;width: 100%;"><b>Game ' . $game . '</b></div>';
+								echo '<div id="game_'.$game.'" class="fix"><div class="game_container">';
+								include 'lineup/fixtures.php';
+								echo '</div></div>';
 								foreach($explain['stats'] as $key=>$stats) {
 							?>
 

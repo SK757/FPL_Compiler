@@ -52,12 +52,46 @@
         .explain_head, .explain {
             display: none;
             overflow: hidden;
+            transition: display .4s ease-out;
+        }
+        .fix {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            left: 0;
+            top: 0;
+            width: 100%;
+            padding-bottom: 7px;
+            margin-bottom: 7px;
+            border-bottom: 1px solid #7d7d7d;
         }
         td #game_2, td #game_3 {
             padding-top: 10px;
         }
-        td #game_1, td #game_2, td #game_3 {
-            padding-bottom: 5px;
+        .game_container {
+            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr 4rem 1fr;
+            height: 1.5rem;
+            position: relative;
+        }
+        .home {
+            font-size: 0.8rem;
+            text-align: right;
+        }
+        strong {
+            color: #ebff00;
+            font-size: 1.2rem;
+            font-variant-numeric: tabular-nums;
+            line-height: 1.25;
+            text-align: center;
+        }
+        .away {
+            font-size: 0.8rem;
+            text-align: left;
+        }
+        .player_modal__blank {
+            margin: 0.5rem 0;
         }
 
 
