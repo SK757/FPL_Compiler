@@ -44,7 +44,12 @@
                       //fixture away team      //team info
                     if ($fixture['team_a'] === $teams['id']) {
                         echo $fixture['team_a_score'].'</strong>';
-                        echo '<span class="away">'.$teams['name'];
+                        echo '<span class="away">';
+                        if ($teams['name'] === 'Crystal Palace') {
+                            echo 'Palace';
+                        } else {
+                            echo $teams['name'];
+                        }
                         if ($fixture['started'] == true && $fixture['finished_provisional'] == false) {
                             echo '<span class="minutes">'.$fixture['minutes']."'".'</span></span>';
                         }

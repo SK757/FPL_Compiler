@@ -71,27 +71,60 @@
         .game_container {
             align-items: center;
             display: grid;
-            grid-template-columns: 1fr 4rem 1fr;
+            width: 100%;
+            grid-template-columns: 1fr 5rem 1fr;
             height: 1.5rem;
             position: relative;
         }
         .home {
-            font-size: 0.8rem;
+            font-size: 1rem;
             text-align: right;
+        }
+        .live {
+            align-items: center;
+            color: #1d1d1d;
+            display: flex;
+            position: absolute;
+            left: 0.7rem;
+            padding: 0 0.15rem;
+            background: #d1d1d1;
+            border-radius: 4px;
         }
         strong {
             color: #ebff00;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-variant-numeric: tabular-nums;
             line-height: 1.25;
             text-align: center;
         }
         .away {
-            font-size: 0.8rem;
+            font-size: 1rem;
             text-align: left;
+        }
+        .minutes {
+            align-items: center;
+            color: #d1d1d1;
+            display: flex;
+            height: 100%;
+            position: absolute;
+            right: 0.7rem;
+            top: 0;
         }
         .player_modal__blank {
             margin: 0.5rem 0;
+        }
+        .fixture__ko {
+            font-size: .8215rem;
+            font-weight: 400;
+            line-height: 1;
+            margin: -0.1rem 0;
+            text-align: center;
+            color: #d1d1d1;
+        }
+        .fixture__ko-item_modal {
+            display: block;
+            font-size: 0.8rem;
+            margin-bottom: -3px;
         }
 
 
