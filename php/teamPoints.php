@@ -67,13 +67,6 @@
 						} ?>
 						
 					</tr>
-					<tr class="explain_head">
-						<td colspan="6">
-							<div style="float: left;width: 40%;">Statistic</div>
-							<div style="float: left;width: 30%;">Value</div>
-							<div style="float: left;width: 30%;">Points</div>
-						</td>
-					</tr>
 					<tr class="explain">
 						<td colspan="6"><?PHP 
 							$game = 1;
@@ -84,6 +77,13 @@
 								echo '<div id="game_'.$game.'" class="fix"><div class="game_container">';
 								include 'lineup/fixtures.php';
 								echo '</div></div>';
+							?>
+							<div class="ex_head">
+								<div style="float: left;width: 40%;">Statistics</div>
+								<div style="float: left;width: 30%;">Value</div>
+								<div style="float: left;width: 30%;">Points</div>
+							</div>
+							<?PHP
 								foreach($explain['stats'] as $key=>$stats) {
 							?>
 
@@ -144,13 +144,10 @@
 				for (i = 0; i < acc.length; i++) {
 					acc[i].addEventListener("click", function() {
 						/* Toggle between hiding and showing the active panel */
-						var explain_head = this.nextElementSibling;
-						var explain = explain_head.nextElementSibling;
-						if (explain_head.style.display === "table-row" && explain.style.display === "table-row") {
-							explain_head.style.display = "none";
+						var explain = this.nextElementSibling;
+						if (explain.style.display === "table-row") {
 							explain.style.display = "none";
 						} else {
-							explain_head.style.display = "table-row";
 							explain.style.display = "table-row";
 						}
 					});
