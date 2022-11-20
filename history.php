@@ -8,7 +8,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#1f1f1f">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/main.css?=1.2">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?=1.3">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -110,6 +110,10 @@
         <section>
             <h1 id="total_transfers">Total Transfers - </h1>
         </section>
+        <!-- BACK TO HOME BUTTON -->
+        <a href="/" aria-label="Return to home page" id="return-to-home">
+            <i class="fas fa-home"></i>
+        </a>
         <!-- BACK TO TOP BUTTON -->
         <a href="javascript:" aria-label="Return to the top of the table" id="return-to-top">
             <i class="fa fa-chevron-up"></i>

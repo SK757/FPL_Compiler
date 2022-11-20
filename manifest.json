@@ -5,8 +5,8 @@
     "start_url": "/",
     "display": "standalone",
     "orientation": "portrait",
-    "background_color": "#37003c",
-    "theme_color": "#37003c",
+    "background_color": "#02efff",
+    "theme_color": "#02efff",
     "description": "Compiler for Fantasy Premier League statistics",
     "icons": [
         {

@@ -1,0 +1,221 @@
+html {
+	background-color: #02efff;
+	background-image: linear-gradient(0deg, #00beff 0%, #02efff 100%);
+}
+body {
+	max-width: 700px;
+	margin: 8px auto;
+	height: calc(100vh - 16px);
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.title {
+	grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+	h1 {
+		margin: 0.3rem 0;
+		font-size: 9.5vmin;
+		font-size: calc(30px + 1vw);
+	}
+}
+.name {
+	grid-area: name;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+
+	h1 {
+		margin: 0.3rem 0;
+		font-size: 5.5vmin;
+		font-size: calc(20px + 1vw);
+	}
+}
+.points {
+	grid-area: points;
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.5);
+
+    h2 {
+		// font-size: 15vh;
+		font-size: 30vmin;
+		margin: 0;
+		line-height: 0.9em;
+		font-size: calc(102px + 3vw);
+	}
+
+	.gwb, .gwdb {
+		margin: 0;
+		padding: .2rem .9rem;
+		background: #37003c;
+		text-align: center;
+		font-size: calc(10px + .5vw);
+		font-weight: bold;
+		span {
+		    background-image: linear-gradient(to right, rgb(0, 255, 135), rgb(2, 239, 255));
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+	.gwb {
+		border-radius: 0 0 15px 15px;
+	}
+	.gwdb {
+		border-radius: 15px 15px 0 0;
+	}
+	a {
+	    background: rgba(255, 255, 255, 0.6);
+	    border-radius: 6px;
+	    margin: 0.4rem 0;
+	    padding: 1rem;
+	    text-align: center;
+	}
+	p {
+		margin: 0;
+		font-weight: bold;
+	}
+
+}
+
+.comp {
+	grid-area: comp;
+}
+.lineup {
+	grid-area: lineup;
+}
+.history {
+	grid-area: history;
+}
+.strength {
+	grid-area: strength;
+}
+
+.table1 {
+	grid-area: table1;
+}
+.table2 {
+	grid-area: table2;
+}
+
+.table1, .table2 {
+    background: rgba(255, 255, 255, 0.5);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+    border-radius: 3px;
+	@media only screen and (max-height: 732px) {
+		overflow: scroll;
+	}
+
+
+    h4 {
+    	text-align: center;
+    	margin: .5rem 0;
+    }
+    ol {
+    	margin: 0;
+    	list-style-type: none;
+    	padding: 0;
+    }
+    li {
+    	width: 42vmin;
+    	@media only screen and (max-width: 450px) {
+			max-width: 165px;
+		}
+    	@media only screen and (min-width: 451px) {
+			max-width: 310px;
+			width: 37vw;
+    	}
+    	display: flex;
+	    flex-direction: row;
+	    border-bottom: 1px solid black;
+	    padding: 0.1rem;
+		// background: rgba(255, 255, 255, 0.6);
+	    // border-radius: 3px;
+	    align-items: center;
+
+		.player {
+			width: 89%;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			text-transform: capitalize;
+		}
+		.player_score {
+			padding: 0 0.2rem;
+		    border-radius: 3px;
+		    background: rgba(255,255,255,0.6);
+		}
+    }
+    li:last-child {
+    	border-bottom: none;
+    	margin: 0 0 .1rem 0;
+    }
+}
+
+.container {
+	margin: 8px;
+	height: calc(100vh - 16px);
+	display: grid;
+	grid:
+		[row1-start] "title title title title" .5fr [row1-end]
+		[row2-start] "name name name name" .5fr [row2-end]
+		[row3-start] ". . . ." 5px [row3-end]
+		[row4-start] "points points points points" .5fr [row4-end]
+		[row5-start] ". . . ." 5px [row5-end]
+		[row6-start] "nav nav nav nav" auto [row6-end]
+		[row7-start] ". . . ." 5px [row7-end]
+		[row8-start] "table1 table1 table2 table2" 2fr [row8-end]
+		/ 1fr 1fr 1fr 1fr;
+	column-gap: 5px;
+}
+.nav {
+	grid-area: nav;
+	display: grid;
+	grid:
+		[row1-start] "comp comp lineup lineup" auto [row1-end]
+		[row2-start] "history history strength strength" auto [row2-end]
+		/ 1fr 1fr 1fr 1fr;
+	gap: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+	padding: 5px;
+
+	h3 {
+		font-size: 4vmin;
+		font-size: calc(14px + .5vw);
+		margin: 0;
+	}
+	a {
+	    text-align: center;
+		padding: 0.9rem 0;
+	}
+}
+/* unvisited link */
+a:link, a:visited, a:hover, a:active {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.comp, .lineup, .history, .strength {
+	background-color: rgba(255,255,255,0.6);
+    border-radius: 3px;
+    display: flex;
+	align-self: stretch;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+
+	a:link, a:visited, a:hover, a:active {
+		width: 100%
+	}
+}

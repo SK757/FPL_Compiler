@@ -9,7 +9,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/css/main.css?=1.2">
-    <link rel="stylesheet" type="text/css" href="styles/css/team.css?=0.1">
+    <link rel="stylesheet" type="text/css" href="styles/css/team.css?=0.2">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -33,10 +33,22 @@
         </h1>
         <span id="chip" style="display: none;"><b>(<?PHP echo $picks['active_chip'] ?>)</b></span>
         </section>
-
-        <section id="reset">
-            <div style="flex-grow: 8; margin-top: 19.920;"><button onclick="window.location.reload()"><b>Refresh</b></button></div>
+        <section>
+            <section id="return-to-home2" style="margin-right: 8px;">
+                <div>
+                    <a href="/" aria-label="Return to home page" id="return-to-home2">
+                        <button><i class="fas fa-home"></i></button>
+                    </a>
+                </div>
+            </section>
+            <section id="reset" style="flex-grow: 1;">
+                <div style="flex-grow: 1;"><button onclick="window.location.reload()"><b>Refresh</b></button></div>
+            </section>
         </section>
+        <!-- BACK TO HOME BUTTON -->
+        <!-- <a href="/" aria-label="Return to home page" id="return-to-home">
+            <i class="fas fa-home"></i>
+        </a> -->
     </main> 
     <script>
         if ('serviceWorker' in navigator) {

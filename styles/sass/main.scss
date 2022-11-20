@@ -293,6 +293,39 @@ footer {
     text-align: center;
 }
 
+/* Back to home button */
+#return-to-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 225, 135, 0.7);
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    @include transition(all 0.3s ease);
+    @include border-radius(35px);
+}
+#return-to-home i {
+    display: block;
+    color: $movement-text;
+    margin: 0;
+    position: relative;
+    font-size: 19px;
+    @include transition(all 0.3s ease);
+}
+@media(hover: hover) and (pointer: fine) {
+    #return-to-home:hover {
+        background: rgba(2, 137, 78, 0.9);
+    }
+}
+#return-to-home:hover i {
+    color: $movement-text;
+    font-size: 24px;
+}
+
 /* Back to top button */
 #return-to-top {
     position: fixed;
