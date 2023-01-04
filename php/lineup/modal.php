@@ -18,7 +18,7 @@ echo '</div>';
             <p style="font-size: 0.8rem;"><?PHP include 'php/team.php';?> - <?PHP include 'php/position.php';?></p>
             <span style="right: 17%;position: absolute;top: 1.3rem;"><?PHP echo "£".$item2['now_cost']/10; ?></span>
         </header>
-        <section class="player_modal__content">
+        
         <?php
         // Blank Gameweek
         if(empty($item1['explain'])) {
@@ -26,6 +26,7 @@ echo '</div>';
         }
         $game = 1;
         foreach($item1['explain'] as $key=>$explain) {
+        echo "<section class='player_modal__content'>";
             echo "<section class='player_modal__fixture'>";
             include 'fixtures.php';
             echo "</section>";
@@ -83,15 +84,6 @@ echo '</div>';
         <?php
         }
         ?>
-
-
-
-
-
-
-
-
-
     </div>
     <div onclick="getElementById(<?php echo $item1['id'] ?>).style.display='none'" class="player_modal__bg" aria-hidden="true"></div>
     

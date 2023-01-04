@@ -287,6 +287,9 @@ td {
 	&__content {
 		padding: 0rem .75rem;
 	}
+	&__content:nth-child(3), &__content:nth-child(4) {
+		border-top: 1px solid #7d7d7d;
+	}
 	&__blank {
 		font-size: 1.2rem;
 		margin: 0.8rem 0;
