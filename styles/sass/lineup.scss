@@ -12,6 +12,11 @@ body {
 	margin: 6px;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
+.update_area {
+    display: grid;
+    grid-template-rows: 1fr 0.25fr;
+    height: calc(100vh - 12px);
+}
 
 /*
 //
@@ -23,68 +28,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 99vh;
-    background: #37003c;
-}
-.loader {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  border: 4px solid #Fff;
-  animation: loader 2s infinite ease;
+    min-height: calc(100vh - 12px);
+    background-color: #37003c;
 }
 
-.loader-inner {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-  background-color: #fff;
-  animation: loader-inner 2s infinite ease-in;
+.loading {
+    max-width: 50%;
+    line-height: 1.4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
 }
 
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-  
-  25% {
-    transform: rotate(180deg);
-  }
-  
-  50% {
-    transform: rotate(180deg);
-  }
-  
-  75% {
-    transform: rotate(360deg);
-  }
-  
-  100% {
-    transform: rotate(360deg);
-  }
+.loading__anim {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border: 5px solid rgba(0,225,135, 0.1);
+    border-left-color: #00e187;
+    border-top-color: #00e187;
+    border-radius: 50%;
+    animation: rotate 600ms infinite linear;
 }
-
-@keyframes loader-inner {
-  0% {
-    height: 0%;
-  }
-  
-  25% {
-    height: 0%;
-  }
-  
-  50% {
-    height: 100%;
-  }
-  
-  75% {
-    height: 100%;
-  }
-  
-  100% {
-    height: 0%;
-  }
+@keyframes rotate {
+    to {
+        transform: rotate(1turn)
+    }
 }
 /*
 //
@@ -468,32 +437,29 @@ span.capt {
 }
 
 @media (prefers-color-scheme: dark) {
-    html {
+    html, .loadWrapper {
         background: #1f1f1f;
     }
     .player_modal__wrapper {
-    	background: #1f1f1f;
+    		background: #1f1f1f;
     }
     .player_modal__header {
-    	color: #1f1f1f;
+    		color: #1f1f1f;
     }
     .live {
-    	color: #1d1d1d !important;
-	    background: #d1d1d1 !important;
+	    	color: #1d1d1d !important;
+		    background: #d1d1d1 !important;
     }
     time, .minutes {
-	    color: #d1d1d1 !important;
+	    	color: #d1d1d1 !important;
 		}
     th {
-    	background: #343434;
+    		background: #343434;
     }
     .player_modal__row {
-    	border-top: 1px solid #343434;
+    		border-top: 1px solid #343434;
     }
-    .loadWrapper {
-    	background: #1f1f1f;
-    }
-	.loading__anim {
+		.loading__anim {
         border: 5px solid rgba(0,225,135, 0.25);
         border-left-color: #00e187;
         border-top-color: #00e187;
