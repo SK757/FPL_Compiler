@@ -3,7 +3,7 @@ echo '<div class="column"><div class="image" style="background-image: url(https:
 if($item['multiplier'] === 2) {
 	echo '<span class="capt">C</span>';
 } elseif($item['multiplier'] === 3) {
-	echo '<span class="capt">TC</span>';
+	echo '<span class="tripcapt">TC</span>';
 } elseif($item['is_vice_captain'] === true) {
 	echo '<span class="capt">V</span>';
 }
