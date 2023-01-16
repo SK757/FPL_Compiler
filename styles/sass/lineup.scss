@@ -394,13 +394,13 @@ span.capt, span.tripcapt {
 	position: relative;
 	right: -1.2rem;
 	bottom: -2rem;
-	padding: 2px 5px;
 	border-radius: 100%;
 	font-size: 10px;
 }
 span.capt {
 	background: #37003c;
 	border: 1px solid white;
+	padding: 2px 5px;
 
 }
 span.tripcapt {
@@ -408,6 +408,7 @@ span.tripcapt {
 	border: 2px solid #37003c;
 	color: #37003c;
 	font-weight: bold;
+	padding: 3px 3px;
 }
 
 @keyframes modal {
