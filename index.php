@@ -7,7 +7,7 @@
     <meta name="Description" content="FPL Hub">
     <meta name="theme-color" content="#02efff">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.114">
+    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.118">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -15,9 +15,10 @@
 </head>
 <body>
 	<main class="container">
+		<?php include 'php/dates.php';
+		if (is_array($live)) { ?>
 		<div class="title"><h1>FPL</h1></div>
 		<div class="name">
-			<?php include 'php/dates.php' ?>
 			<h1><?php echo $leagues['name']; ?></h1>
 		</div>
 		<div class="points">
@@ -41,7 +42,7 @@
 		    	}
 		    	?>
 		    </span>
-			<a href="team" target="_top"><h2 class="score"></h2><p>Points &rarr;</p></a>
+			<a href="team" target="_self"><h2 class="score"></h2><p>Points &rarr;</p></a>
 			<span class="gwdb">
 				<span style="text-align: center;">
 		            <?php
@@ -64,16 +65,16 @@
 		</div>
 		<div class="nav">
 			<div class="comp">
-				<a href="compiler" target="_top"><h3>Compiler</h3></a>
+				<a href="compiler" target="_self"><h3>Compiler</h3></a>
 			</div>
 			<div class="lineup">
-				<a href="lineup" target="_top"><h3>Lineup</h3></a>
+				<a href="lineup" target="_self"><h3>Lineup</h3></a>
 			</div>
 			<div class="history">
-				<a href="history" target="_top"><h3>History</h3></a>
+				<a href="history" target="_self"><h3>History</h3></a>
 			</div>
 			<div class="strength">
-				<a href="strength" target="_top"><h3>Strength</h3></a>
+				<a href="strength" target="_self"><h3>Strength</h3></a>
 			</div>
 		</div>
 		<div class="table1">
@@ -104,6 +105,9 @@
 				?>
 			</ol>
 		</div>
+	<?php } else {
+		echo '<div class="offline"><h1>Gameweek is Being Updated</h1></div>';
+	} ?>
 	</main>
 
 	<script>
