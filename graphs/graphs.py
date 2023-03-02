@@ -5,7 +5,7 @@ import urllib.request
 ################################ Data mining from the FPL API ################################
 # The only 2 parameters to specify are "teamID" and "lastGameweek"
 teamID = 329312
-lastGameweek = 24
+lastGameweek = 25
 
 # Get the detailed info about a given FPL Manager’s Team and a given game week
 gameweekData = {}
@@ -231,4 +231,4 @@ ax6.legend(wedges, positions,
 
 ax6.set_xlabel("Points per position over the season")
 
-fig.savefig('graphs/gw20-29/gw24.png')
+fig.savefig('gw20-29/gw25.png')
