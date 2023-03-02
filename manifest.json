@@ -2,7 +2,7 @@
     "name": "Fantasy Premier League Compiler",
     "short_name": "FPL",
     "id": "/",
-    "start_url": "/",
+    "start_url": "/?standalone=true",
     "display": "standalone",
     "orientation": "portrait",
     "background_color": "#02efff",
