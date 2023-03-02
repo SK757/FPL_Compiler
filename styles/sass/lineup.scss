@@ -9,6 +9,7 @@ body {
 	display: grid;
 	grid-template-rows: 1fr 0.25fr;
 	height: calc(100vh - 12px);
+	height: calc(var(--vh, 1vh) * 100 - 12px);
 	margin: 6px;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
@@ -16,6 +17,7 @@ body {
     display: grid;
     grid-template-rows: 1fr 0.25fr;
     height: calc(100vh - 12px);
+	height: calc(var(--vh, 1vh) * 100 - 12px);
 }
 
 /*
@@ -28,7 +30,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 12px);
+    height: calc(100vh - 12px);
+	height: calc(var(--vh, 1vh) * 100 - 12px);
     background-color: #37003c;
 }
 
@@ -259,9 +262,13 @@ td {
 		}
 	}
 	&__content {
+		max-height: 90vh;
+		overflow-y: auto;
+	}
+	&__explain {
 		padding: 0rem .75rem;
 	}
-	&__content:nth-child(3), &__content:nth-child(4) {
+	&__explain:nth-child(2), &__explain:nth-child(3) {
 		border-top: 1px solid #7d7d7d;
 	}
 	&__blank {

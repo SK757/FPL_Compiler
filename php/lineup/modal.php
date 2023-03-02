@@ -18,72 +18,82 @@ echo '</div>';
             <p style="font-size: 0.8rem;"><?PHP include 'php/team.php';?> - <?PHP include 'php/position.php';?></p>
             <span style="right: 17%;position: absolute;top: 1.3rem;"><?PHP echo "£".$item2['now_cost']/10; ?></span>
         </header>
-        
-        <?php
-        // Blank Gameweek
-        if(empty($item1['explain'])) {
-            echo '<p class="player_modal__blank">No match this gameweek</p>';
-        }
-        $game = 1;
-        foreach($item1['explain'] as $key=>$explain) {
-        echo "<section class='player_modal__content'>";
-            echo "<section class='player_modal__fixture'>";
-            include 'fixtures.php';
-            echo "</section>";
-        ?>
-            <table class="player_modal__details">
-                <thead>
-                    <tr>
-                        <th class="align_1 strong player_modal__details-col1">Statistics</th>
-                        <th class="strong">Value</th>
-                        <th class="strong">Points</th>
-                    </tr>
-                </thead>
-                <tbody>
-                	<?php
-	                	foreach($explain['stats'] as $key=>$stats) {
-					?>
-                    <tr class="player_modal__row">
-                    	<td>
-                    		<span class="capitalise player_modal__details-col1_offset"><?php 
-                    		if ($stats['identifier'] === 'goals_scored') {
-								echo 'Goals Scored';
-							} elseif ($stats['identifier'] === 'clean_sheets') {
-								echo 'Clean Sheets';
-							} elseif ($stats['identifier'] === 'goals_conceded') {
-								echo 'Goals Conceded';
-							} elseif ($stats['identifier'] === 'penalties_missed') {
-								echo 'Penalties Missed';
-							} elseif ($stats['identifier'] === 'penalties_saved') {
-								echo 'Penalties Saved';
-							} elseif ($stats['identifier'] === 'own_goals') {
-								echo 'Own Goals';
-							} elseif ($stats['identifier'] === 'yellow_cards') {
-								echo 'Yellow Cards';
-							} elseif ($stats['identifier'] === 'red_cards') {
-								echo 'Red Cards';
-							} else {
-								echo $stats['identifier'];
-							}
-                    		?>
-                    			
-                    		</span>
-                    	</td>
-                        <td class="align_c player_modal__col">	<strong class="player_modal__value"><?php echo $stats['value'] ?></strong>
-                        </td>
-                        <td class="align_c player_modal__col">
-                        	<strong class="player_modal__highlight"><?php echo $stats['points'] ?></strong>
-                        </td>
-                    </tr>
-                    <?php 
-                    	}++$game
-                    ?>
-                </tbody>
-            </table>
+        <section class="player_modal__content">
+            <?php
+            // Blank Gameweek
+            if(empty($item1['explain'])) {
+                echo '<p class="player_modal__blank">No match this gameweek</p>';
+            }
+            $game = 1;
+            foreach($item1['explain'] as $key=>$explain) {
+            echo "<section class='player_modal__explain'>";
+                echo "<section class='player_modal__fixture'>";
+                include 'fixtures.php';
+                echo "</section>";
+            ?>
+                <table class="player_modal__details">
+                    <thead>
+                        <tr>
+                            <th class="align_1 strong player_modal__details-col1">Statistics</th>
+                            <th class="strong">Value</th>
+                            <th class="strong">Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<?php
+    	                	foreach($explain['stats'] as $key=>$stats) {
+    					?>
+                        <tr class="player_modal__row">
+                        	<td>
+                        		<span class="capitalise player_modal__details-col1_offset"><?php 
+                        		if ($stats['identifier'] === 'goals_scored') {
+    								echo 'Goals Scored';
+    							} elseif ($stats['identifier'] === 'clean_sheets') {
+    								echo 'Clean Sheets';
+    							} elseif ($stats['identifier'] === 'goals_conceded') {
+    								echo 'Goals Conceded';
+    							} elseif ($stats['identifier'] === 'penalties_missed') {
+    								echo 'Penalties Missed';
+    							} elseif ($stats['identifier'] === 'penalties_saved') {
+    								echo 'Penalties Saved';
+    							} elseif ($stats['identifier'] === 'own_goals') {
+    								echo 'Own Goals';
+    							} elseif ($stats['identifier'] === 'yellow_cards') {
+    								echo 'Yellow Cards';
+    							} elseif ($stats['identifier'] === 'red_cards') {
+    								echo 'Red Cards';
+    							} else {
+    								echo $stats['identifier'];
+    							}
+                        		?>
+                        			
+                        		</span>
+                        	</td>
+                            <td class="align_c player_modal__col">
+                                <strong class="player_modal__value">
+                                    <?php echo $stats['value'] ?>
+                                </strong>
+
+                            </td>
+                            <td class="align_c player_modal__col">
+                            	<strong class="player_modal__highlight">
+                                    <?php echo $stats['points'] ?>
+                                </strong>
+                            </td>
+                        </tr>
+                        <?php 
+                        	}++$game
+                        ?>
+                        <!-- <tr>
+                            <td><?php //include 'next5.php'; ?></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </section>
+            <?php
+            }
+            ?>
         </section>
-        <?php
-        }
-        ?>
     </div>
     <div onclick="getElementById(<?php echo $item1['id'] ?>).style.display='none'" class="player_modal__bg" aria-hidden="true"></div>
     
