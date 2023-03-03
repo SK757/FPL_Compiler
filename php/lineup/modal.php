@@ -1,9 +1,7 @@
 <!-- OPEN MODAL -->
 <button onclick="document.getElementById(<?php echo $item1['id'] ?>).style.display='flex'" class="player_btn"></button>
 
-<?PHP
-echo '</div>';
-?>
+</div>
 <article class="player_modal" id=<?php echo $item1['id'] ?>>
     <div class="player_modal__wrapper">
         <header class="player_modal__header">
