@@ -9,7 +9,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/css/main.css?=1.2">
-    <link rel="stylesheet" type="text/css" href="styles/css/team.css?=0.2">
+    <link rel="stylesheet" type="text/css" href="styles/css/team.css?=0.24">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -78,6 +78,13 @@
                 $('#score').append(sum);
             });
         }
+        // We listen to the resize event
+        window.addEventListener('resize', () => {    
+            // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+            let vh = window.innerHeight * 0.01;
+            // Then we set the value in the --vh custom property to the root of the document
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
     </script>   
     <script src="js/javascript.js?=0.90"></script>
 </body>
