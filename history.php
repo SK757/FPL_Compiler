@@ -8,7 +8,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#1f1f1f">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/main.css?=1.3">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?=1.32">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -16,27 +16,10 @@
     <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?=0.3" color="#37003c">
     <script src="js/sortable.js?=0.02"></script>
     <style type="text/css">
-        /*@media (prefers-color-scheme: light) {
-            tr:nth-child(odd) {
-                background-color: #fff !important;
-                color: #000;
-            }
-            tr:nth-child(even) {
-                background-color: #f2f2f2 !important;
-                color: #000;
-            }
-        }*//*
-        .twentyfive {
-            background-color: #fff !important;
-            color: #000;
-        }*/
-        /*@media (prefers-color-scheme: dark) {*/
         .twentyfive {
             background-color: #1f1f1f !important;
             color: #fff !important;
         }
-
-        /*}*/
         tbody tr:last-child td {
             border-bottom: none !important;
         }
@@ -53,6 +36,9 @@
         }
         .change {
             padding: 5px !important;
+        }
+        #player_info td, #player_info th {
+            padding: 8px 6px;
         }
     </style>
 </head>
@@ -160,6 +146,14 @@
         var x = window.matchMedia("(max-width: 899px)");
         headers(x); // Call listener function at run time
         x.addListener(headers); // Attach listener function on state changes
+
+        // We listen to the resize event
+        window.addEventListener('resize', () => {    
+            // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+            let vh = window.innerHeight * 0.01;
+            // Then we set the value in the --vh custom property to the root of the document
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
     </script>
 </body>
 </html>
