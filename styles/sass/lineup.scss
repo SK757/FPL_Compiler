@@ -374,6 +374,23 @@ td {
 		color: #ebff00;
 		font-size: 1.5rem;
 	}
+	&__expected {
+	    border-top: 1px solid #7d7d7d;
+		align-items: center;
+	    display: grid;
+	    grid-template-columns: 1fr 1fr 1fr;
+	    // height: 2rem;
+	    position: relative;
+	    padding: .2rem 0;
+
+	    span {
+	    	text-align: center;
+	    	font-size: 0.8rem;
+	    }
+	    .ex_head {
+	    	color: #a7a6a6;
+	    }
+	}
 }
 
 p { 

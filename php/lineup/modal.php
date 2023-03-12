@@ -91,6 +91,14 @@
             <?php
             }
             ?>
+            <section class="player_modal__expected">
+                <span class="ex_head">xG</span>
+                <span class="ex_head">xA</span>
+                <span class="ex_head">xGI</span>
+                <span><?php echo $item1['stats']['expected_goals'] ?></span>
+                <span><?php echo $item1['stats']['expected_assists'] ?></span>
+                <span><?php echo $item1['stats']['expected_goal_involvements'] ?></span>
+            </section>
         </section>
     </div>
     <div onclick="getElementById(<?php echo $item1['id'] ?>).style.display='none'" class="player_modal__bg" aria-hidden="true"></div>
