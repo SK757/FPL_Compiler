@@ -170,7 +170,7 @@ function headers(x) {
 		$(".inf").html("I ");
 		$(".cre").html("C ");
 		$(".thr").html("T ");
-		$(".ict").html("ICT ");
+		$(".ict").html("ICT<br>");
 		$(".basic").html("<b>Basic</b>");
 		$(".adv").html("<b>Advanced</b>");
 		$(".goals2").html("G/A/CS");
