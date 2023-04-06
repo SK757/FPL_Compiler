@@ -64,7 +64,6 @@
                         <th class="xpn">EXPoints Next GW </th>
                         <th class="goals">Goals </th>
                         <th class="assists">Assists </th>
-                        <th>XG P90 </th>
                         <th class="clean_sheets">Clean Sheets </th>
                         <th class="advanced price_c">Price Change </th>
                         <th class="advanced selec">Selected </th>
@@ -84,7 +83,7 @@
                         <th class="advanced inf">Influence </th>
                         <th class="advanced cre">Creativity </th>
                         <th class="advanced thr">Threat </th>    
-                        <th class="advanced ict">ICT Index </th>
+                        <th class="ict">ICT Index </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -104,7 +103,6 @@
                         <td><?PHP echo $item2['ep_next']; ?></td>
                         <td><?PHP echo $item2['goals_scored']; ?></td>
                         <td><?PHP echo $item2['assists']; ?></td>
-                        <td><?PHP echo $item2['expected_goals_per_90']; ?></td>
                         <td class="clean_sheets_stat"><?PHP echo $item2['clean_sheets']; ?></td>
                         <td class="advanced"><?PHP echo "£".$item2['cost_change_start']/10; ?></td>
                         <td class="advanced"><?PHP echo $item2['selected_by_percent']."%"; ?></td>
@@ -124,7 +122,7 @@
                         <td class="advanced"><?PHP echo $item2['influence']; ?></td>
                         <td class="advanced"><?PHP echo $item2['creativity']; ?></td>
                         <td class="advanced"><?PHP echo $item2['threat']; ?></td>
-                        <td class="advanced"><?PHP echo $item2['ict_index']; ?></td>
+                        <td><?PHP echo $item2['ict_index']; ?></td>
                     </tr>
                 <?PHP
                     }   //if (++$i == 14) {break;}  
