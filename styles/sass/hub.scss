@@ -6,6 +6,7 @@ body {
 	max-width: 700px;
 	margin: 8px auto;
 	height: calc(100vh - 16px);
+	height: calc(var(--vh, 1vh) * 100 - 16px)!important;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 .title {
@@ -172,7 +173,7 @@ body {
 
 .container {
 	margin: 8px;
-	height: calc(100vh - 16px);
+	height: 100%;
 	display: grid;
 	grid:
 		[row1-start] "title title title title" .5fr [row1-end]
@@ -227,4 +228,12 @@ a:link, a:visited, a:hover, a:active {
 	a:link, a:visited, a:hover, a:active {
 		width: 100%
 	}
+}
+
+.offline {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	grid-area: title / title / table2 / table2;
 }

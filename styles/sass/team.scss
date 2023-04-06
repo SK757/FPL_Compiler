@@ -19,19 +19,22 @@
     -o-border-radius: $radius;
     border-radius: $radius;
 }
-
+body {
+    
+}
 #table_cont {
     max-height: calc(100vh - 139px);
+    max-height: calc(var(--vh, 1vh) * 100 - 139px);
 }
 #player_info th {
     padding-top: 15px;
     padding-bottom: 15px;
 }
-#player_info tbody tr.explain:nth-child(33) td {
-    border-bottom: none;
+#player_info tbody tr.accordion:nth-child(21) td {
+    border-bottom: 1px solid #c0020d;
 }
-#player_info tbody tr.accordion:nth-child(34) td {
-    border-top: 1px solid #c0020d;
+#player_info tbody tr.explain:nth-child(30) td {
+    border-bottom: none;
 }
 section {
     display: flex;
@@ -76,7 +79,7 @@ tr.explain_head td, tr.explain td {
     font-weight: bold;
 }
 td #game_2, td #game_3 {
-    padding-top: 10px;
+    padding-top: 7px;
     border-top: 1px solid #7d7d7d;
 }
 .game_container {
@@ -143,6 +146,7 @@ strong {
     }
     #table_cont {
         max-height: calc(100vh - 69.1px);
+        max-height: calc(var(--vh, 1vh) * 100 - 69.1px);
     }
 }
 tr.explain_head td {
