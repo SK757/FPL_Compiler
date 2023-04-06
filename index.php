@@ -7,7 +7,7 @@
     <meta name="Description" content="FPL Hub">
     <meta name="theme-color" content="#02efff">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.118">
+    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.121">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -123,6 +123,13 @@
 	        });
 	        $('.score').text(sum);
 	    });
+		// We listen to the resize event
+		window.addEventListener('resize', () => {    
+		    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+			let vh = window.innerHeight * 0.01;
+			// Then we set the value in the --vh custom property to the root of the document
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		});
 	</script>
 </body>
 </html>
