@@ -5,7 +5,6 @@ function change() {
 	$("table tbody tr").get().reduce(function(prevVal, tr, i) {
 	    var $tds = $(tr).find('td'),
 	        val = Number($tds.eq(6).text().replace(/,/g, ""))
-			diff = val - prevVal;
 			if (val < prevVal) {
 				$tds.eq(8).html("<i style='color: #00e187' class='fas fa-caret-up'></i>");
 			} 

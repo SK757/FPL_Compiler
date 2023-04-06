@@ -113,7 +113,7 @@
         }
     </script>
     <script src="js/javascript.js?=0.90"></script>
-    <script src="js/change.js?=1.2"></script>
+    <script src="js/change.js?=1.21"></script>
     <script>
 
         var cls = document.getElementById("player_info").getElementsByTagName("td");
