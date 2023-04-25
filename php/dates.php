@@ -15,6 +15,5 @@ $deadline = json_decode(file_get_contents("https://fantasy.premierleague.com/api
 
 
 $fixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api/fixtures/?event=".$leagues['current_event']), true);
-// potential
-// $upcomingFixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api/fixtures/?event=22"), true);
+$upcomingFixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api/fixtures/?future=1"), true);
 ?>

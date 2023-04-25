@@ -82,9 +82,6 @@
                         <?php 
                         	}++$game
                         ?>
-                        <!-- <tr>
-                            <td><?php //include 'next5.php'; ?></td>
-                        </tr> -->
                     </tbody>
                 </table>
             </section>
@@ -99,6 +96,9 @@
                 <span><?php echo $item1['stats']['expected_assists'] ?></span>
                 <span><?php echo $item1['stats']['expected_goal_involvements'] ?></span>
             </section>
+        </section>
+        <section class="player_modal__next5">
+            <?php include 'next5.php'; ?>
         </section>
     </div>
     <div onclick="getElementById(<?php echo $item1['id'] ?>).style.display='none'" class="player_modal__bg" aria-hidden="true"></div>
