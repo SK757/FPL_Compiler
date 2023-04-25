@@ -9,7 +9,6 @@
                         if ($item['element'] === $item1['id'] && $item['element'] === $item2['id']) {
                             if($item['position'] === 1) {
                                 include 'php/lineup/captain.php';
-                                echo '</p></b></div>';
                                 include 'php/lineup/modal.php';
                             }
                         }
@@ -27,7 +26,6 @@
                         if ($item['element'] === $item1['id'] && $item['element'] === $item2['id']) {
                             if($item['position'] < 12 && $item2['element_type'] == 2) {
                                 include 'php/lineup/captain.php';
-                                echo '</p></b></div>';
                                 include 'php/lineup/modal.php';
                             }
                         }
@@ -44,7 +42,6 @@
                         if ($item['element'] === $item1['id'] && $item['element'] === $item2['id']) {
                             if($item['position'] < 12 && $item2['element_type'] == 3) {
                                 include 'php/lineup/captain.php';
-                                echo '</p></b></div>';
                                 include 'php/lineup/modal.php';
                             }
                         }
@@ -61,7 +58,6 @@
                         if ($item['element'] === $item1['id'] && $item['element'] === $item2['id']) {
                             if($item['position'] < 12 && $item2['element_type'] == 4) {
                                 include 'php/lineup/captain.php';
-                                echo '</p></b></div>';
                                 include 'php/lineup/modal.php';
                             }
                         }
@@ -79,9 +75,9 @@
                     foreach($data['elements'] as $key=>$item2) {
                         if ($item['element'] === $item1['id'] && $item['element'] === $item2['id']) {
                             if($item['position'] >= 12) {
-                                echo '<div class="column bench"><div class="image bench-image" style="background-image: url(https://resources.premierleague.com/premierleague/photos/players/110x140/p' . $item2['code'] . '.png);"></div><div class="player"><p>' . $item2['web_name'] . '</p></div><div class="points"><b><p class="p">' . $item1['stats']['total_points'] . '</p></b></div>';
-                                    include 'php/lineup/modal.php';
-
+                                echo '<div class="column bench"><div class="image bench-image" style="background-image: url(https://resources.premierleague.com/premierleague/photos/players/110x140/p' . $item2['code'] . '.png);"></div><div class="player"><p>' . $item2['web_name'] . '</p></div><div class="points">';
+                                include 'php/lineup/stpPoints.php';
+                                include 'php/lineup/modal.php';
                             }
                         }
                     }
