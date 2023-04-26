@@ -21,7 +21,7 @@
             // Blank Gameweek
             if(empty($item1['explain'])) {
                 echo '<p class="player_modal__blank">No match this gameweek</p>';
-            }
+            } else {
             $game = 1;
             foreach($item1['explain'] as $key=>$explain) {
             echo "<section class='player_modal__explain'>";
@@ -97,6 +97,7 @@
                 <span><?php echo $item1['stats']['expected_goal_involvements'] ?></span>
             </section>
         </section>
+        <?php } ?>
         <section class="player_modal__next5">
             <?php include 'next5.php'; ?>
         </section>
