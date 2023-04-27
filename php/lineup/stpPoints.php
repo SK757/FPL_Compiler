@@ -16,7 +16,11 @@ foreach($item1['explain'] as $key=>$explain) {
 }
 
 if ($stp === true) {
-    echo '<p class="stp">'.$i.' Still to play</p></div>';
+    if ($i === 1) {
+        echo '<p class="stp">Still to play</p></div>';
+    } else {
+        echo '<p class="stp">'.$i.' Still to play</p></div>';
+    }
 } elseif ($item['multiplier'] === 2 || $item['multiplier'] === 3) {
     echo '<b><p class="p">'.$item1['stats']['total_points'] * $item['multiplier'].'</p></b></div>';
 } else {
