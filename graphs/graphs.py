@@ -5,7 +5,7 @@ import urllib.request
 ################################ Data mining from the FPL API ################################
 # The only 2 parameters to specify are "teamID" and "lastGameweek"
 teamID = 329312
-lastGameweek = 32
+lastGameweek = 33
 
 # Get the detailed info about a given FPL Manager’s Team and a given game week
 gameweekData = {}
@@ -126,7 +126,14 @@ import numpy as np
 
 gameweek = np.arange(1, lastGameweek+1)
 
-fig, ((ax1, ax2), (ax3, ax4), (ax5, ax6)) = plt.subplots(3, 2, figsize=(11.69, 8.27)) #fig size A4 in inches figsize=(11.69,8.27)
+# fig, ((ax1, ax2), (ax3, ax4), (ax5, ax6)) = plt.subplots(3, 2, figsize=(11.69, 8.27)) #fig size A4 in inches figsize=(11.69,8.27)
+fig = plt.figure(figsize=(11.69, 10))
+ax1 = plt.subplot2grid((4, 2), (0, 0), colspan=2)
+ax2 = plt.subplot2grid((4, 2), (1, 0), colspan=2)
+ax3 = plt.subplot2grid((4, 2), (2, 0), colspan=1)
+ax4 = plt.subplot2grid((4, 2), (2, 1), colspan=1)
+ax5 = plt.subplot2grid((4, 2), (3, 0), colspan=1)
+ax6 = plt.subplot2grid((4, 2), (3, 1), colspan=1)
 fig.suptitle("Team performance : " + teamName)
 fig.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=0.3, hspace=0.4)
 
@@ -136,7 +143,7 @@ ax1.plot(gameweek, points, color='b', label='Team FPL points')
 ax1.plot(gameweek, averagePoints, color='black', label='Average FPL points')
 ax1.grid(axis = 'y',linewidth = 0.5)
 ax1.set_xticks(gameweek)
-ax1.set_xticklabels(gameweek, rotation=45, ha="right", size=8)
+# ax1.set_xticklabels(gameweek, rotation=45, ha="right", size=8)
 ax1.set_xlabel('Gameweek')
 ax1.set_ylabel('FPL points')
 ax1.legend(loc='best', frameon=True, prop={'size':6})
@@ -150,7 +157,7 @@ ax2.grid(axis = 'y',linewidth = 0.5)
 ax2.set_ylim(ymin=0)
 ax2.set_ylim(ymax=max(gameweekRank + 400000))
 ax2.set_xticks(gameweek)
-ax2.set_xticklabels(gameweek, rotation=45, ha="right", size=8)
+# ax2.set_xticklabels(gameweek, rotation=45, ha="right", size=8)
 ax2.get_yaxis().get_major_formatter().set_scientific(False)
 ax2.set_xlabel('Gameweek')
 ax2.set_ylabel('Rank')
@@ -177,24 +184,6 @@ for rect, label in zip(rects, labels):
     ax3.text(rect.get_x() + rect.get_width() / 2, height + 0.1, label, ha='center', va='bottom', size=6)
 
 
-### Team transfers
-ax44 = ax4.twinx()
-ax4.bar(gameweek, transfers, color='b', label='Number of transfers', width=0.5)
-ax44.plot(gameweek, transfersCost, color='r', label='Transfers cost')
-ax4.grid(axis = 'y',linewidth = 0.5)
-ax4.set_xlabel('Gameweek')
-ax4.set_ylabel('Number of transfers')
-ax44.set_ylabel('Transfers cost')
-ax4.legend(loc=2, frameon=True, prop={'size':6})
-ax44.legend(loc=1, frameon=True, prop={'size':6})
-ax44.set_ylim(ymin=0)
-ax44.set_ylim(ymax=max(transfersCost)+1)
-ax4.set_xticks(gameweek)
-ax4.set_xticklabels(gameweek, rotation=45, ha="right", size=8)
-ax4.yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
-ax44.yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
-
-
 ### Captain points
 captainPoints = np.array(captainPoints)
 captainDisplay = []
@@ -202,18 +191,36 @@ for n in range(0, lastGameweek):
     captainDisplay.append(str(n+1) + " - " + captain[n])
 mask1 = captainPoints > 3
 mask2 = captainPoints <= 3
-ax5.bar(gameweek[mask1], list(map(lambda x: x*2, captainPoints[mask1])), width=0.5, color='green')
-ax5.bar(gameweek[mask2], list(map(lambda x: x*2, captainPoints[mask2])), width=0.5, color='firebrick')
-ax5.grid(axis = 'y',linewidth = 0.5)
-ax5.set_ylim(ymin=0)
-ax5.set_ylim(ymax=max(list(map(lambda x: x*2, captainPoints)))+5)
-ax5.set_xticks(gameweek)
-ax5.set_xticklabels(captainDisplay, rotation=45, ha="right", size=6)
-ax5.set_ylabel('Captain FPL points')
-rects = ax5.patches
+ax4.bar(gameweek[mask1], list(map(lambda x: x*2, captainPoints[mask1])), width=0.5, color='green')
+ax4.bar(gameweek[mask2], list(map(lambda x: x*2, captainPoints[mask2])), width=0.5, color='firebrick')
+ax4.grid(axis = 'y',linewidth = 0.5)
+ax4.set_ylim(ymin=0)
+ax4.set_ylim(ymax=max(list(map(lambda x: x*2, captainPoints)))+5)
+ax4.set_xticks(gameweek)
+ax4.set_xticklabels(captainDisplay, rotation=45, ha="right", size=6)
+ax4.set_ylabel('Captain FPL points')
+rects = ax4.patches
 for rect in rects:
     height = rect.get_height()
-    ax5.text(rect.get_x() + rect.get_width() / 2, height + 0.6, height, ha='center', va='bottom', size=6)
+    ax4.text(rect.get_x() + rect.get_width() / 2, height + 0.6, height, ha='center', va='bottom', size=6)
+
+
+### Team transfers
+ax55 = ax5.twinx()
+ax5.bar(gameweek, transfers, color='b', label='Number of transfers', width=0.5)
+ax55.plot(gameweek, transfersCost, color='r', label='Transfers cost')
+ax5.grid(axis = 'y',linewidth = 0.5)
+ax5.set_xlabel('Gameweek')
+ax5.set_ylabel('Number of transfers')
+ax55.set_ylabel('Transfers cost')
+ax5.legend(loc=2, frameon=True, prop={'size':6})
+ax55.legend(loc=1, frameon=True, prop={'size':6})
+ax55.set_ylim(ymin=0)
+ax55.set_ylim(ymax=max(transfersCost)+1)
+ax5.set_xticks(gameweek)
+ax5.set_xticklabels(gameweek, rotation=45, ha="right", size=8)
+ax5.yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
+ax55.yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 
 
 ### Points per position
@@ -235,4 +242,4 @@ ax6.legend(wedges, positions,
 
 ax6.set_xlabel("Points per position over the season")
 
-fig.savefig('gw30-38/gw32.png')
+fig.savefig('gw30-38/gw33.png')
