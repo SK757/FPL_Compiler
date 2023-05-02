@@ -34,7 +34,7 @@
             }
             ?>
         </section>
-        <section class="flex-container mid" style="grid-template-columns: repeat(4, minmax(3.875rem, 5.5rem));">
+        <section class="flex-container mid">
             <?PHP
             foreach($picks['picks'] as $key=>$item) {
                 foreach($live['elements'] as $key=>$item1) {

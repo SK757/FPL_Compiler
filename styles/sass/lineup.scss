@@ -77,6 +77,7 @@ body {
 		"def"
 		"mid"
 		"fwd";
+	margin-top: 2rem;
 }
 
 .gk {
@@ -96,6 +97,7 @@ body {
 	display: grid;
 	grid-template-rows: 1fr;
 	border-top: 1px solid #ddd;
+	padding-top: 1.5rem;
 }
 
 div {
@@ -107,7 +109,7 @@ div {
 
 .flex-container {
 	display: flex;
-	align-items: center;
+	align-items: start;
 	justify-content: center;
 }
 
@@ -130,7 +132,7 @@ div {
 	background-size: 100%;
 	height: 3.2rem;
 	width: 3.2rem;
-	margin: 0 auto .3rem;
+	margin: 0 auto .2rem;
 	border-radius: 100%;
 	overflow: visible;
 }
@@ -167,7 +169,7 @@ p {
 
 .stp {
 	margin-top: .2rem;
-	font-size: 3.3vmin;
+	font-size: .68rem;
 	font-weight: 300;
 }
 
@@ -509,8 +511,8 @@ span.tripcapt {
 		font-size: 3vmin;
 	}
 	.points {
-		// width: 100px;
-		font-size: 5vmin;
+		font-size: 4.5vmin;
+	    line-height: 22px;
 	}
 	.image {
 		height: 3.2rem;
