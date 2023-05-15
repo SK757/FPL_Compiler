@@ -109,6 +109,12 @@
                 $('.total_points b').text(sum);
             });
         }
+        const elements = document.querySelectorAll('.stp');
+        elements.forEach((element) => {
+            if (element.innerText === "Did not play") {
+                element.previousElementSibling.previousElementSibling.previousElementSibling.classList.add('bench-image');
+            }
+        });
     </script> 
 </body>
 </html>

@@ -3,6 +3,7 @@ $played = false;
 $notPlayed = false;
 $fix = 0;
 $stp = 0;
+$didNotPlay = false;
 foreach($item1['explain'] as $key=>$explain) {	
     foreach($fixtures as $key=>$fixture) {
           //players team id         //fixture team id's
@@ -12,6 +13,9 @@ foreach($item1['explain'] as $key=>$explain) {
             	if ($fixture['started'] === true) {
                     $played = true;
                 }
+                if ($fixture['finished_provisional'] === true && $item1['stats']['minutes'] === 0) {
+                    $didNotPlay = true;
+                }
                 if ($fixture['started'] === false) {
                     $notPlayed = true;
                     ++$stp;
@@ -20,7 +24,7 @@ foreach($item1['explain'] as $key=>$explain) {
         }
     }++$fix;
 }
-if ($fix === 1 && $played === true || $fix === 2 && $played === true) {
+if ($fix > 0 && $played === true && $didNotPlay === false) {
     if ($item['multiplier'] === 2 || $item['multiplier'] === 3) {
         echo '<b><p class="p">'.$item1['stats']['total_points'] * $item['multiplier'].'</p></b>';
     } else {
@@ -34,8 +38,12 @@ if ($fix === 1 && $notPlayed === true) {
     } elseif ($stp > 1) {
         echo '<span class="stp">'. $stp .' Still to play</span>';
     }
+} elseif ($fix === 1 && $didNotPlay === true) {
+    echo '<span class="stp">Did not play</span>';
 }
 if ($fix === 2 && $notPlayed === true) {
     echo '<span class="stp">'. $stp .' Still to play</span>';
+} elseif ($fix === 2 && $didNotPlay === true) {
+    echo '<span class="stp">Did not play</span>';
 }
 ?>
