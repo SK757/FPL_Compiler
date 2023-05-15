@@ -513,7 +513,7 @@ span.tripcapt {
 	}
 	.points {
 		font-size: 4.5vmin;
-	    line-height: 22px;
+	    line-height: 4vmin;
 	}
 	.image {
 		margin: 0 auto;
@@ -536,25 +536,25 @@ span.tripcapt {
         background: #1f1f1f;
     }
     .player_modal__wrapper {
-    		background: #1f1f1f;
+    	background: #1f1f1f;
     }
     .player_modal__header {
-    		color: #1f1f1f;
+    	color: #1f1f1f;
     }
     .live {
-	    	color: #1d1d1d !important;
-		    background: #d1d1d1 !important;
+    	color: #1d1d1d !important;
+	    background: #d1d1d1 !important;
     }
     time, .minutes {
-	    	color: #d1d1d1 !important;
+    	color: #d1d1d1 !important;
 		}
     th {
-    		background: #343434;
+		background: #343434;
     }
     .player_modal__row {
-    		border-top: 1px solid #343434;
+		border-top: 1px solid #343434;
     }
-		.loading__anim {
+	.loading__anim {
         border: 5px solid rgba(0,225,135, 0.25);
         border-left-color: #00e187;
         border-top-color: #00e187;
