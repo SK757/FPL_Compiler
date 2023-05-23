@@ -28,7 +28,7 @@ foreach($item1['explain'] as $key=>$explain) {
         }
     }++$fix;
 }
-if ($fix > 0 && $gamePlayed === true && $didNotPlay === false) {
+if ($fix > 0 && $gamePlayed === true) {
     if ($item['multiplier'] === 2 || $item['multiplier'] === 3) {
         echo '<b><p class="p">'.$item1['stats']['total_points'] * $item['multiplier'].'</p></b>';
     } else {
@@ -38,16 +38,16 @@ if ($fix > 0 && $gamePlayed === true && $didNotPlay === false) {
 echo '</div>';
 if ($fix === 1 && $gameNotPlayed === true) {
     if ($stp === 1) {
-        echo '<span class="stp">Still to play</span>';
+        echo '<div class="stp">Still to play</div>';
     } elseif ($stp > 1) {
-        echo '<span class="stp">'. $stp .' Still to play</span>';
+        echo '<div class="stp">'. $stp .' Still to play</div>';
     }
 } elseif ($fix === 1 && $didNotPlay === true && $didPlay === false) {
-    echo '<span class="stp">Did not play</span>';
+    echo '<div class="stp">Did not play</div>';
 }
 if ($fix === 2 && $gameNotPlayed === true) {
-    echo '<span class="stp">'. $stp .' Still to play</span>';
+    echo '<div class="stp">'. $stp .' Still to play</div>';
 } elseif ($fix === 2 && $didNotPlay === true && $didPlay === false) {
-    echo '<span class="stp">Did not play</span>';
+    echo '<div class="stp">Did not play</div>';
 }
 ?>

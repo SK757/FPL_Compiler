@@ -77,7 +77,7 @@ body {
 		"def"
 		"mid"
 		"fwd";
-	margin-top: 2rem;
+	margin-top: 1rem;
 }
 
 .gk {
@@ -168,7 +168,7 @@ p {
 }
 
 .stp {
-	margin-top: .2rem;
+	// margin-top: .2rem;
 	font-size: .68rem;
 	font-weight: 300;
 }
@@ -506,10 +506,13 @@ span.tripcapt {
 }
 
 @media screen and (min-height: 300px) and (min-width: 500px) {
+	.grid-container {
+		margin-top: 1rem;
+	}
 	.player {
 		font-size: 2.6vmin;
 	    line-height: 2.7vmin;
-	    margin-bottom: 3px;
+	    margin-bottom: 2px;
 	}
 	.points {
 		font-size: 4.5vmin;
