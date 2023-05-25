@@ -22,7 +22,6 @@
             if(empty($item1['explain'])) {
                 echo '<p class="player_modal__blank">No match this gameweek</p>';
             } else {
-            $game = 1;
             foreach($item1['explain'] as $key=>$explain) {
             echo "<section class='player_modal__explain'>";
                 echo "<section class='player_modal__fixture'>";
@@ -80,7 +79,22 @@
                             </td>
                         </tr>
                         <?php 
-                        	}++$game
+                                // foreach ($fixtures as $key=>$fixture) {
+                                //     if ($explain['fixture'] === $fixture['id']) {
+                                //         foreach($fixture['stats'] as $key=>$fixtureStats) {
+                                //             if ($fixtureStats['identifier'] === 'bps') {
+                                //                 foreach($fixtureStats['a'] as $key=>$away) {
+                                //                     foreach($fixtureStats['h'] as $key=>$home) {
+                                //                         echo $away['value'];
+                                //                         echo $home['value'];
+                                //                     }
+                                //                 }
+                                //             }
+                                //         }
+                                //     }
+                            	// }
+                            }
+                            
                         ?>
                     </tbody>
                 </table>
@@ -97,10 +111,12 @@
                 <span><?php echo $item1['stats']['expected_goal_involvements'] ?></span>
             </section>
         </section>
-        <?php } ?>
+        <?php } 
+        if (is_array($upcomingFixtures)) { ?>
         <section class="player_modal__next5">
             <?php include 'next5.php'; ?>
         </section>
+        <?php } ?>
     </div>
     <div onclick="getElementById(<?php echo $item1['id'] ?>).style.display='none'" class="player_modal__bg" aria-hidden="true"></div>
     
