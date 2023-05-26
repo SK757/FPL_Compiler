@@ -123,9 +123,11 @@ div {
 	flex-basis: 0%;
 	position: relative;
 	z-index: 1;
+	overflow: visible;
 }
 
 .image {
+	position: relative;
 	background-color: #fff;
 	background-position: center .31rem;
 	background-repeat: no-repeat;
@@ -462,19 +464,20 @@ span.total_points>b {
 	font-size: 6vmin;
 	font-style: italic;
 }
-
-span.capt, span.tripcapt {
-	position: relative;
-	right: -1.2rem;
-	bottom: -2rem;
+span.capt, span.tripcapt, span.chance {
+	position: absolute;
 	border-radius: 100%;
 	font-size: 10px;
+}
+span.capt, span.tripcapt {
+    right: -0.8rem;
+    bottom: -0.6rem;
+	transform: translate(-50%, -50%);
 }
 span.capt {
 	background: #37003c;
 	border: 1px solid white;
 	padding: 2px 5px;
-
 }
 span.tripcapt {
 	background: #fff;
@@ -483,6 +486,28 @@ span.tripcapt {
 	font-weight: bold;
 	padding: 3px 3px;
 }
+span.chance {
+	border: 1px solid #37003c;
+	padding: 1px 6px;
+	top: 0.5rem;
+    right: -0.7rem;
+	transform: translate(-50%, -50%);
+}
+span.seventyFive {
+    background-color: #ffe65b;
+    color: #000;
+}
+span.fifty {
+    background-color: #ffab1b;
+    color: #000;
+}
+span.twentyFive {
+    background-color: #d44401;
+}
+span.zero {
+    background-color: #c0020d;
+}
+
 
 @keyframes modal {
     0% {
@@ -528,6 +553,10 @@ span.tripcapt {
 	span.tripcapt {
 		font-size: 1.8vmin;
 		padding: 3px 3px;
+	}
+	span.chance {
+		padding: 1px 5px;
+	    right: -0.6rem;
 	}
 	.stp {
 		font-size: 2.3vmin;

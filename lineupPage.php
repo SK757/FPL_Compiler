@@ -75,7 +75,17 @@
                     foreach($data['elements'] as $key=>$item2) {
                         if ($item['element'] === $item1['id'] && $item['element'] === $item2['id']) {
                             if($item['position'] >= 12) {
-                                echo '<div class="column bench"><div class="image bench-image" style="background-image: url(https://resources.premierleague.com/premierleague/photos/players/110x140/p' . $item2['code'] . '.png);"></div><div class="player"><p>' . $item2['web_name'] . '</p></div><div class="points">';
+                                echo '<div class="column bench"><div class="image bench-image" style="background-image: url(https://resources.premierleague.com/premierleague/photos/players/110x140/p' . $item2['code'] . '.png);">';
+                                if($item2['chance_of_playing_next_round'] === 75) {
+                                    echo '<span class="chance seventyFive"><b>!</b></span>';
+                                }elseif($item2['chance_of_playing_next_round'] === 50) {
+                                    echo '<span class="chance fifty"><b>!</b></span>';
+                                }elseif($item2['chance_of_playing_next_round'] === 25) {
+                                    echo '<span class="chance twentyFive"><b>!</b></span>';
+                                }elseif($item2['chance_of_playing_next_round'] === 0) {
+                                    echo '<span class="chance zero"><b>!</b></span>';
+                                }
+                                echo '</div><div class="player"><p>' . $item2['web_name'] . '</p></div><div class="points">';
                                 include 'php/lineup/stpPoints.php';
                                 include 'php/lineup/modal.php';
                             }

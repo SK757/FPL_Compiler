@@ -23,8 +23,7 @@
                             echo $datetime->format('D j M').'<br>';
                             echo $datetime->format('G:i');
                             echo '</span></time></strong>';
-                        }
-                        if ($fixture['started'] == true && $fixture['finished_provisional'] == false) {
+                        } elseif ($fixture['started'] == true && $fixture['finished_provisional'] == false) {
                             echo '<span class="live">Live</span>';
                         }
                         if ($fixture['started'] == true) {

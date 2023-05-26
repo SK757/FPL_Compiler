@@ -7,6 +7,15 @@ if($item['multiplier'] === 2) {
 } elseif($item['is_vice_captain'] === true) {
 	echo '<span class="capt">V</span>';
 }
+if($item2['chance_of_playing_next_round'] === 75) {
+	echo '<span class="chance seventyFive"><b>!</b></span>';
+}elseif($item2['chance_of_playing_next_round'] === 50) {
+	echo '<span class="chance fifty"><b>!</b></span>';
+}elseif($item2['chance_of_playing_next_round'] === 25) {
+	echo '<span class="chance twentyFive"><b>!</b></span>';
+}elseif($item2['chance_of_playing_next_round'] === 0) {
+	echo '<span class="chance zero"><b>!</b></span>';
+}
 echo '</div><div class="player"><b><p>' . $item2['web_name']. '</p></b></div><div class="points">';
 include 'stpPoints.php';
 ?>
