@@ -12,7 +12,20 @@
                     <path fill-rule="evenodd" d="M57.6571429,43.3428571 C57.2,42.8857143 56.5142857,42.8857143 56.0571429,43.3428571 L50,49.4 L43.9428571,43.3428571 C43.4857143,42.8857143 42.8,42.8857143 42.3428571,43.3428571 C41.8857143,43.8 41.8857143,44.4857143 42.3428571,44.9428571 L48.4,51 L42.3428571,57.0571429 C41.8857143,57.5142857 41.8857143,58.2 42.3428571,58.6571429 C42.5714286,58.8857143 42.8,59 43.1428571,59 C43.4857143,59 43.7142857,58.8857143 43.9428571,58.6571429 L50,52.6 L56.0571429,58.6571429 C56.2857143,58.8857143 56.6285714,59 56.8571429,59 C57.0857143,59 57.4285714,58.8857143 57.6571429,58.6571429 C58.1142857,58.2 58.1142857,57.5142857 57.6571429,57.0571429 L51.6,51 L57.6571429,44.9428571 C58.1142857,44.4857143 58.1142857,43.8 57.6571429,43.3428571 Z" transform="translate(-42 -43)" fill="#37003c"></path>
                 </svg>
             </button>
-            <h1 class="player_modal__heading"><?php echo $item2['web_name'] ?></h1>
+            <h1 class="player_modal__heading">
+                <?php echo $item2['web_name'];
+                $chance = $item2['chance_of_playing_next_round'];
+                if($chance === 75) {
+                    echo ' - <span class="seventyFive2">' . $item2['chance_of_playing_next_round'] . '%</span>';
+                } elseif($chance === 50) {
+                    echo ' - <span class="fifty2">' . $item2['chance_of_playing_next_round'] . '%</span>';
+                } elseif($chance === 25) {
+                    echo ' - <span class="twentyFive2">' . $item2['chance_of_playing_next_round'] . '%</span>';
+                } elseif($chance === 0) {
+                    echo ' - <span class="zero2">' . $item2['chance_of_playing_next_round'] . '%</span>';
+                }
+                ?>     
+            </h1>
             <p style="font-size: 0.8rem;"><?PHP include 'php/team.php';?> - <?PHP include 'php/position.php';?></p>
             <span style="right: 17%;position: absolute;top: 1.3rem;"><?PHP echo "£".$item2['now_cost']/10; ?></span>
         </header>
