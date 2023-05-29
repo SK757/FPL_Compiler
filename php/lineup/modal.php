@@ -125,7 +125,7 @@
             </section>
         </section>
         <?php } 
-        if (is_array($upcomingFixtures)) { ?>
+        if (count($upcomingFixtures) > 0) { ?>
         <section class="player_modal__next5">
             <?php include 'next5.php'; ?>
         </section>

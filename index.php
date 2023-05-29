@@ -52,25 +52,22 @@
 		    	?>
 		    </span>
 			<a href="team" target="_self"><h2 class="score"></h2><p>Points &rarr;</p></a>
+			<?php
+			if (count($deadline) > 0) {  ?>
 			<span class="gwdb">
 				<span style="text-align: center;">
-		            <?php
-		             if (count($deadline) === 0) {              
-		                echo " ";
-		            } else {
-		            ?>
-		            Gameweek <?php echo $leagues['current_event']+1; ?> Deadline<br>
-		            <?php
-		                $kickoff = $deadline[0]['kickoff_time'];
-		                $datetime = new DateTime($kickoff);
-		                $timezone = new DateTimeZone('Europe/London');
-		                $datetime->setTimezone($timezone);
-		                $datetime->sub(new DateInterval('PT1H30M'));
-		                echo $datetime->format('D j M G:i');
-		            }
-		            ?>
+		            Gameweek <?php echo $nextgw; ?> Deadline<br>
+	            <?php
+	                $kickoff = $deadline[0]['kickoff_time'];
+	                $datetime = new DateTime($kickoff);
+	                $timezone = new DateTimeZone('Europe/London');
+	                $datetime->setTimezone($timezone);
+	                $datetime->sub(new DateInterval('PT1H30M'));
+	                echo $datetime->format('D j M G:i');
+	            ?>
 		        </span>
             </span>
+	        <?php } ?>
 		</div>
 		<div class="nav">
 			<div class="comp">
