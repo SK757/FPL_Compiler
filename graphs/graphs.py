@@ -5,7 +5,7 @@ import urllib.request
 ################################ Data mining from the FPL API ################################
 # The only 2 parameters to specify are "teamID" and "lastGameweek"
 teamID = 329312
-lastGameweek = 37
+lastGameweek = 38
 
 # Get the detailed info about a given FPL Manager’s Team and a given game week
 gameweekData = {}
@@ -42,7 +42,7 @@ def getPlayerName(playerID):
     i = 0
     while i < len(elements):
         if (elements[i]["id"] == playerID):
-            return (elements[i]["first_name"] + " " + elements[i]["second_name"])
+            return (elements[i]["web_name"])
         i += 1
     return "ID not found"
 
@@ -127,7 +127,7 @@ import numpy as np
 gameweek = np.arange(1, lastGameweek+1)
 
 # fig, ((ax1, ax2), (ax3, ax4), (ax5, ax6)) = plt.subplots(3, 2, figsize=(11.69, 8.27)) #fig size A4 in inches figsize=(11.69,8.27)
-fig = plt.figure(figsize=(11.69, 10))
+fig = plt.figure(figsize=(10, 9))
 ax1 = plt.subplot2grid((4, 2), (0, 0), colspan=2)
 ax2 = plt.subplot2grid((4, 2), (1, 0), colspan=2)
 ax3 = plt.subplot2grid((4, 2), (2, 0), colspan=1)
@@ -135,7 +135,8 @@ ax4 = plt.subplot2grid((4, 2), (2, 1), colspan=1)
 ax5 = plt.subplot2grid((4, 2), (3, 0), colspan=1)
 ax6 = plt.subplot2grid((4, 2), (3, 1), colspan=1)
 fig.suptitle("Team performance : " + teamName)
-fig.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=0.3, hspace=0.4)
+fig.tight_layout()
+fig.subplots_adjust(left=0.1, bottom=0.1, right=None, top=None, wspace=0.2, hspace=0.4)
 
 
 ### Team points
@@ -242,4 +243,4 @@ ax6.legend(wedges, positions,
 
 ax6.set_xlabel("Points per position over the season")
 
-fig.savefig('gw30-38/gw37.png')
+fig.savefig('gw30-38/gw38.png')
