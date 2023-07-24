@@ -145,6 +145,6 @@
             });
         }
     </script>
-    <script src="js/javascript.js?=0.93"></script>
+    <script src="js/javascript.js?=0.941"></script>
 </body>
 </html>
