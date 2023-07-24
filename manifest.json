@@ -36,8 +36,8 @@
     ],
     "shortcuts": [
         {
-            "name":"FPL Points",
-            "url":"/p",
+            "name":"FPL Compiler",
+            "url":"/compiler",
             "icons": [
                 {
                     "src":"/favicon/FPLCompiler192copy.png",
