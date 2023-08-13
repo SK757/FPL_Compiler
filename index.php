@@ -16,7 +16,7 @@
     <meta name="Description" content="FPL Hub">
     <meta name="theme-color" content="#02efff">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.122">
+    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.123">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -84,7 +84,7 @@
 			</div>
 		</div>
 		<div class="table1">
-			<h4><?PHP echo $leagues['leagues']['classic'][4]['name']; ?></h4>
+			<h4><?PHP echo $leagues['leagues']['classic'][5]['name']; ?></h4>
 			<ol>
 				<?php 
 				foreach($navStandings['standings']['results'] as $key=>$navS) {
@@ -92,11 +92,16 @@
 					<li><span class="player"><?PHP echo $navS['player_name']; ?></span><span class="player_score"><?php echo $navS['total']; ?></span></li> 
 				<?php
 				}
+				foreach($navStandings['new_entries']['results'] as $key=>$navSnew) {
+				?>
+					<li><span class="player"><?PHP echo $navSnew['player_first_name'] . " " . $navSnew['player_last_name']; ?></span><span class="player_score">New</span></li> 
+				<?php
+				}
 				?>
 			</ol>
 		</div>
 		<div class="table2">
-			<h4><?PHP echo $leagues['leagues']['classic'][5]['name']; ?></h4>
+			<h4><?PHP echo $leagues['leagues']['classic'][6]['name']; ?></h4>
 			<ol>
 				<?php
 				$i = 0;
@@ -108,6 +113,11 @@
 					// 	break;
 					// }
 				}  
+				foreach($tasStandings['new_entries']['results'] as $key=>$tasSnew) {
+				?>
+					<li><span class="player"><?PHP echo $tasSnew['player_first_name'] . " " . $tasSnew['player_last_name']; ?></span><span class="player_score">New</span></li> 
+				<?php
+				}
 				?>
 			</ol>
 		</div>
