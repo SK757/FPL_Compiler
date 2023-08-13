@@ -54,18 +54,22 @@
 						<td><?PHP echo $item2['goals_scored']; ?>/<?PHP echo $item2['assists']; ?>/<?PHP echo $item2['clean_sheets']; ?></td>
 						<?PHP
 						// Yellow Card Ban #1
-						$gamesPlayed = $item2['total_points'] / $item2['points_per_game'];
-						if (round($gamesPlayed) <= 19 && $item2['yellow_cards'] === 4) {
-							echo '<td style="background: #ffab1b;">' . $item2['yellow_cards'] . '</td>';
-							
-						} // Yellow Card Ban #2
-						elseif (round($gamesPlayed) >= 19 && round($gamesPlayed) <= 38 && $item2['yellow_cards'] === 9) {
+						if ($item2['points_per_game'] > 0) {
+							$gamesPlayed = $item2['total_points'] / $item2['points_per_game'];
+							if (round($gamesPlayed) <= 19 && $item2['yellow_cards'] === 4) {
 								echo '<td style="background: #ffab1b;">' . $item2['yellow_cards'] . '</td>';
-						}
-						else {
-							echo '<td>' . $item2['yellow_cards'] . '</td>';
-						} ?>
-						
+								
+							} // Yellow Card Ban #2
+							elseif (round($gamesPlayed) >= 19 && round($gamesPlayed) <= 38 && $item2['yellow_cards'] === 9) {
+									echo '<td style="background: #ffab1b;">' . $item2['yellow_cards'] . '</td>';
+							}
+							else {
+								echo '<td>' . $item2['yellow_cards'] . '</td>';
+							} 
+						} else {
+								echo '<td>0</td>';
+							}  ?>
+
 					</tr>
 					<tr class="explain">
 						<td colspan="6"><?PHP 
