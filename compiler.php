@@ -55,35 +55,35 @@
                 <thead>
                     <tr>
                         <th style="display: none;">chance of playing </th>
-                        <th id="nameHead">Name </th>
-                        <th class="points">Total Points </th>
-                        <th >Price </th>
-                        <th class="ppg">Points Per Game </th>
-                        <th class="gwp">Gameweek Points </th>
-                        <th class="advanced xpt">EXPoints This GW </th>
-                        <th class="xpn">EXPoints Next GW </th>
-                        <th class="goals">Goals </th>
-                        <th class="assists">Assists </th>
-                        <th class="clean_sheets">Clean Sheets </th>
-                        <th class="advanced price_c">Price Change </th>
-                        <th class="advanced selec">Selected </th>
-                        <th class="advanced min">Minutes </th>
-                        <th class="advanced nocursor sorttable_nosort">News </th>
-                        <th class="advanced in">Transfers In </th>
-                        <th class="advanced out">Transfers Out </th>
-                        <th class="advanced gc">Goals Conceded </th>
-                        <th class="advanced og">Own Goals </th>
-                        <th class="advanced pens_s">Pens Saved </th>
-                        <th class="advanced pens_m">Pens Missed </th>
-                        <th class="advanced yc">Yellow Cards </th>
-                        <th class="advanced rc">Red Cards </th>
-                        <th class="advanced saves">Saves </th>
-                        <th class="advanced bonus">Bonus Points </th>
-                        <th class="advanced bps">BPS Score </th>
-                        <th class="advanced inf">Influence </th>
-                        <th class="advanced cre">Creativity </th>
-                        <th class="advanced thr">Threat </th>    
-                        <th class="ict">ICT Index </th>
+                        <th id="nameHead"><span>Name </span></th>
+                        <th class="points"><span>Total Points </span></th>
+                        <th ><span>Price </span></th>
+                        <th class="ppg"><span>Points Per Game </span></th>
+                        <th class="gwp"><span>Gameweek Points </span></th>
+                        <th class="advanced xpt"><span>EXPoints This GW </span></th>
+                        <th class="xpn"><span>EXPoints Next GW </span></th>
+                        <th class="goals"><span>Goals </span></th>
+                        <th class="assists"><span>Assists </span></th>
+                        <th class="clean_sheets"><span>Clean Sheets </span></th>
+                        <th class="advanced price_c"><span>Price Change </span></th>
+                        <th class="advanced selec"><span>Selected </span></th>
+                        <th class="advanced min"><span>Minutes </span></th>
+                        <th class="advanced nocursor sorttable_nosort"><span>News </span></th>
+                        <th class="advanced in"><span>Transfers In </span></th>
+                        <th class="advanced out"><span>Transfers Out </span></th>
+                        <th class="advanced gc"><span>Goals Conceded </span></th>
+                        <th class="advanced og"><span>Own Goals </span></th>
+                        <th class="advanced pens_s"><span>Pens Saved </span></th>
+                        <th class="advanced pens_m"><span>Pens Missed </span></th>
+                        <th class="advanced yc"><span>Yellow Cards </span></th>
+                        <th class="advanced rc"><span>Red Cards </span></th>
+                        <th class="advanced saves"><span>Saves </span></th>
+                        <th class="advanced bonus"><span>Bonus Points </span></th>
+                        <th class="advanced bps"><span>BPS Score </span></th>
+                        <th class="advanced inf"><span>Influence </span></th>
+                        <th class="advanced cre"><span>Creativity </span></th>
+                        <th class="advanced thr"><span>Threat </span></th>    
+                        <th class="ict"><span>ICT Index </span></th>
                     </tr>
                 </thead>
                 <tbody>
