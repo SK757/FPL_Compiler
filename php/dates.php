@@ -6,6 +6,7 @@ $data = json_decode(file_get_contents("https://fantasy.premierleague.com/api/boo
 $leagues = json_decode(file_get_contents("https://fantasy.premierleague.com/api/entry/56467/"), true);
 $navStandings = json_decode(file_get_contents("https://fantasy.premierleague.com/api/leagues-classic/61937/standings/?page_new_entries=1&page_standings=1&phase=1"), true);
 $tasStandings = json_decode(file_get_contents("https://fantasy.premierleague.com/api/leagues-classic/381282/standings/?page_new_entries=1&page_standings=1&phase=1"), true);
+$freeStandings = json_decode(file_get_contents("https://fantasy.premierleague.com/api/leagues-classic/427127/standings/?page_new_entries=1&page_standings=1&phase=1"), true);
 
 $picks = json_decode(file_get_contents("https://fantasy.premierleague.com/api/entry/56467/event/".$leagues['current_event']."/picks/"), true);
 $live = json_decode(file_get_contents("https://fantasy.premierleague.com/api/event/".$leagues['current_event']."/live/"), true);

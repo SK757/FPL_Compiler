@@ -16,7 +16,7 @@
     <meta name="Description" content="FPL Hub">
     <meta name="theme-color" content="#02efff">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.123">
+    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.125">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -121,6 +121,31 @@
 				?>
 			</ol>
 		</div>
+		<div class="table3">
+			<h4><?PHP echo $leagues['leagues']['classic'][7]['name']; ?></h4>
+			<ol>
+				<?php
+				$i = 0;
+				foreach($freeStandings['standings']['results'] as $key=>$freeS) {
+				?>
+					<li><span class="player"><?PHP echo $freeS['player_name']; ?></span><span class="player_score"><?php echo $freeS['total']; ?></span></li> 
+				<?php 
+					// if (++$i == 5) {
+					// 	break;
+					// }
+				}  
+				foreach($freeStandings['new_entries']['results'] as $key=>$freeSnew) {
+				?>
+					<li><span class="player"><?PHP echo $freeSnew['player_first_name'] . " " . $freeSnew['player_last_name']; ?></span><span class="player_score">New</span></li> 
+				<?php
+				}
+				?>
+			</ol>
+		</div>
+		<div class="table_select">
+			<span class="table_select_1 active">.</span>
+			<span class="table_select_2">.</span>
+		</div>
 	<?php } else {
 		echo '<div class="offline"><h1>Gameweek is Being Updated</h1></div>';
 	} ?>
@@ -138,6 +163,23 @@
 	            sum += parseFloat($(this).text());
 	        });
 	        $('.score').text(sum);
+
+	        $('.table3').hide();
+		    $('.table2, .table3').on('click', function() {
+			    $('.table2, .table3').toggle();
+			});
+
+			$(".table2").click(function (e) { 
+			    $(".table_select_1").removeClass("active");
+			    $(".table_select_2").addClass("active");
+			    e.stopPropagation();
+			});
+			$(".table3").click(function (e) { 
+			    $(".table_select_2").removeClass("active");
+			    $(".table_select_1").addClass("active");
+			    e.stopPropagation();
+			});
+
 	    });
 		// We listen to the resize event
 		window.addEventListener('resize', () => {    

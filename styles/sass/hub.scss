@@ -112,22 +112,21 @@ body {
 .table1 {
 	grid-area: table1;
 }
-.table2 {
-	grid-area: table2;
+.table2, .table3, .table_select,.table_select2 {
+	grid-area: table2_3;
 }
 
-.table1, .table2 {
+.table1, .table2, .table3 {
     background: rgba(255, 255, 255, 0.5);
 	display: flex;
 	align-items: center;
 	flex-direction: column;
     border-radius: 3px;
-	@media only screen and (max-height: 732px) {
-		overflow: scroll;
-	}
+    overflow: scroll;
+    z-index: 2;
+	text-transform: capitalize;
 
-
-    h4 {
+	h4 {
     	text-align: center;
     	margin: .5rem 0;
     }
@@ -159,7 +158,6 @@ body {
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			text-transform: capitalize;
 		}
 		.player_score {
 			padding: 0 0.2rem;
@@ -171,6 +169,19 @@ body {
     	border-bottom: none;
     	margin: 0 0 .1rem 0;
     }
+}
+
+.table_select {
+	z-index: 1;
+    position: relative;
+    top: -8px;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.active {
+	color: white;
 }
 
 .container {
@@ -185,7 +196,7 @@ body {
 		[row5-start] ". . . ." 5px [row5-end]
 		[row6-start] "nav nav nav nav" auto [row6-end]
 		[row7-start] ". . . ." 5px [row7-end]
-		[row8-start] "table1 table1 table2 table2" 2fr [row8-end]
+		[row8-start] "table1 table1 table2_3 table2_3" 2fr [row8-end]
 		/ 1fr 1fr 1fr 1fr;
 	column-gap: 5px;
 }
@@ -237,5 +248,5 @@ a:link, a:visited, a:hover, a:active {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	grid-area: title / title / table2 / table2;
+	grid-area: title / title / table2_3 / table2_3;
 }
