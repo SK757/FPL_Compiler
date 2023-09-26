@@ -16,7 +16,7 @@
     <meta name="Description" content="FPL Hub">
     <meta name="theme-color" content="#02efff">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.125">
+    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.126">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -80,7 +80,7 @@
 				<a href="history" target="_self"><h3>History</h3></a>
 			</div>
 			<div class="strength">
-				<a href="strength" target="_self"><h3>Strength</h3></a>
+				<a href="standings" target="_self"><h3>Standings</h3></a>
 			</div>
 		</div>
 		<div class="table1">
@@ -104,7 +104,7 @@
 			<h4><?PHP echo $leagues['leagues']['classic'][6]['name']; ?></h4>
 			<ol>
 				<?php
-				$i = 0;
+				// $i = 0;
 				foreach($tasStandings['standings']['results'] as $key=>$tasS) {
 				?>
 					<li><span class="player"><?PHP echo $tasS['player_name']; ?></span><span class="player_score"><?php echo $tasS['total']; ?></span></li> 
@@ -125,7 +125,7 @@
 			<h4><?PHP echo $leagues['leagues']['classic'][7]['name']; ?></h4>
 			<ol>
 				<?php
-				$i = 0;
+				// $i = 0;
 				foreach($freeStandings['standings']['results'] as $key=>$freeS) {
 				?>
 					<li><span class="player"><?PHP echo $freeS['player_name']; ?></span><span class="player_score"><?php echo $freeS['total']; ?></span></li> 
@@ -142,9 +142,31 @@
 				?>
 			</ol>
 		</div>
+		<div class="table4">
+			<h4><?PHP echo $leagues['leagues']['classic'][8]['name']; ?></h4>
+			<ol>
+				<?php
+				// $i = 0;
+				foreach($wheelerStandings['standings']['results'] as $key=>$wheelerS) {
+				?>
+					<li><span class="player"><?PHP echo $wheelerS['player_name']; ?></span><span class="player_score"><?php echo $wheelerS['total']; ?></span></li> 
+				<?php 
+					// if (++$i == 5) {
+					// 	break;
+					// }
+				}  
+				foreach($wheelerStandings['new_entries']['results'] as $key=>$wheelerSnew) {
+				?>
+					<li><span class="player"><?PHP echo $wheelerSnew['player_first_name'] . " " . $wheelerSnew['player_last_name']; ?></span><span class="player_score">New</span></li> 
+				<?php
+				}
+				?>
+			</ol>
+		</div>
 		<div class="table_select">
 			<span class="table_select_1 active">.</span>
 			<span class="table_select_2">.</span>
+			<span class="table_select_3">.</span>
 		</div>
 	<?php } else {
 		echo '<div class="offline"><h1>Gameweek is Being Updated</h1></div>';
@@ -164,19 +186,28 @@
 	        });
 	        $('.score').text(sum);
 
-	        $('.table3').hide();
-		    $('.table2, .table3').on('click', function() {
-			    $('.table2, .table3').toggle();
-			});
+	        $('.table3, .table4').hide();
 
-			$(".table2").click(function (e) { 
+			$(".table2").click(function (e) {
+	        	$('.table2').hide();
+	        	$('.table3').show();
 			    $(".table_select_1").removeClass("active");
 			    $(".table_select_2").addClass("active");
+			    $(".table_select_3").removeClass("active");
 			    e.stopPropagation();
 			});
-			$(".table3").click(function (e) { 
+			$(".table3").click(function (e) {
+	        	$('.table3').hide();
+	        	$('.table4').show();
 			    $(".table_select_2").removeClass("active");
+			    $(".table_select_3").addClass("active");
+			    e.stopPropagation();
+			});
+			$(".table4").click(function (e) {
+	        	$('.table4').hide();
+	        	$('.table2').show();
 			    $(".table_select_1").addClass("active");
+			    $(".table_select_3").removeClass("active");
 			    e.stopPropagation();
 			});
 

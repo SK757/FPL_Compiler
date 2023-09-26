@@ -112,11 +112,11 @@ body {
 .table1 {
 	grid-area: table1;
 }
-.table2, .table3, .table_select,.table_select2 {
+.table2, .table3, .table4, .table_select, .table_select2, .table_select3 {
 	grid-area: table2_3;
 }
 
-.table1, .table2, .table3 {
+.table1, .table2, .table3, .table4 {
     background: rgba(255, 255, 255, 0.5);
 	display: flex;
 	align-items: center;
