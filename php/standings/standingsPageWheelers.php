@@ -37,7 +37,7 @@
                     <td><?PHP echo $wheelerS['total']; ?></td>
                     <td>
                         <?PHP 
-                        $difference = $tasStandings['standings']['results'][0]['total'] - $wheelerS['total'];
+                        $difference = $wheelerStandings['standings']['results'][0]['total'] - $wheelerS['total'];
                         if($difference === 0) {
                             echo "-";
                         } else {
