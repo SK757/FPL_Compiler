@@ -1,25 +1,20 @@
 <?php
-    foreach($upcomingFixtures as $key=>$next5) {
+    foreach($upcomingAndPastFixtures['fixtures'] as $key=>$next5) {
         foreach($data['teams'] as $key=>$teams) {
             // if the fixture gw is equal to the next 5 gw's
-            if ($next5['event'] <= $nextgw+4) {
-                    //players team id         //fixture team id's
-                if ($item2['team'] === $next5['team_h'] || $next5['team_a']) {
-                    // if players team id equals fixtures home team
-                    if ($item2['team'] === $next5['team_h']) {
-                        // get away team name
-                        if ($next5['team_a'] === $teams['id']) {
-                            echo '<span class="diff'.$next5['team_h_difficulty'].'"><b>'.$next5['event'].'</b><br>'.$teams['short_name'].'</span>';
-                        }
-                    // if players team id equals fixtures away team
-                    } elseif ($item2['team'] === $next5['team_a']) {
-                        // get home team name
-                        if ($next5['team_h'] === $teams['id']) {
-                            echo '<span style="text-transform: lowercase;" class="diff'.$next5['team_a_difficulty'].'"><b>'.$next5['event'].'</b><br>'.$teams['short_name'].'</span>';
-                        }
+            if ($next5['event'] <= $nextgw+4 && $next5['event'] !== null) {
+                // check if home
+                if ($next5['is_home'] === true) {
+                    // get away team name
+                    if ($teams['id'] === $next5['team_a']) {
+                        echo '<span class="diff'.$next5['difficulty'].'"><b>'.$next5['event'].'</b><br>'.$teams['short_name'];
                     }
+                // if not, get home team name
+                } elseif ($teams['id'] === $next5['team_h']) {
+                    echo '<span style="text-transform: lowercase;" class="diff'.$next5['difficulty'].'"><b>'.$next5['event'].'</b><br>'.$teams['short_name'];
                 }
+                echo '</span>';
             }
-        } 
+        }
     }
 ?>

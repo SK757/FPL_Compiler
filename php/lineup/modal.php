@@ -38,6 +38,7 @@
             foreach($item1['explain'] as $key=>$explain) {
             echo "<section class='player_modal__explain'>";
                 echo "<section class='player_modal__fixture'>";
+                $upcomingAndPastFixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api/element-summary/".$item1['id']."/"), true);
                 include 'fixtures.php';
                 echo "</section>";
             ?>
@@ -116,7 +117,8 @@
             </section>
         </section>
         <?php } 
-        if (count($upcomingFixtures) > 0) { ?>
+        if (count($upcomingFixtures) > 0) { 
+        ?>
         <section class="player_modal__last5">
             <?php include 'last5.php'; ?>
         </section>
