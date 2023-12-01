@@ -1,5 +1,5 @@
 <!-- OPEN MODAL -->
-<button onclick="document.getElementById(<?php echo $item1['id'] ?>).style.display='flex'" class="player_btn"></button>
+<button onclick="document.getElementById(<?php echo $item1['id'] ?>).style.display='flex'" aria-label="<?php echo $item2['web_name']; ?>" class="player_btn"></button>
 
 </div>
 <article class="player_modal" id=<?php echo $item1['id'] ?>>
@@ -54,9 +54,7 @@
     	                	foreach($explain['stats'] as $key=>$stats) {
     					?>
                         <tr class="player_modal__row">
-                        	<td>
-                        		<span class="capitalise player_modal__details-col1_offset"><?php 
-                        		if ($stats['identifier'] === 'goals_scored') {
+                        	<td class="player_modal__details-col1_offset"><?php if ($stats['identifier'] === 'goals_scored') {
     								echo 'Goals Scored';
     							} elseif ($stats['identifier'] === 'clean_sheets') {
     								echo 'Clean Sheets';
@@ -76,19 +74,12 @@
     								echo $stats['identifier'];
     							}
                         		?>
-                        			
-                        		</span>
                         	</td>
-                            <td class="align_c player_modal__col">
-                                <strong class="player_modal__value">
-                                    <?php echo $stats['value'] ?>
-                                </strong>
-
+                            <td class="player_modal__col">
+                                <?php echo $stats['value'] ?>
                             </td>
-                            <td class="align_c player_modal__col">
-                            	<strong class="player_modal__highlight">
-                                    <?php echo $stats['points'] ?>
-                                </strong>
+                            <td class="player_modal__col player_modal__highlight">
+                                <?php echo $stats['points'] ?>
                             </td>
                         </tr>
                         <?php 
@@ -126,6 +117,9 @@
         </section>
         <?php } 
         if (count($upcomingFixtures) > 0) { ?>
+        <section class="player_modal__last5">
+            <?php include 'last5.php'; ?>
+        </section>
         <section class="player_modal__next5">
             <?php include 'next5.php'; ?>
         </section>

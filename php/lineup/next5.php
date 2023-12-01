@@ -2,7 +2,7 @@
     foreach($upcomingFixtures as $key=>$next5) {
         foreach($data['teams'] as $key=>$teams) {
             // if the fixture gw is equal to the next 5 gw's
-            if ($next5['event'] === $nextgw || $next5['event'] === $nextgw+1 || $next5['event'] === $nextgw+2 || $next5['event'] === $nextgw+3 || $next5['event'] === $nextgw+4) {
+            if ($next5['event'] <= $nextgw+4) {
                     //players team id         //fixture team id's
                 if ($item2['team'] === $next5['team_h'] || $next5['team_a']) {
                     // if players team id equals fixtures home team

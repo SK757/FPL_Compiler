@@ -13,6 +13,7 @@ $picks = json_decode(file_get_contents("https://fantasy.premierleague.com/api/en
 $live = json_decode(file_get_contents("https://fantasy.premierleague.com/api/event/".$leagues['current_event']."/live/"), true);
 
 $nextgw = $leagues['current_event']+1;
+$lastgw = $leagues['current_event']-1;
 $deadline = json_decode(file_get_contents("https://fantasy.premierleague.com/api/fixtures/?event=".$nextgw), true);
 
 
