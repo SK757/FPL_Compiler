@@ -2,7 +2,7 @@
     foreach($upcomingAndPastFixtures['fixtures'] as $key=>$next5) {
         foreach($data['teams'] as $key=>$teams) {
             // if the fixture gw is equal to the next 5 gw's
-            if ($next5['event'] <= $nextgw+4 && $next5['event'] !== null) {
+            if ($next5['event'] > $leagues['current_event'] && $next5['event'] <= $nextgw+4 && $next5['event'] !== null) {
                 // check if home
                 if ($next5['is_home'] === true) {
                     // get away team name
