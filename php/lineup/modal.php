@@ -84,22 +84,8 @@
                             </td>
                         </tr>
                         <?php 
-                                // foreach ($fixtures as $key=>$fixture) {
-                                //     if ($explain['fixture'] === $fixture['id']) {
-                                //         foreach($fixture['stats'] as $key=>$fixtureStats) {
-                                //             if ($fixtureStats['identifier'] === 'bps') {
-                                //                 foreach($fixtureStats['a'] as $key=>$away) {
-                                //                     foreach($fixtureStats['h'] as $key=>$home) {
-                                //                         echo $away['value'];
-                                //                         echo $home['value'];
-                                //                     }
-                                //                 }
-                                //             }
-                                //         }
-                                //     }
-                            	// }
                             }
-                            
+                            include 'bps.php';
                         ?>
                     </tbody>
                 </table>

@@ -108,12 +108,18 @@
                 $('.bench-container .p').each(function(){
                     sum += parseInt(this.innerHTML, 10);
                 });
+                $('.player_modal__details .asItStands').each(function(){
+                    sum += parseInt(this.innerHTML, 10);
+                });
                 $('.total_points b').text(sum);
             });
         } else {
             $(function() {
                 var sum = 0;
                 $('.grid-container .p').each(function(){
+                    sum += parseInt(this.innerHTML, 10);
+                });
+                $('.player_modal__details .asItStands').each(function(){
                     sum += parseInt(this.innerHTML, 10);
                 });
                 $('.total_points b').text(sum);
