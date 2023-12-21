@@ -48,6 +48,8 @@ if ($fix === 1 && $gameNotPlayed === true) {
     } elseif ($stp > 1) {
         echo '<div class="stp">'. $stp .' Still to play</div>';
     }
+} elseif ($fix === 1 && $gamePlayed === true && $item1['stats']['minutes'] === 0 && $fixture['finished_provisional'] === false) {
+    echo '<div class="stp">Not in 1st XI</div>';
 } elseif ($fix === 1 && $didNotPlay === true && $didPlay === false) {
     echo '<div class="stp">Did not play</div>';
 }

@@ -14,9 +14,24 @@ if($chance === 75) {
 	echo '<span class="chance fifty"><b>!</b></span>';
 }elseif($chance === 25) {
 	echo '<span class="chance twentyFive"><b>!</b></span>';
-}elseif($chance === 0) {
-	echo '<span class="chance zero"><b>!</b></span>';
 }
+// elseif($chance === 0) {
+	// echo '<span class="chance zero"><b>!</b></span>';
+// }
+$upcomingAndPastFixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api/element-summary/".$item1['id']."/"), true);
+
+foreach($upcomingAndPastFixtures['history'] as $key=>$matchInfo) {
+	foreach($fixtures as $key=>$fixture) {
+		if ($matchInfo['fixture'] === $fixture['id']) {
+			if ($fixture['started'] === true && $fixture['finished_provisional'] === false) {
+				echo '<span class="chance twentyFive"><b>!</b></span>';
+			}
+		}
+	}
+}
+
+
+
 echo '</div><div class="player"><b><p>' . $item2['web_name']. '</p></b></div><div class="points">';
 include 'stpPoints.php';
 ?>

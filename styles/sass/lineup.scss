@@ -468,7 +468,7 @@ span.total_points>b {
 	font-size: 6vmin;
 	font-style: italic;
 }
-span.capt, span.tripcapt, span.chance {
+span.capt, span.tripcapt, span.chance, span.live {
 	position: absolute;
 	border-radius: 100%;
 	font-size: 10px;
@@ -489,6 +489,13 @@ span.tripcapt {
 	color: #37003c;
 	font-weight: bold;
 	padding: 3px 3px;
+}
+span.live {
+	background: #37003c;
+	border: 1px solid white;
+	padding: 1px;
+    left: -0.6rem;
+	border-radius: 4px;
 }
 span.chance {
 	border: 1px solid #37003c;

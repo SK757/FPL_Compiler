@@ -85,6 +85,18 @@
                                 }elseif($item2['chance_of_playing_next_round'] === 0) {
                                     echo '<span class="chance zero"><b>!</b></span>';
                                 }
+                                $upcomingAndPastFixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api/element-summary/".$item1['id']."/"), true);
+
+                                foreach($upcomingAndPastFixtures['history'] as $key=>$matchInfo) {
+                                    foreach($fixtures as $key=>$fixture) {
+                                        if ($matchInfo['fixture'] === $fixture['id']) {
+                                            if ($fixture['started'] === true && $fixture['finished_provisional'] === false) {
+                                                echo '<span class="live"><b>
+                                                LIVE</b></span>';
+                                            }
+                                        }
+                                    }
+                                }
                                 echo '</div><div class="player"><p>' . $item2['web_name'] . '</p></div><div class="points">';
                                 include 'php/lineup/stpPoints.php';
                                 include 'php/lineup/modal.php';
