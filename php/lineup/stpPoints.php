@@ -35,7 +35,13 @@ if ($fix > 0 && $gamePlayed === true) {
         echo '<b><p class="p">'.$item1['stats']['total_points'].'</p></b>';
     }
 }
+
+if(empty($item1['explain'])) {
+    echo '<b><p class="p">-</p></b>';
+}
+
 echo '</div>';
+
 if ($fix === 1 && $gameNotPlayed === true) {
     if ($stp === 1) {
         echo '<div class="stp">Still to play</div>';
@@ -50,4 +56,9 @@ if ($fix === 2 && $gameNotPlayed === true) {
 } elseif ($fix === 2 && $didNotPlay === true && $didPlay === false) {
     echo '<div class="stp">Did not play</div>';
 }
+
+if(empty($item1['explain'])) {
+    echo '<div class="stp">No match</div>';
+}
+
 ?>

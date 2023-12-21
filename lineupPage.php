@@ -123,11 +123,12 @@
                     sum += parseInt(this.innerHTML, 10);
                 });
                 $('.total_points b').text(sum);
+
             });
         }
         const elements = document.querySelectorAll('.stp');
         elements.forEach((element) => {
-            if (element.innerText === "Did not play") {
+            if (element.innerText === "Did not play" || element.innerText === "No match") {
                 element.previousElementSibling.previousElementSibling.previousElementSibling.classList.add('bench-image');
             }
         });
