@@ -91,8 +91,7 @@
                                     foreach($fixtures as $key=>$fixture) {
                                         if ($matchInfo['fixture'] === $fixture['id']) {
                                             if ($fixture['started'] === true && $fixture['finished_provisional'] === false) {
-                                                echo '<span class="live"><b>
-                                                LIVE</b></span>';
+                                                echo '<span class="gameLive"><b>LIVE</b></span>';
                                             }
                                         }
                                     }

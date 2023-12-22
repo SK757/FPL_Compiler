@@ -22,11 +22,11 @@ $upcomingAndPastFixtures = json_decode(file_get_contents("https://fantasy.premie
 
 foreach($upcomingAndPastFixtures['history'] as $key=>$matchInfo) {
 	foreach($fixtures as $key=>$fixture) {
-		if ($matchInfo['fixture'] === $fixture['id']) {
-			if ($fixture['started'] === true && $fixture['finished_provisional'] === false) {
-				echo '<span class="chance twentyFive"><b>!</b></span>';
-			}
-		}
+	    if ($matchInfo['fixture'] === $fixture['id']) {
+	        if ($fixture['started'] === true && $fixture['finished_provisional'] === false) {
+	            echo '<span class="gameLive"><b>LIVE</b></span>';
+	        }
+	    }
 	}
 }
 

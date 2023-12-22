@@ -5,6 +5,7 @@ $fix = 0;
 $stp = 0;
 $didPlay = false;
 $didNotPlay = false;
+$startingXI = true;
 foreach($item1['explain'] as $key=>$explain) {	
     foreach($fixtures as $key=>$fixture) {
           //players team id         //fixture team id's
@@ -13,16 +14,18 @@ foreach($item1['explain'] as $key=>$explain) {
             if ($explain['fixture'] === $fixture['id']) {
             	if ($fixture['started'] === true) {
                     $gamePlayed = true;
+                } else {
+                    $gameNotPlayed = true;
+                    ++$stp;
+                }
+                if ($item1['stats']['minutes'] === 0 && $fixture['finished_provisional'] === false) {
+                    $startingXI = false;
                 }
                 if ($fixture['finished_provisional'] === true && $item1['stats']['minutes'] > 0) {
                     $didPlay = true;
                 }
                 if ($fixture['finished_provisional'] === true && $item1['stats']['minutes'] === 0) {
                     $didNotPlay = true;
-                }
-                if ($fixture['started'] === false) {
-                    $gameNotPlayed = true;
-                    ++$stp;
                 }
             }
         }
@@ -44,17 +47,17 @@ echo '</div>';
 
 if ($fix === 1 && $gameNotPlayed === true) {
     if ($stp === 1) {
-        echo '<div class="stp">Still to play</div>';
+        echo '<div class="stp yts">Still to play</div>';
     } elseif ($stp > 1) {
         echo '<div class="stp">'. $stp .' Still to play</div>';
     }
-} elseif ($fix === 1 && $gamePlayed === true && $item1['stats']['minutes'] === 0 && $fixture['finished_provisional'] === false) {
+} elseif ($fix === 1 && $gamePlayed === true && $startingXI === false) {
     echo '<div class="stp">Not in 1st XI</div>';
 } elseif ($fix === 1 && $didNotPlay === true && $didPlay === false) {
     echo '<div class="stp">Did not play</div>';
 }
 if ($fix === 2 && $gameNotPlayed === true) {
-    echo '<div class="stp">'. $stp .' Still to play</div>';
+    echo '<div class="stp yts">'. $stp .' Still to play</div>';
 } elseif ($fix === 2 && $didNotPlay === true && $didPlay === false) {
     echo '<div class="stp">Did not play</div>';
 }
