@@ -33,10 +33,13 @@ foreach($item1['explain'] as $key=>$explain) {
 }
 if ($fix > 0 && $gamePlayed === true) {
     if ($item['multiplier'] === 2 || $item['multiplier'] === 3) {
-        echo '<b><p class="p">'.$item1['stats']['total_points'] * $item['multiplier'].'</p></b>';
+        echo '<b><p class="p" style="display:inline;">'.$item1['stats']['total_points'] * $item['multiplier'].'</p></b>';
     } else {
-        echo '<b><p class="p">'.$item1['stats']['total_points'].'</p></b>';
+        echo '<b><p class="p" style="display:inline;">'.$item1['stats']['total_points'].'</p></b>';
     }
+    echo '<span class="'.$item1['id'].'" style="font-size: 12px;position: absolute;">';
+    include 'php/lineup/bps2.php';
+    echo '</span>';
 }
 
 if(empty($item1['explain'])) {
