@@ -49,8 +49,9 @@
                         } else {
                             echo $teams['name'];
                         }
+                        echo '</span>';
                         if ($fixture['started'] == true && $fixture['finished_provisional'] == false) {
-                            echo '<span class="minutes">'.$fixture['minutes']."'".'</span></span>';
+                            echo '<span class="minutes">'.$fixture['minutes']."'".'</span>';
                         }
                     }
                 }
