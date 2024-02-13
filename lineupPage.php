@@ -119,7 +119,7 @@
                 $('.bench-container .p').each(function(){
                     sum += parseInt(this.innerHTML, 10);
                 });
-                $('.player_modal__details .asItStands').each(function(){
+                $('.points .bonus').each(function(){
                     sum += parseInt(this.innerHTML, 10);
                 });
                 $('.total_points b').text(sum);
@@ -130,11 +130,10 @@
                 $('.grid-container .p').each(function(){
                     sum += parseInt(this.innerHTML, 10);
                 });
-                $('.player_modal__details .asItStands').each(function(){
+                $('.grid-container .points .bonusTotal').each(function(){
                     sum += parseInt(this.innerHTML, 10);
                 });
                 $('.total_points b').text(sum);
-
             });
         }
         const elements = document.querySelectorAll('.stp');

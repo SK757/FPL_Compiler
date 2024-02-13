@@ -37,9 +37,7 @@ if ($fix > 0 && $gamePlayed === true) {
     } else {
         echo '<b><p class="p" style="display:inline;">'.$item1['stats']['total_points'].'</p></b>';
     }
-    echo '<span class="'.$item1['id'].'" style="font-size: 12px;position: absolute;">';
     include 'php/lineup/bps2.php';
-    echo '</span>';
 }
 
 if(empty($item1['explain'])) {

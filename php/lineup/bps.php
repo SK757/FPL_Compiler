@@ -72,9 +72,9 @@ foreach($upcomingAndPastFixtures['history'] as $key=>$matchInfo) {
 						echo '<tr class="player_modal__row"><td class="player_modal__details-col1_offset">Bonus AIS*</td><td class="player_modal__col">'.$player2bp.'</td>'.'<td class="player_modal__col player_modal__highlight asItStands">'.$player2bp.'</td>';
 					} elseif ($matchInfo['element'] === $bonus[2]['element']) {
 						echo '<tr class="player_modal__row"><td class="player_modal__details-col1_offset">Bonus AIS*</td><td class="player_modal__col">'.$player3bp.'</td>'.'<td class="player_modal__col player_modal__highlight asItStands">'.$player3bp.'</td>';
-					} elseif ($matchInfo['element'] === $bonus[3]['element']) {
+					} elseif ($player4bp != null && $matchInfo['element'] === $bonus[3]['element']) {
 						echo '<tr class="player_modal__row"><td class="player_modal__details-col1_offset">Bonus AIS*</td><td class="player_modal__col">'.$player4bp.'</td>'.'<td class="player_modal__col player_modal__highlight asItStands">'.$player4bp.'</td>';
-					} elseif ($matchInfo['element'] === $bonus[4]['element']) {
+					} elseif ($player5bp != null && $matchInfo['element'] === $bonus[4]['element']) {
 						echo '<tr class="player_modal__row"><td class="player_modal__details-col1_offset">Bonus AIS*</td><td class="player_modal__col">'.$player5bp.'</td>'.'<td class="player_modal__col player_modal__highlight asItStands">'.$player5bp.'</td>';
 					}
 					echo '</tr>';

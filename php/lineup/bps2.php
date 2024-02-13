@@ -65,17 +65,16 @@ foreach($upcomingAndPastFixtures['history'] as $key=>$matchInfo) {
 						$player4bp = 1;
 						$player5bp = 1;
 					}
-					
 					if ($matchInfo['element'] === $bonus[0]['element']) {
-						echo '&nbsp+'.$player1bp;
+						echo '<span class="bonus">&nbsp+<span class="bonusTotal">'.$player1bp*$item['multiplier'].'</span></span>';
 					} elseif ($matchInfo['element'] === $bonus[1]['element']) {
-						echo '&nbsp+'.$player2bp;
+						echo '<span class="bonus">&nbsp+<span class="bonusTotal">'.$player2bp*$item['multiplier'].'</span></span>';
 					} elseif ($matchInfo['element'] === $bonus[2]['element']) {
-						echo '&nbsp+'.$player3bp;
+						echo '<span class="bonus">&nbsp+<span class="bonusTotal">'.$player3bp*$item['multiplier'].'</span></span>';
 					} elseif ($player4bp != null && $matchInfo['element'] === $bonus[3]['element']) {
-						echo '&nbsp+'.$player4bp;
+						echo '<span class="bonus">&nbsp+<span class="bonusTotal">'.$player4bp*$item['multiplier'].'</span></span>';
 					} elseif ($player5bp != null && $matchInfo['element'] === $bonus[4]['element']) {
-						echo '&nbsp+'.$player5bp;
+						echo '<span class="bonus">&nbsp+<span class="bonusTotal">'.$player5bp*$item['multiplier'].'</span></span>';
 					}
 				}
 			}
