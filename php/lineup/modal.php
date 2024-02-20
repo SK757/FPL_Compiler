@@ -55,26 +55,13 @@
     	                	foreach($explain['stats'] as $key=>$stats) {
     					?>
                         <tr class="player_modal__row">
-                        	<td class="player_modal__details-col1_offset"><?php if ($stats['identifier'] === 'goals_scored') {
-    								echo 'Goals Scored';
-    							} elseif ($stats['identifier'] === 'clean_sheets') {
-    								echo 'Clean Sheets';
-    							} elseif ($stats['identifier'] === 'goals_conceded') {
-    								echo 'Goals Conceded';
-    							} elseif ($stats['identifier'] === 'penalties_missed') {
-    								echo 'Penalties Missed';
-    							} elseif ($stats['identifier'] === 'penalties_saved') {
-    								echo 'Penalties Saved';
-    							} elseif ($stats['identifier'] === 'own_goals') {
-    								echo 'Own Goals';
-    							} elseif ($stats['identifier'] === 'yellow_cards') {
-    								echo 'Yellow Cards';
-    							} elseif ($stats['identifier'] === 'red_cards') {
-    								echo 'Red Cards';
-    							} else {
-    								echo $stats['identifier'];
-    							}
-                        		?>
+                        	<td class="player_modal__details-col1_offset">
+                            <?php 
+                                $identifier = $stats['identifier'];
+                                $identifier = str_replace('_', ' ', $identifier);
+                                $identifier = ucwords($identifier);
+                                echo $identifier;
+                            ?>
                         	</td>
                             <td class="player_modal__col">
                                 <?php echo $stats['value'] ?>
