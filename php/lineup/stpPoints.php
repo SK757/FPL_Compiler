@@ -48,7 +48,7 @@ echo '</div>';
 
 if ($fix === 1 && $gameNotPlayed === true) {
     if ($stp === 1) {
-        echo '<div class="stp yts">Still to play</div>';
+        echo '<div class="stp">Still to play</div>';
     } elseif ($stp > 1) {
         echo '<div class="stp">'. $stp .' Still to play</div>';
     }
@@ -58,7 +58,7 @@ if ($fix === 1 && $gameNotPlayed === true) {
     echo '<div class="stp">Did not play</div>';
 }
 if ($fix === 2 && $gameNotPlayed === true) {
-    echo '<div class="stp yts">'. $stp .' Still to play</div>';
+    echo '<div class="stp">'. $stp .' Still to play</div>';
 } elseif ($fix === 2 && $didNotPlay === true && $didPlay === false) {
     echo '<div class="stp">Did not play</div>';
 }
