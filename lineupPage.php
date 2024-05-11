@@ -119,7 +119,10 @@
                 $('.bench-container .p').each(function(){
                     sum += parseInt(this.innerHTML, 10);
                 });
-                $('.points .bonus').each(function(){
+                $('.grid-container .points .bonusTotal').each(function(){
+                    sum += parseInt(this.innerHTML, 10);
+                });
+                $('.bench-container .points .bonusTotal').each(function(){
                     sum += parseInt(this.innerHTML, 10);
                 });
                 $('.total_points b').text(sum);
