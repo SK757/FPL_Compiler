@@ -17,6 +17,7 @@
             }
             ?>
             <span class="total_points">Points <br><b></b></span>
+            <span style="position: absolute;top: 1rem;left: 1rem;text-align: center;" class="games_left">Still to Play <br><b style="font-size: 6vmin;font-style: italic;"></b></span>
         </section>
         <section class="flex-container def">
             <?PHP
@@ -127,6 +128,10 @@
                 });
                 $('.total_points b').text(sum);
             });
+            let stpSquad = $('.grid-container .column .stp').length;
+            let stpBench = $('.bench-container .column .stp').length;
+            stpBB = stpSquad + stpBench;
+            $('.games_left b').text(stpBB);
         } else {
             $(function() {
                 var sum = 0;
@@ -138,6 +143,8 @@
                 });
                 $('.total_points b').text(sum);
             });
+            let stpSquad = $('.grid-container .column .stp').length;
+            $('.games_left b').text(stpSquad);
         }
         const elements = document.querySelectorAll('.stp');
         elements.forEach((element) => {
@@ -145,6 +152,7 @@
                 element.previousElementSibling.previousElementSibling.previousElementSibling.classList.add('bench-image');
             }
         });
+        document.querySelectorAll('#main-div .specific-class').length;
     </script> 
 </body>
 </html>
