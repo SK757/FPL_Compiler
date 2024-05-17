@@ -17,7 +17,7 @@
             }
             ?>
             <span class="total_points">Points <br><b></b></span>
-            <span style="position: absolute;top: 1rem;left: 1rem;text-align: center;" class="games_left">Still to Play <br><b style="font-size: 6vmin;font-style: italic;"></b></span>
+            <span class="games_left"><br><b></b></span>
         </section>
         <section class="flex-container def">
             <?PHP
@@ -131,7 +131,10 @@
             let stpSquad = $('.grid-container .column .stp').length;
             let stpBench = $('.bench-container .column .stp').length;
             stpBB = stpSquad + stpBench;
-            $('.games_left b').text(stpBB);
+            if (stpBB > 0) {
+                $('.games_left').prepend("Still to Play");
+                $('.games_left b').append(stpBB);
+            }
         } else {
             $(function() {
                 var sum = 0;
@@ -144,7 +147,10 @@
                 $('.total_points b').text(sum);
             });
             let stpSquad = $('.grid-container .column .stp').length;
-            $('.games_left b').text(stpSquad);
+            if (stpSquad > 0) {
+                $('.games_left').prepend("Still to Play");
+                $('.games_left b').append(stpBB);
+            }
         }
         const elements = document.querySelectorAll('.stp');
         elements.forEach((element) => {

@@ -479,6 +479,16 @@ span.total_points>b {
 	font-size: 6vmin;
 	font-style: italic;
 }
+span.games_left {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	text-align: center;
+}
+span.games_left>b {
+	font-size: 6vmin;
+	font-style: italic;
+}
 span.capt, span.tripcapt, span.chance, span.gameLive {
 	position: absolute;
 	border-radius: 100%;
