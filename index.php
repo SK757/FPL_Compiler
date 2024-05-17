@@ -77,7 +77,7 @@
 				<a href="lineup" target="_self"><h3>Lineup</h3></a>
 			</div>
 			<div class="history">
-				<a href="history" target="_self"><h3>History</h3></a>
+				<a href="bonusPage" target="_self"><h3>Bonus Points</h3></a>
 			</div>
 			<div class="strength">
 				<a href="standings" target="_self"><h3>Standings</h3></a>
