@@ -50,6 +50,8 @@
         }
         table {
             color: #37003c;
+            table-layout: fixed;
+            width: 100%;
         }
         thead tr th {
             background: rgba(255,255,255,1);
@@ -61,6 +63,24 @@
         }
         tr:last-child td {
             border-bottom: 0;
+        }
+        .rank {
+            width: 10%;
+        }
+        .nameCol {
+            text-wrap: nowrap;
+            width: 35%;
+        }
+        .name {
+            width: 80%;
+        }
+        @media screen and (min-width: 700px) {
+            .name {
+                width: 60%;
+            }
+        }
+        .tm {
+            width: 15%;
         }
         .league_select {
             display: flex;

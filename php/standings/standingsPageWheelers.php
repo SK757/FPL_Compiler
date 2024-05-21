@@ -3,12 +3,12 @@
         <table>
             <thead>
                 <tr>
-                    <th id="nameHead">Rank </th>
-                    <th id="nameHead">Manager</th>
-                    <th id="nameHead">Total </th>
-                    <th id="nameHead">PN </th>
-                    <th id="nameHead">GW </th>
-                    <th id="nameHead">TM (Hits) </th>
+                    <th id="nameHead" class="rank">Rank</th>
+                    <th id="nameHead" class="nameCol">Manager</th>
+                    <th id="nameHead">Total</th>
+                    <th id="nameHead">PN</th>
+                    <th id="nameHead">GW</th>
+                    <th id="nameHead" class="tm">TM (Hit)</th>
                 </tr>
             </thead>
             <tbody>
@@ -19,20 +19,33 @@
                     $transfers = json_decode(file_get_contents("https://fantasy.premierleague.com/api/entry/".$wheelerS['entry']."/event/".$leagues['current_event']."/picks/"), true);
             ?>
                 <tr style="text-align:center;">
-                    <td>
+                    <td class="rank">
                         <?PHP echo $wheelerS['rank'];
                         if($wheelerS['rank'] < $wheelerS['last_rank']) {
                             echo " <span><i class='fa-solid fa-circle-chevron-up' style='color:#00ff87;background-image:radial-gradient(at center, #37003c 40%, transparent 40%);'></i></span>";
                         } elseif($wheelerS['rank'] > $wheelerS['last_rank']) {
                             echo " <i class='fa-solid fa-circle-chevron-down' style='color:#e90052;background-image:radial-gradient(at center, #fff 40%, transparent 40%);'></i>";
-                        } elseif($wheelerS['last_rank'] === "0") {
-                            echo " <i class='fa-solid fa-circle' style='color:rgba(255,255,255,.5);'></i>";
                         } else {
                             echo " <i class='fa-solid fa-circle' style='color:rgba(255,255,255,.5);'></i>";
                         } ?>
                     </td>
-                    <td style="text-transform:capitalize;">
-                        <b><?PHP echo $wheelerS['player_name']; ?></b>
+                    <td class="nameCol" style="text-transform:capitalize;">
+                        <?PHP
+                        if (str_contains($wheelerS['player_name'], '-')) {
+                            echo '<span class="name" style="font-weight:bold;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-block;vertical-align:bottom;">J-R Richardson</span>';
+                        } else {
+                            echo '<span class="name" style="font-weight:bold;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-block;vertical-align:bottom;">'.$wheelerS['player_name'].'</span>';
+                        }
+                        if ($transfers['active_chip'] === "wildcard") {
+                            echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">WC</span>';
+                        } elseif ($transfers['active_chip'] === "bboost") {
+                            echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">BB</span>';
+                        } elseif ($transfers['active_chip'] === "freehit") {
+                            echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">FH</span>';
+                        } elseif ($transfers['active_chip'] === "3xc") {
+                            echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">TC</span>';
+                        }
+                        ?>
                     </td>
                     <td><?PHP echo $wheelerS['total']; ?></td>
                     <td>
@@ -46,7 +59,7 @@
                         ?>
                     </td>
                     <td><?PHP echo $transfers['entry_history']['points']; ?></td>
-                    <td><?PHP
+                    <td class="tm"><?PHP
                         if($transfers['entry_history']['event_transfers_cost'] === 0) {
                             echo $transfers['entry_history']['event_transfers'];
                         } else {
