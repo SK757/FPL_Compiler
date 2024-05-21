@@ -8,7 +8,7 @@
     <meta name="google" content="notranslate"/>
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#37003c">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
-    <link rel="stylesheet" type="text/css" href="styles/css/bonus.css?=0.101">
+    <link rel="stylesheet" type="text/css" href="styles/css/bonus.css?=0.102">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -41,7 +41,7 @@ $fixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api
 		    }
 		    echo '</div>'; // Home team
 
-			if ($fixture['started'] == false) {
+			if ($fixture['started'] === false) {
                 echo '<strong class="fixture__score align_c fixture__date"><time datetime="fixture.kickoff_time">';
                 $kickoff = $fixture['kickoff_time'];
                 $datetime = new DateTime($kickoff);
@@ -50,9 +50,12 @@ $fixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api
                 echo $datetime->format('D j M ');
                 echo $datetime->format('G:i');
                 echo '</time></strong>';
-            } elseif ($fixture['started'] == true && $fixture['finished_provisional'] == true) {
+            } elseif ($fixture['started'] === true && $fixture['finished_provisional'] === false) {
                 echo '<span class="fixture__live">Live</span>';
+                echo '<span class="fixture__minutes">'.$fixture['minutes']."'".'</span>';
                 echo '<strong class="fixture__score align_c">'.$fixture['team_h_score'].' - '.$fixture['team_a_score'].'</strong>';
+            } elseif ($fixture['finished_provisional'] === true) {
+            	echo '<strong class="fixture__score align_c">'.$fixture['team_h_score'].' - '.$fixture['team_a_score'].'</strong>';
             }
 
 			echo '<div class="fixture__team">';
@@ -62,7 +65,9 @@ $fixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api
 		        }
 		    }
 		    echo '</div>'; // Away team
-		    echo '<button class="fixture__toggle-btn" type="button">View fixture details</button>';
+		    if ($fixture['started'] === true) {
+			    echo '<button class="fixture__toggle-btn" type="button">View fixture details</button>';
+			}
 		    echo '</div>'; // Fixture teams & score
 
 		    echo '<div class="fixtureDetails">';
@@ -100,48 +105,47 @@ $fixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api
 			    }
 			    echo '</div>'; // Fixture item right
 			    echo '</div>'; // Fixture BPS
+			
+			    //					   //
+			    // Bonus Points System //
+			    // 		 			   //
+			    echo '<h2 class="captialise fixtureDetails__sub-heading">Bonus Points System</h2>';
+			    echo '<div class="fixtureDetails__info">';
+			    echo '<div class="align_r fixtureDetails__info-item">';
+			    $i = 0;
+			    foreach($fixture['stats'][9]['h'] as $key=>$bpsH) {
+			    	echo '<div>';
+			    	foreach($data['elements'] as $key=>$player) {
+				        if ($bpsH['element'] === $player['id']) {
+				            echo $player['web_name'];
+				        }
+				    }
+			    	echo '<strong class="fixtureDetails__info-item__value">'.$bpsH['value'].'</strong></div>';
+
+			    	if (++$i == 5) {
+			    		break;
+			    	}
+			    } 
+			    echo '</div>'; // Fixture item left
+
+			    echo '<div class="align_l fixtureDetails__info-item">';
+			    $z = 0;
+			    foreach($fixture['stats'][9]['a'] as $key=>$bpsA) {
+			    	echo '<div><strong class="fixtureDetails__info-item__value">'.$bpsA['value'].'</strong>';
+			    	foreach($data['elements'] as $key=>$player) {
+				        if ($bpsA['element'] === $player['id']) {
+				            echo $player['web_name'].'</div>';
+				        }
+				    }
+			    	if (++$z == 5) {
+			    		break;
+			    	}
+			    }
+			    echo '</div>'; // Fixture item right
+			    echo '</div>'; // Fixture BPS
+
+			    echo '</div>'; // Fixture Details
 			}
-
-		    //					   //
-		    // Bonus Points System //
-		    // 		 			   //
-		    echo '<h2 class="captialise fixtureDetails__sub-heading">Bonus Points System</h2>';
-		    echo '<div class="fixtureDetails__info">';
-		    echo '<div class="align_r fixtureDetails__info-item">';
-		    $i = 0;
-		    foreach($fixture['stats'][9]['h'] as $key=>$bpsH) {
-		    	echo '<div>';
-		    	foreach($data['elements'] as $key=>$player) {
-			        if ($bpsH['element'] === $player['id']) {
-			            echo $player['web_name'];
-			        }
-			    }
-		    	echo '<strong class="fixtureDetails__info-item__value">'.$bpsH['value'].'</strong></div>';
-
-		    	if (++$i == 5) {
-		    		break;
-		    	}
-		    } 
-		    echo '</div>'; // Fixture item left
-
-		    echo '<div class="align_l fixtureDetails__info-item">';
-		    $z = 0;
-		    foreach($fixture['stats'][9]['a'] as $key=>$bpsA) {
-		    	echo '<div><strong class="fixtureDetails__info-item__value">'.$bpsA['value'].'</strong>';
-		    	foreach($data['elements'] as $key=>$player) {
-			        if ($bpsA['element'] === $player['id']) {
-			            echo $player['web_name'].'</div>';
-			        }
-			    }
-		    	if (++$z == 5) {
-		    		break;
-		    	}
-		    }
-		    echo '</div>'; // Fixture item right
-		    echo '</div>'; // Fixture BPS
-
-		    echo '</div>'; // Fixture Details
-
 		    echo '</div>'; // Whole Fixture
 		}
 	?>

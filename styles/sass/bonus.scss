@@ -44,14 +44,19 @@ h2 {
 	    margin: 0 .75rem;
 	}
 	&__live {
-	    align-items: center;
 	    color: #37003c;
-	    display: flex;
 	    position: absolute;
-	    left: 0.7rem;
-	    padding: 0 0.15rem;
+	    left: .7rem;
+	    padding: 0 .15rem;
 	    background: #d0bcd3;
 	    border-radius: 4px;
+	    font-size: .65rem;
+	}
+	&__minutes {
+	    color: #d0bcd3;
+	    position: absolute;
+	    right: .7rem;
+	    font-size: .65rem;
 	}
 	&__date {
 	    font-size: .7rem;
