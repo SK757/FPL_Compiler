@@ -8,7 +8,7 @@
     <meta name="google" content="notranslate"/>
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#37003c">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
-    <link rel="stylesheet" type="text/css" href="styles/css/bonus.css?=0.1">
+    <link rel="stylesheet" type="text/css" href="styles/css/bonus.css?=0.101">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -50,10 +50,9 @@ $fixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api
                 echo $datetime->format('D j M ');
                 echo $datetime->format('G:i');
                 echo '</time></strong>';
-            } elseif ($fixture['started'] == true && $fixture['finished_provisional'] == false) {
-                echo '<span class="live">Live</span>';
-            } else {
-				echo '<strong class="fixture__score align_c">'.$fixture['team_h_score'].' - '.$fixture['team_a_score'].'</strong>';
+            } elseif ($fixture['started'] == true && $fixture['finished_provisional'] == true) {
+                echo '<span class="fixture__live">Live</span>';
+                echo '<strong class="fixture__score align_c">'.$fixture['team_h_score'].' - '.$fixture['team_a_score'].'</strong>';
             }
 
 			echo '<div class="fixture__team">';

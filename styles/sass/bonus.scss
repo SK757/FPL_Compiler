@@ -4,6 +4,14 @@ html {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 20px;
 }
+body {
+	max-width: 500px;
+	margin: 0 auto;
+	justify-content: center;
+}
+article {
+	width: 100%;
+}
 .sub-heading {
     font-size: .95rem;
     font-weight: 600;
@@ -22,7 +30,7 @@ h2 {
     padding: .75rem 0;
     position: relative;
 	&__team {
-	    font-size: .9rem;
+	    font-size: .75rem;
 	    line-height: 1rem;
 	}
 	.align_r {
@@ -34,6 +42,16 @@ h2 {
 	    font-variant-numeric: tabular-nums;
 	    line-height: 1.1rem;
 	    margin: 0 .75rem;
+	}
+	&__live {
+	    align-items: center;
+	    color: #37003c;
+	    display: flex;
+	    position: absolute;
+	    left: 0.7rem;
+	    padding: 0 0.15rem;
+	    background: #d0bcd3;
+	    border-radius: 4px;
 	}
 	&__date {
 	    font-size: .7rem;
