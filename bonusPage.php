@@ -19,7 +19,7 @@
 
 $data = json_decode(file_get_contents("https://fantasy.premierleague.com/api/bootstrap-static/"), true);
 
-$leagues = json_decode(file_get_contents("https://fantasy.premierleague.com/api/entry/56467/"), true);
+$leagues = json_decode(file_get_contents("https://fantasy.premierleague.com/api/entry/64519/"), true);
 
 $fixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api/fixtures/?event=".$leagues['current_event']), true);
 
