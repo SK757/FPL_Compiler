@@ -149,7 +149,7 @@
             let stpSquad = $('.grid-container .column .stp').length;
             if (stpSquad > 0) {
                 $('.games_left').prepend("Still to Play");
-                $('.games_left b').append(stpBB);
+                $('.games_left b').append(stpSquad);
             }
         }
         const elements = document.querySelectorAll('.stp');
