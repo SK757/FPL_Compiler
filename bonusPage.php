@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-GB" class="notranslate" translate="no">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SWCCHKEVF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-3SWCCHKEVF');
+    </script>
 	<title>FPL Bonus</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
@@ -8,7 +17,8 @@
     <meta name="google" content="notranslate"/>
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#37003c">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
-    <link rel="stylesheet" type="text/css" href="styles/css/bonus.css?=0.103">
+    <link rel="stylesheet" type="text/css" href="styles/css/bonus.css?=0.104">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.4.2/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -145,6 +155,14 @@
 	
 	
 </article>
+<!-- BACK TO HOME BUTTON -->
+<a href="/" aria-label="Return to home page" id="return-to-home">
+    <i class="fas fa-home"></i>
+</a>
+<!-- REFRESH BUTTON -->
+<a aria-label="Refresh Table" id="refresh" style="cursor: pointer;">
+    <i class="fa-solid fa-arrows-rotate" style="color: #000000;"></i>
+</a>
 
 <script type="text/javascript">
 	if ('serviceWorker' in navigator) {

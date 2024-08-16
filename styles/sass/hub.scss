@@ -138,13 +138,6 @@ body {
     }
     li {
     	width: 42vmin;
-    	@media only screen and (max-width: 450px) {
-			max-width: 165px;
-		}
-    	@media only screen and (min-width: 451px) {
-			max-width: 310px;
-			width: 37vw;
-    	}
     	display: flex;
 	    flex-direction: row;
 	    border-bottom: 1px solid black;
@@ -164,6 +157,14 @@ body {
 		    border-radius: 3px;
 		    background: rgba(255,255,255,0.6);
 		}
+		
+    	@media only screen and (max-width: 450px) {
+			max-width: 165px;
+		}
+    	@media only screen and (min-width: 451px) {
+			max-width: 310px;
+			width: 37vw;
+    	}
     }
     li:last-child {
     	border-bottom: none;

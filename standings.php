@@ -16,7 +16,8 @@
     <meta name="Description" content="FPL Standings">
     <meta name="theme-color" content="#02efff">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/lineup.css?=0.934"><link rel="stylesheet" href="//use.fontawesome.com/releases/v6.4.2/css/all.css" crossorigin="anonymous" SameSite="none Secure">
+    <link rel="stylesheet" type="text/css" href="styles/css/lineup.css?=0.934">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.4.2/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -133,7 +134,7 @@
     <div class="loadWrapper">
         <button id="navigators">The Navigators</button>
         <button id="taskers">Taskers</button>
-        <button id="ain">Aintree</button>
+        <button id="aintree">Aintree</button>
         <!-- BACK TO HOME BUTTON -->
         <a href="/" aria-label="Return to home page" id="return-to-home">
             <i class="fas fa-home"></i>
@@ -169,7 +170,7 @@
         });
     });
     // Do an ajax request
-    $("#ain").click(function() {
+    $("#aintree").click(function() {
         $.ajax({
             url: "php/standings/standingsPageAin.php"
         }).done(function(data) { // data what is sent back by the php page
