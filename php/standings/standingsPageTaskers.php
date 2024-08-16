@@ -70,7 +70,24 @@
 
                 </tr>
             <?PHP
-                } 
+                }
+                foreach($tasStandings['new_entries']['results'] as $key=>$tasSnew)
+                {
+            ?>
+                <tr style="text-align:center;">
+                    <td>New</td>
+                    <td class="nameCol" style="text-transform:capitalize;">
+                        <?PHP
+                        echo $tasSnew['player_first_name'].' '.$tasSnew['player_last_name'];
+                        ?>
+                    </td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            <?PHP
+                }  
             ?></tbody>
         </table>
         <div class="league_select">

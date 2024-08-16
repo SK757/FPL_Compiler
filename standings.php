@@ -133,8 +133,7 @@
     <div class="loadWrapper">
         <button id="navigators">The Navigators</button>
         <button id="taskers">Taskers</button>
-        <button id="ffa">Free For All</button>
-        <button id="wheelers">Wheelers Dealers</button>
+        <button id="ain">Aintree</button>
         <!-- BACK TO HOME BUTTON -->
         <a href="/" aria-label="Return to home page" id="return-to-home">
             <i class="fas fa-home"></i>
@@ -170,19 +169,9 @@
         });
     });
     // Do an ajax request
-    $("#ffa").click(function() {
+    $("#ain").click(function() {
         $.ajax({
-            url: "php/standings/standingsPageFree.php"
-        }).done(function(data) { // data what is sent back by the php page
-            $('.update_area').html(data); // display data
-            $(".loadWrapper").hide();
-            $(".update_area").show();
-        });
-    });
-    // Do an ajax request
-    $("#wheelers").click(function() {
-        $.ajax({
-            url: "php/standings/standingsPageWheelers.php"
+            url: "php/standings/standingsPageAin.php"
         }).done(function(data) { // data what is sent back by the php page
             $('.update_area').html(data); // display data
             $(".loadWrapper").hide();

@@ -70,6 +70,23 @@
 
                 </tr>
             <?PHP
+                }
+                foreach($navStandings['new_entries']['results'] as $key=>$navSnew)
+                {
+            ?>
+                <tr style="text-align:center;">
+                    <td>New</td>
+                    <td class="nameCol" style="text-transform:capitalize;">
+                        <?PHP
+                        echo $navSnew['player_first_name'].' '.$navSnew['player_last_name'];
+                        ?>
+                    </td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            <?PHP
                 } 
             ?></tbody>
         </table>

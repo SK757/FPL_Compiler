@@ -101,7 +101,7 @@
 			</ol>
 		</div>
 		<div class="table2">
-			<h4><?PHP echo $leagues['leagues']['classic'][6]['name']; ?></h4>
+			<h4>Ex-Taskers</h4>
 			<ol>
 				<?php
 				// $i = 0;
@@ -122,42 +122,21 @@
 			</ol>
 		</div>
 		<div class="table3">
-			<h4><?PHP echo $leagues['leagues']['classic'][7]['name']; ?></h4>
+			<h4>Aintree</h4>
 			<ol>
 				<?php
 				// $i = 0;
-				foreach($freeStandings['standings']['results'] as $key=>$freeS) {
+				foreach($ainStandings['standings']['results'] as $key=>$ainS) {
 				?>
-					<li><span class="player"><?PHP echo $freeS['player_name']; ?></span><span class="player_score"><?php echo $freeS['total']; ?></span></li> 
+					<li><span class="player"><?PHP echo $ainS['player_name']; ?></span><span class="player_score"><?php echo $ainS['total']; ?></span></li> 
 				<?php 
 					// if (++$i == 5) {
 					// 	break;
 					// }
 				}  
-				foreach($freeStandings['new_entries']['results'] as $key=>$freeSnew) {
+				foreach($ainStandings['new_entries']['results'] as $key=>$ainSnew) {
 				?>
-					<li><span class="player"><?PHP echo $freeSnew['player_first_name'] . " " . $freeSnew['player_last_name']; ?></span><span class="player_score">New</span></li> 
-				<?php
-				}
-				?>
-			</ol>
-		</div>
-		<div class="table4">
-			<h4><?PHP echo $leagues['leagues']['classic'][8]['name']; ?></h4>
-			<ol>
-				<?php
-				// $i = 0;
-				foreach($wheelerStandings['standings']['results'] as $key=>$wheelerS) {
-				?>
-					<li><span class="player"><?PHP echo $wheelerS['player_name']; ?></span><span class="player_score"><?php echo $wheelerS['total']; ?></span></li> 
-				<?php 
-					// if (++$i == 5) {
-					// 	break;
-					// }
-				}  
-				foreach($wheelerStandings['new_entries']['results'] as $key=>$wheelerSnew) {
-				?>
-					<li><span class="player"><?PHP echo $wheelerSnew['player_first_name'] . " " . $wheelerSnew['player_last_name']; ?></span><span class="player_score">New</span></li> 
+					<li><span class="player"><?PHP echo $ainSnew['player_first_name'] . " " . $ainSnew['player_last_name']; ?></span><span class="player_score">New</span></li> 
 				<?php
 				}
 				?>
@@ -166,7 +145,6 @@
 		<div class="table_select">
 			<span class="table_select_1 active">.</span>
 			<span class="table_select_2">.</span>
-			<span class="table_select_3">.</span>
 		</div>
 	<?php } else {
 		echo '<div class="offline"><h1>Gameweek is Being Updated</h1></div>';
@@ -186,28 +164,20 @@
 	        });
 	        $('.score').text(sum);
 
-	        $('.table3, .table4').hide();
+	        $('.table3').hide();
 
 			$(".table2").click(function (e) {
 	        	$('.table2').hide();
 	        	$('.table3').show();
 			    $(".table_select_1").removeClass("active");
 			    $(".table_select_2").addClass("active");
-			    $(".table_select_3").removeClass("active");
 			    e.stopPropagation();
 			});
 			$(".table3").click(function (e) {
 	        	$('.table3').hide();
-	        	$('.table4').show();
-			    $(".table_select_2").removeClass("active");
-			    $(".table_select_3").addClass("active");
-			    e.stopPropagation();
-			});
-			$(".table4").click(function (e) {
-	        	$('.table4').hide();
 	        	$('.table2').show();
+			    $(".table_select_2").removeClass("active");
 			    $(".table_select_1").addClass("active");
-			    $(".table_select_3").removeClass("active");
 			    e.stopPropagation();
 			});
 
