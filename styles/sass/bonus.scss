@@ -132,9 +132,15 @@ h2 {
         background: #1f1f1f;
     }
     .fixture {
-	    border-top: 1px solid #636363;;
+	    border-top: 1px solid #636363;
 	}
 	.fixtureDetails__info {
 	    background: linear-gradient(90deg, #1f1f1f 49.8%, #636363 50%, #1f1f1f 50.2%, #1f1f1f);
+	}
+	.fixture__live {
+		background: #fff;
+	}
+	.fixture__minutes {
+		color: #fff;
 	}
 }

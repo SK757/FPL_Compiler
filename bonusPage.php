@@ -8,24 +8,14 @@
     <meta name="google" content="notranslate"/>
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#37003c">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
-    <link rel="stylesheet" type="text/css" href="styles/css/bonus.css?=0.102">
+    <link rel="stylesheet" type="text/css" href="styles/css/bonus.css?=0.103">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
     <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?=0.3" color="#37003c">
 </head>
 <body>
-<?php 
-
-$data = json_decode(file_get_contents("https://fantasy.premierleague.com/api/bootstrap-static/"), true);
-
-$leagues = json_decode(file_get_contents("https://fantasy.premierleague.com/api/entry/64519/"), true);
-
-$fixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api/fixtures/?event=".$leagues['current_event']), true);
-
-?>
-
-
+<?php include 'php/dates.php'; ?>
 <article>
 	<h1 class="sub-heading">Fixtures</h1>
 
@@ -105,6 +95,8 @@ $fixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api
 			    }
 			    echo '</div>'; // Fixture item right
 			    echo '</div>'; // Fixture BPS
+			}
+			if ($fixture['started'] === true) {
 			
 			    //					   //
 			    // Bonus Points System //
@@ -146,6 +138,7 @@ $fixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api
 
 			    echo '</div>'; // Fixture Details
 			}
+		    echo '</div>'; // Fixture
 		    echo '</div>'; // Whole Fixture
 		}
 	?>
