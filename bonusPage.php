@@ -71,84 +71,101 @@
 		    echo '</div>'; // Fixture teams & score
 
 		    echo '<div class="fixtureDetails">';
-
-		    // 		 //
-		    // Bonus //
-		    // 		 //
-		    if ($fixture['finished'] === true) {
-			    echo '<h2 class="captialise fixtureDetails__sub-heading">Bonus</h2>';
-			    echo '<div class="fixtureDetails__info">';
-			    echo '<div class="align_r fixtureDetails__info-item">';
-			    foreach($fixture['stats'][8]['h'] as $key=>$bonusH) {
-			    	echo '<div>';
-			    	foreach($data['elements'] as $key=>$player) {
-				        if ($bonusH['element'] === $player['id']) {
-				            echo $player['web_name'];
-				        }
-				    }
-			    	echo '<strong class="fixtureDetails__info-item__value">'.$bonusH['value'].'</strong></div>';
-			    } 
-			    echo '</div>'; // Fixture item left
-
-			    echo '<div class="align_l fixtureDetails__info-item">';
-			    $z = 0;
-			    foreach($fixture['stats'][8]['a'] as $key=>$bonusA) {
-			    	echo '<div><strong class="fixtureDetails__info-item__value">'.$bonusA['value'].'</strong>';
-			    	foreach($data['elements'] as $key=>$player) {
-				        if ($bonusA['element'] === $player['id']) {
-				            echo $player['web_name'].'</div>';
-				        }
-				    }
-			    	if (++$z == 5) {
-			    		break;
-			    	}
-			    }
-			    echo '</div>'; // Fixture item right
-			    echo '</div>'; // Fixture BPS
-			}
 			if ($fixture['started'] === true) {
-			
-			    //					   //
-			    // Bonus Points System //
-			    // 		 			   //
-			    echo '<h2 class="captialise fixtureDetails__sub-heading">Bonus Points System</h2>';
-			    echo '<div class="fixtureDetails__info">';
-			    echo '<div class="align_r fixtureDetails__info-item">';
-			    $i = 0;
-			    foreach($fixture['stats'][9]['h'] as $key=>$bpsH) {
-			    	echo '<div>';
-			    	foreach($data['elements'] as $key=>$player) {
-				        if ($bpsH['element'] === $player['id']) {
-				            echo $player['web_name'];
-				        }
-				    }
-			    	echo '<strong class="fixtureDetails__info-item__value">'.$bpsH['value'].'</strong></div>';
+				foreach($fixture['stats'] as $key=>$bpsHA) {
+					if (count($bpsHA['a']) === 0 && count($bpsHA['h']) === 0) {
+						continue;
+					} else {
+						$identifier = $bpsHA['identifier'];
+						$identifier = str_replace('_', ' ', $identifier);
+						$identifier = ucwords($identifier);
+						if ($identifier === "Bps") {
+							echo '<h2 class="captialise fixtureDetails__sub-heading">BPS</h2>';
+						} else {
+							echo '<h2 class="captialise fixtureDetails__sub-heading">'.$identifier.'</h2>';
+						}
+						echo '<div class="fixtureDetails__info">';
+						echo '<div class="align_r fixtureDetails__info-item">';
+						if ($bpsHA['identifier'] === "bps") {
+							$i = 0;
+							foreach($bpsHA['h'] as $key=>$bpsH) {
+								echo '<div>';
+								foreach($data['elements'] as $key=>$player) {
+							        if ($bpsH['element'] === $player['id']) {
+							            echo $player['web_name'];
+							        }
+							    }
+							    echo '<strong class="fixtureDetails__info-item__value">'.$bpsH['value'].'</strong></div>';
 
-			    	if (++$i == 5) {
-			    		break;
-			    	}
-			    } 
-			    echo '</div>'; // Fixture item left
+							    if (++$i == 5) {
+						    		break;
+						    	}
+							}
+						} else {
+							foreach($bpsHA['h'] as $key=>$bpsH) {
+								echo '<div>';
+								foreach($data['elements'] as $key=>$player) {
+							        if ($bpsH['element'] === $player['id']) {
+							            echo $player['web_name'];
+							        }
+							    }
+							    if ($bpsHA['identifier'] === "goals_scored" || $bpsHA['identifier'] === "assists" || $bpsHA['identifier'] === "own_goals" || $bpsHA['identifier'] === "penalties_saved" || $bpsHA['identifier'] === "penalties_missed" || $bpsHA['identifier'] === "yellow_cards" || $bpsHA['identifier'] === "red_cards") {
+							    	if ($bpsH['value'] > 1) {
+								    	echo '<strong class="fixtureDetails__info-item__value">'.$bpsH['value'].'</strong>';
+								    } else {
+								    	echo '</div>';
+								    }
+								} else {
+									echo '<strong class="fixtureDetails__info-item__value">'.$bpsH['value'].'</strong></div>';
+								}
+							}
+						} 
+						echo '</div>'; // align_r fixtureDetails__info-item
+						
 
-			    echo '<div class="align_l fixtureDetails__info-item">';
-			    $z = 0;
-			    foreach($fixture['stats'][9]['a'] as $key=>$bpsA) {
-			    	echo '<div><strong class="fixtureDetails__info-item__value">'.$bpsA['value'].'</strong>';
-			    	foreach($data['elements'] as $key=>$player) {
-				        if ($bpsA['element'] === $player['id']) {
-				            echo $player['web_name'].'</div>';
-				        }
-				    }
-			    	if (++$z == 5) {
-			    		break;
-			    	}
-			    }
-			    echo '</div>'; // Fixture item right
+						echo '<div class="align_l fixtureDetails__info-item">';
+						if ($bpsHA['identifier'] === "bps") {
+							$i = 0;
+							foreach($bpsHA['a'] as $key=>$bpsA) {
+								echo '<div>';
+							    echo '<strong class="fixtureDetails__info-item__value">'.$bpsA['value'].'</strong>';
+								foreach($data['elements'] as $key=>$player) {
+							        if ($bpsA['element'] === $player['id']) {
+							            echo $player['web_name'].'</div>';
+							        }
+							    }
+							    if (++$i == 5) {
+						    		break;
+						    	}
+							}
+						} else {
+							foreach($bpsHA['a'] as $key=>$bpsA) {
+								echo '<div>';
+								if ($bpsHA['identifier'] === "goals_scored" || $bpsHA['identifier'] === "assists" || $bpsHA['identifier'] === "own_goals" || $bpsHA['identifier'] === "penalties_saved" || $bpsHA['identifier'] === "penalties_missed" || $bpsHA['identifier'] === "yellow_cards" || $bpsHA['identifier'] === "red_cards") {
+							    	if ($bpsA['value'] > 1) {
+								    	echo '<strong class="fixtureDetails__info-item__value">'.$bpsA['value'].'</strong>';
+								    }
+								} else {
+									echo '<strong class="fixtureDetails__info-item__value">'.$bpsA['value'].'</strong>';
+								}
+								foreach($data['elements'] as $key=>$player) {
+							        if ($bpsA['element'] === $player['id']) {
+							            echo $player['web_name'].'</div>';
+							        }
+							    }
+							}
+						}
+						echo '</div>'; // align_r fixtureDetails__info-item
+						echo '</div>'; // fixtureDetails__info
+					}
+
+
+				}
+				echo '</div>'; // Fixture item left
 			    echo '</div>'; // Fixture BPS
 
 			    echo '</div>'; // Fixture Details
 			}
-		    echo '</div>'; // Fixture
 		    echo '</div>'; // Whole Fixture
 		}
 	?>
@@ -160,7 +177,7 @@
     <i class="fas fa-home"></i>
 </a>
 <!-- REFRESH BUTTON -->
-<a aria-label="Refresh Table" id="refresh" style="cursor: pointer;">
+<a href="javascript:location.reload(true)" aria-label="Refresh Table" id="refresh" style="cursor: pointer;">
     <i class="fa-solid fa-arrows-rotate" style="color: #000000;"></i>
 </a>
 

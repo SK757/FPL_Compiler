@@ -172,7 +172,7 @@
     // Do an ajax request
     $("#aintree").click(function() {
         $.ajax({
-            url: "php/standings/standingsPageAin.php"
+            url: "php/standings/standingsPageAintree.php"
         }).done(function(data) { // data what is sent back by the php page
             $('.update_area').html(data); // display data
             $(".loadWrapper").hide();
