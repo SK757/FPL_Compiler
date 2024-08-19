@@ -17,7 +17,7 @@
     <meta name="google" content="notranslate"/>
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#37003c">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
-    <link rel="stylesheet" type="text/css" href="styles/css/bonus.css?=0.104">
+    <link rel="stylesheet" type="text/css" href="styles/css/bonus.css?=0.105">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.4.2/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -31,6 +31,25 @@
 
 	<?php
 		foreach($fixtures as $key=>$fixture) {
+			$kickoff = $fixture['kickoff_time'];
+            $datetime = new DateTime($kickoff);
+            $timezone = new DateTimeZone('Europe/London');
+            $datetime->setTimezone($timezone);
+            $dateDate = $datetime->format('D j M ');
+            // if previous date exists
+			if (isset($fixtures[$key-1]['kickoff_time'])) {
+                $prevKickoff = $fixtures[$key-1]['kickoff_time'];
+                $prevDatetime = new DateTime($prevKickoff);
+                $prevDatetime->setTimezone($timezone);
+                $prevDateDate = $prevDatetime->format('D j M ');
+                // if its the next date, show the date
+                if ($dateDate > $prevDateDate) {
+                	echo '<h2 class="fixture_date">'.$datetime->format('D j M').'</h2>';
+                }
+            // if previous date doesn't exist (first game), just show date 
+            } else {
+                	echo '<h2 class="fixture_date">'.$datetime->format('D j M').'</h2>';
+            }
 			echo '<div>';// Whole Fixture
 			echo '<div class="fixture">';
 			echo '<div class="fixture__team align_r">';
@@ -43,10 +62,6 @@
 
 			if ($fixture['started'] === false) {
                 echo '<strong class="fixture__score align_c fixture__date"><time datetime="fixture.kickoff_time">';
-                $kickoff = $fixture['kickoff_time'];
-                $datetime = new DateTime($kickoff);
-                $timezone = new DateTimeZone('Europe/London');
-                $datetime->setTimezone($timezone);
                 echo $datetime->format('D j M ');
                 echo $datetime->format('G:i');
                 echo '</time></strong>';
