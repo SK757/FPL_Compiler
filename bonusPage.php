@@ -99,7 +99,7 @@
 						} else {
 							echo '<h2 class="captialise fixtureDetails__sub-heading">'.$identifier.'</h2>';
 						}
-						echo '<div class="fixtureDetails__info">';
+						echo '<div class="fixtureDetails__info">';//////////
 						echo '<div class="align_r fixtureDetails__info-item">';
 						if ($bpsHA['identifier'] === "bps") {
 							$i = 0;
@@ -126,7 +126,7 @@
 							    }
 							    if ($bpsHA['identifier'] === "goals_scored" || $bpsHA['identifier'] === "assists" || $bpsHA['identifier'] === "own_goals" || $bpsHA['identifier'] === "penalties_saved" || $bpsHA['identifier'] === "penalties_missed" || $bpsHA['identifier'] === "yellow_cards" || $bpsHA['identifier'] === "red_cards") {
 							    	if ($bpsH['value'] > 1) {
-								    	echo '<strong class="fixtureDetails__info-item__value">'.$bpsH['value'].'</strong>';
+								    	echo '<strong class="fixtureDetails__info-item__value">'.$bpsH['value'].'</strong></div>';
 								    } else {
 								    	echo '</div>';
 								    }
