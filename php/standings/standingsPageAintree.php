@@ -40,7 +40,7 @@
                             echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">WC</span>';
                         } elseif ($transfers['active_chip'] === "bboost") {
                             echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">BB</span>';
-                        } elseif ($transfers['active_chip'] === "ainhit") {
+                        } elseif ($transfers['active_chip'] === "freehit") {
                             echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">FH</span>';
                         } elseif ($transfers['active_chip'] === "3xc") {
                             echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">TC</span>';
