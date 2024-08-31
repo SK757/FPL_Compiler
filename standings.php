@@ -70,7 +70,7 @@
         }
         .nameCol {
             text-wrap: nowrap;
-            width: 35%;
+            width: 31%;
         }
         .name {
             width: 80%;
