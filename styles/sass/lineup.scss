@@ -174,7 +174,7 @@ p {
 	position: absolute;
 }
 //still to play
-.stp {
+.stp, .dnp {
 	// margin-top: .2rem;
 	font-size: .68rem;
 	font-weight: 300;
@@ -603,7 +603,7 @@ span.zero2 {
 		padding: 1px 5px;
 	    right: -0.6rem;
 	}
-	.stp {
+	.stp, .dnp {
 		font-size: 2.3vmin;
 	}
 }
