@@ -17,7 +17,7 @@
     <meta name="google" content="notranslate"/>
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#37003c">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
-    <link rel="stylesheet" type="text/css" href="styles/css/bonus.css?=0.105">
+    <link rel="stylesheet" type="text/css" href="styles/css/bonus.css?=0.108">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.4.2/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -43,7 +43,7 @@
                 $prevDatetime->setTimezone($timezone);
                 $prevDateDate = $prevDatetime->format('D j M ');
                 // if its the next date, show the date
-                if ($dateDate > $prevDateDate) {
+                if ($dateDate != $prevDateDate) {
                 	echo '<h2 class="fixture_date">'.$datetime->format('D j M').'</h2>';
                 }
             // if previous date doesn't exist (first game), just show date 
