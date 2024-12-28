@@ -52,8 +52,8 @@
             <a href="team" target="_top"><h1 id="score" class="score"></h1></a>
         </section>
         <section class="leagues">
-            <p><?PHP echo $leagues['leagues']['classic'][4]['name']; ?> rank - <?PHP echo ordinal($leagues['leagues']['classic'][4]['entry_rank']); ?></p>
             <p><?PHP echo $leagues['leagues']['classic'][5]['name']; ?> rank - <?PHP echo ordinal($leagues['leagues']['classic'][5]['entry_rank']); ?></p>
+            <p><?PHP echo $leagues['leagues']['classic'][6]['name']; ?> rank - <?PHP echo ordinal($leagues['leagues']['classic'][6]['entry_rank']); ?></p>
         </section>
     </main>
     <script>
