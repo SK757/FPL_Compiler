@@ -6,3 +6,5 @@ www.fpl.seankirk.co.uk/team
 www.fpl.seankirk.co.uk/lineup
 www.fpl.seankirk.co.uk/history
 www.fpl.seankirk.co.uk/strength
+www.fpl.seankirk.co.uk/standings
+www.fpl.seankirk.co.uk/bonusPage
