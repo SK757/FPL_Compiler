@@ -40,13 +40,13 @@
 		    	}
 		    } ?>
 		    <span class="gwb">
-		    	<span>Gameweek <?php echo $leagues['current_event']; ?></span>
-		    	<?php 
-		    	$numItems = count($fixtures);
-		    	$i = 0;
-		    	foreach($fixtures as $key=>$fixture) {
-		    		if(++$i === $numItems && $fixture['finished_provisional'] == false) {
-                        echo '&nbsp;<p class="live">Live</p>';
+		    	<?php
+		    	foreach($data['events'] as $key=>$events) {
+		    		if ($events['id'] === $leagues['current_event']) {
+		    			echo '<span>'.$events['name'].'</span>';
+		    			if ($events['finished'] === false) {
+		    				echo '&nbsp;<p class="live">Live</p>';
+			    		}
 		    		}
 		    	}
 		    	?>
@@ -57,8 +57,8 @@
         		if ($events['is_next'] === true) {
         			echo 
         			'<span class="gwdb">
-        				<span style="text-align: center;">
-        					Gameweek ' . $events['id'] . ' Deadline<br>';
+        				<span style="text-align: center;">'.
+        					$events['name'].' Deadline<br>';
 		        			$deadline = $events['deadline_time'];
 		        			$deadlineDatetime = new DateTime($deadline);
 		        			$timezone = new DateTimeZone('Europe/London');
