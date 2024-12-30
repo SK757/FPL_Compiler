@@ -56,7 +56,7 @@
         	foreach($data['events'] as $key=>$events) {
         		if ($events['is_next'] === true) {
         			echo 
-        			'<span class="gwdb" style="text-align: center;">
+        			'<span class="gwdb">
         				<span style="text-align: center;">
         					Gameweek ' . $events['id'] . ' Deadline<br>';
 		        			$deadline = $events['deadline_time'];
