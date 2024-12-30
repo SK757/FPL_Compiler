@@ -53,21 +53,22 @@
 		    </span>
 			<a href="team" target="_self"><h2 class="score"></h2><p>Points &rarr;</p></a>
 			<?php
-			if (count($deadline) > 0) {  ?>
-			<span class="gwdb">
-				<span style="text-align: center;">
-		            Gameweek <?php echo $nextgw; ?> Deadline<br>
-	            <?php
-	                $kickoff = $deadline[0]['kickoff_time'];
-	                $datetime = new DateTime($kickoff);
-	                $timezone = new DateTimeZone('Europe/London');
-	                $datetime->setTimezone($timezone);
-	                $datetime->sub(new DateInterval('PT1H30M'));
-	                echo $datetime->format('D j M G:i');
-	            ?>
-		        </span>
-            </span>
-	        <?php } ?>
+        	foreach($data['events'] as $key=>$events) {
+        		if ($events['is_next'] === true) {
+        			echo 
+        			'<span class="gwdb" style="text-align: center;">
+        				<span style="text-align: center;">
+        					Gameweek ' . $events['id'] . ' Deadline<br>';
+		        			$deadline = $events['deadline_time'];
+			                $deadlineDatetime = new DateTime($deadline);
+			                $timezone = new DateTimeZone('Europe/London');
+			                $deadlineDatetime->setTimezone($timezone);
+			                echo $deadlineDatetime->format('D j M G:i');
+		                echo '</span>';
+	                echo '</span>';
+        		}
+        	}
+            ?>
 		</div>
 		<div class="nav">
 			<div class="comp">
