@@ -60,12 +60,12 @@
         				<span style="text-align: center;">
         					Gameweek ' . $events['id'] . ' Deadline<br>';
 		        			$deadline = $events['deadline_time'];
-			                $deadlineDatetime = new DateTime($deadline);
-			                $timezone = new DateTimeZone('Europe/London');
-			                $deadlineDatetime->setTimezone($timezone);
-			                echo $deadlineDatetime->format('D j M G:i');
-		                echo '</span>';
-	                echo '</span>';
+		        			$deadlineDatetime = new DateTime($deadline);
+		        			$timezone = new DateTimeZone('Europe/London');
+		        			$deadlineDatetime->setTimezone($timezone);
+		        			echo $deadlineDatetime->format('D j M G:i');
+	        			echo '</span>';
+        			echo '</span>';
         		}
         	}
             ?>
