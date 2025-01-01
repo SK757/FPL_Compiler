@@ -14,10 +14,9 @@ if($chance === 75) {
 	echo '<span class="chance fifty"><b>!</b></span>';
 }elseif($chance === 25) {
 	echo '<span class="chance twentyFive"><b>!</b></span>';
+}elseif($chance === 0) {
+	echo '<span class="chance zero"><b>!</b></span>';
 }
-// elseif($chance === 0) {
-	// echo '<span class="chance zero"><b>!</b></span>';
-// }
 $upcomingAndPastFixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api/element-summary/".$item1['id']."/"), true);
 
 foreach($upcomingAndPastFixtures['history'] as $key=>$matchInfo) {
