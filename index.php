@@ -16,7 +16,7 @@
     <meta name="Description" content="FPL Hub">
     <meta name="theme-color" content="#02efff">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.127">
+    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.128">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -51,7 +51,35 @@
 		    	}
 		    	?>
 		    </span>
-			<a href="team" target="_self"><h2 class="score"></h2><p>Points &rarr;</p></a>
+		    <div class="scoreContainer">
+			    <div class="sideStatsLeft">
+				    <div class="sideStatsLeftDetails">
+				    	<?php
+				    	foreach($data['events'] as $key=>$events) {
+					    	if ($events['id'] === $leagues['current_event']) {
+						    	echo '<div class="leftStat"><div class="statScore">'.$events['average_entry_score'].'</div><h4 class="statTitle">Average<br>Score</h4></div>';
+						    }
+						}
+				    	?>
+					</div>
+				</div>
+				<a href="team" target="_self"><h2 class="score"></h2><p>Points &rarr;</p></a>
+				<div class="sideStatsRight">
+				    <div class="sideStatsRightDetails">
+				    	<?php
+				    	foreach($data['events'] as $key=>$events) {
+					    	if ($events['id'] === $leagues['current_event']) {
+						    	foreach($data['elements'] as $key=>$item2) {
+						    		if($item2['id'] === $events['top_element_info']['id']) {
+										echo '<div class="leftStat"><div class="statScore">'.$events['top_element_info']['points'].'</div><h4 class="statTitle">'.$item2['web_name'].'<br>Top Scorer</h4></div>';
+						    		}
+					    		}
+						    }
+						}
+				    	?>
+					</div>
+				</div>
+			</div>
 			<?php
         	foreach($data['events'] as $key=>$events) {
         		if ($events['is_next'] === true) {
