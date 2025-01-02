@@ -521,9 +521,8 @@ span.gameLive {
 span.chance {
 	border: 1px solid #37003c;
 	padding: 1px 6px;
-	top: 0.5rem;
-    right: -0.7rem;
-	transform: translate(-50%, -50%);
+	top: 0;
+    transform: translate(74%, 1%);
 }
 span.seventyFive {
     background-color: #ffe65b;
@@ -601,7 +600,6 @@ span.zero2 {
 	}
 	span.chance {
 		padding: 1px 5px;
-	    right: -0.6rem;
 	}
 	.stp, .dnp {
 		font-size: 2.3vmin;
