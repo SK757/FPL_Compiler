@@ -48,6 +48,8 @@
                             <?php 
                                 $identifier = $stats['identifier'];
                                 $identifier = str_replace('_', ' ', $identifier);
+                                $identifier = str_replace('mng', 'Manager', $identifier);
+                                $identifier = str_replace('sheets', 'sheet', $identifier);
                                 $identifier = ucwords($identifier);
                                 echo $identifier;
                             ?>

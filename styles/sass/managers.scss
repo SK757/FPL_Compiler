@@ -1,7 +1,6 @@
 html {
-	background-color: #02efff;
-	background-image: linear-gradient(0deg, #00beff 0%, #02efff 100%);
-	height: 100%;
+	background-color: #37003c;
+	color: white;
 }
 body {
 	max-width: 700px;
@@ -13,46 +12,61 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0 1rem;
-}
-.auto-grid {
-  --auto-grid-min-size: 6rem;
-  
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  grid-gap: 1rem;
-  justify-content: stretch;
-}
-.item-container {
-	text-align: center;
-	position: relative;
-}
-.image {
-	position: relative;
-	background-color: #fff;
-	background-position: center .31rem;
-	background-repeat: no-repeat;
-	background-size: 100%;
-	height: 3.2rem;
-	width: 3.2rem;
-	margin: 0 auto .2rem;
-	border-radius: 100%;
-	overflow: visible;
-}
-.player_btn {
-	background: 0 0;
-	border: 0;
-	cursor: pointer;
-	height: calc(100% + 6px);
-	left: 0;
-	margin: -6px 0 0;
-	outline: none;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	-webkit-tap-highlight-color: transparent;
-}
-.info {
+
+	.auto-grid {
+		--auto-grid-min-size: 6rem;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+		grid-gap: 1rem;
+		justify-content: stretch;
+	}
+	&__item {
+		text-align: center;
+		position: relative;
+	}
+	.image {
+		position: relative;
+		background-color: #fff;
+		background-position: center .31rem;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		height: 3.2rem;
+		width: 3.2rem;
+		margin: 0 auto .2rem;
+		border-radius: 100%;
+		overflow: visible;
+
+		.gameLive {
+			position: absolute;
+			border-radius: 100%;
+			font-size: 10px;
+			background: #37003c;
+			border: 1px solid white;
+			padding: 1px;
+		    left: -0.6rem;
+			border-radius: 4px;
+		}
+	}
+	.player_btn {
+		background: 0 0;
+		border: 0;
+		cursor: pointer;
+		height: calc(100% + 6px);
+		left: 0;
+		margin: -6px 0 0;
+		outline: none;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		-webkit-tap-highlight-color: transparent;
+	}
+	.info {
+		.team_name {
+			font-size: .8rem;
+		}
+	}
 }
 table {
 	border-collapse: collapse;
@@ -110,6 +124,9 @@ td {
 		background: #fff;
 		color: #37003c;
 		padding: .65rem .75rem;
+		p {
+			margin: 0;
+		}
 	}
 	&__btn {
 		background: #00e187;
@@ -141,10 +158,8 @@ td {
 	&__heading {
 		margin: 0;
 		padding-right: 2.5rem;
-		h1 {
-			font-size: 1.2rem;
-			font-weight: 600;
-		}
+		font-size: 1.17rem;
+		font-weight: 600;
 	}
 	&__content {
 		max-height: 84vh;
@@ -191,8 +206,8 @@ td {
 		}
 		.fixture__ko-item_modal {
 			display: block;
-	    font-size: .8rem;
-	    margin-bottom: -3px;
+		    font-size: .8rem;
+		    margin-bottom: -3px;
 		}
 		.away {
 		    text-align: left;
@@ -200,23 +215,23 @@ td {
 		    font-weight: normal;
 		}
 		.live {
-	    align-items: center;
-	    color: #37003c;
-	    display: flex;
-	    position: absolute;
-	    left: 0.7rem;
-	    padding: 0 0.15rem;
-	    background: #d0bcd3;
-	    border-radius: 4px;
+		    align-items: center;
+		    color: #37003c;
+		    display: flex;
+		    position: absolute;
+		    left: 0.7rem;
+		    padding: 0 0.15rem;
+		    background: #d0bcd3;
+		    border-radius: 4px;
 		}
 		.minutes {
-	    align-items: center;
-	    color: #d0bcd3;
-	    display: flex;
-	    height: 100%;
-	    position: absolute;
-	    right: .7rem;
-	    top: 0
+		    align-items: center;
+		    color: #d0bcd3;
+		    display: flex;
+		    height: 100%;
+		    position: absolute;
+		    right: .7rem;
+		    top: 0
 		}
 	}
 	&__details {
@@ -303,5 +318,37 @@ td {
 	    	color: white;
 	    	filter: brightness(90%);
 	    }
+	}
+}
+@media (prefers-color-scheme: dark) {
+	html {
+	    background: #1f1f1f;
+	}
+	.player_modal__wrapper {
+		background: #1f1f1f;
+	}
+	.player_modal__header {
+		color: #1f1f1f;
+	}
+	.live {
+		color: #1d1d1d !important;
+		background: #d1d1d1 !important;
+	}
+	time, .minutes {
+		color: #d1d1d1 !important;
+	}
+	th {
+		background: #343434;
+	}
+	.player_modal__row {
+		border-top: 1px solid #343434;
+	}
+	.loading__anim {
+	    border: 5px solid rgba(0,225,135, 0.25);
+	    border-left-color: #00e187;
+	    border-top-color: #00e187;
+	}
+	.container .image .gameLive {
+		background: #1f1f1f;
 	}
 }
