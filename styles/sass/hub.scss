@@ -147,14 +147,14 @@ body {
 .comp {
 	grid-area: comp;
 }
-.lineup {
-	grid-area: lineup;
+.managers {
+	grid-area: managers;
 }
-.history {
-	grid-area: history;
+.bonus {
+	grid-area: bonus;
 }
-.strength {
-	grid-area: strength;
+.standings {
+	grid-area: standings;
 }
 
 .table1 {
@@ -253,8 +253,8 @@ body {
 	grid-area: nav;
 	display: grid;
 	grid:
-		[row1-start] "comp comp lineup lineup" auto [row1-end]
-		[row2-start] "history history strength strength" auto [row2-end]
+		[row1-start] "comp comp managers managers" auto [row1-end]
+		[row2-start] "bonus bonus standings standings" auto [row2-end]
 		/ 1fr 1fr 1fr 1fr;
 	gap: 5px;
     background: rgba(255, 255, 255, 0.5);
@@ -278,7 +278,7 @@ a:link, a:visited, a:hover, a:active {
 	cursor: pointer;
 }
 
-.comp, .lineup, .history, .strength {
+.comp, .managers, .bonus, .standings {
 	background-color: rgba(255,255,255,0.6);
     border-radius: 3px;
     display: flex;

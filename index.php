@@ -16,7 +16,7 @@
     <meta name="Description" content="FPL Hub">
     <meta name="theme-color" content="#02efff">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.128">
+    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.129">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -63,7 +63,7 @@
 				    	?>
 					</div>
 				</div>
-				<a href="team" target="_self"><h2 class="score"></h2><p>Points &rarr;</p></a>
+				<a href="lineup" target="_self"><h2 class="score"></h2><p>Lineup &rarr;</p></a>
 				<div class="sideStatsRight">
 				    <div class="sideStatsRightDetails">
 				    	<?php
@@ -102,13 +102,13 @@
 			<div class="comp">
 				<a href="compiler" target="_self"><h3>Compiler</h3></a>
 			</div>
-			<div class="lineup">
-				<a href="lineup" target="_self"><h3>Lineup</h3></a>
+			<div class="managers">
+				<a href="managers" target="_self"><h3>Managers</h3></a>
 			</div>
-			<div class="history">
+			<div class="bonus">
 				<a href="bonusPage" target="_self"><h3>Bonus Points</h3></a>
 			</div>
-			<div class="strength">
+			<div class="standings">
 				<a href="standings" target="_self"><h3>Standings</h3></a>
 			</div>
 		</div>
