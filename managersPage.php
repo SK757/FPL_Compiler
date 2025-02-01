@@ -39,7 +39,7 @@
 		        				}
 		   					}
 		   					echo '</div>';
-		   					echo '<div class="points">'. $item1['stats']['total_points']. '</div>';
+		   					echo '<div class="points"><b>'. $item1['stats']['total_points']. '</b></div>';
 						include 'php/lineup/modal_manager.php';
 					}
 				}
