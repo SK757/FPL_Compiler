@@ -26,17 +26,32 @@
 								}
 							}
 							echo '</div>';
-							echo '<div class="info"><b>'. $item2['web_name'] .'</b><br>';
+							echo '<div class="info"><b>';
+							if($item2['web_name'] === "Van Nistelrooy") {
+								echo "RVN";
+							} else {
+								echo $item2['web_name'];
+							}
+							echo '</b><br>';
 							foreach($data['teams'] as $key=>$teams) {
 		        				if ($item2['team'] === $teams['id']) {
 		        					echo '<span class="team_name">'. $teams['short_name'] . ' - '. ordinal($teams['position']) .'</span>';
 		        				}
 		   					}
 		   					echo '</div>';
+		   					echo '<div class="points">'. $item1['stats']['total_points']. '</div>';
 						include 'php/lineup/modal_manager.php';
 					}
 				}
 			}
 			?>
 		</div>
+		<!-- BACK TO HOME BUTTON -->
+		<a href="/" aria-label="Return to home page" id="return-to-home">
+		    <i class="fas fa-home"></i>
+		</a>
+		<!-- REFRESH BUTTON -->
+		<a href="javascript:location.reload(true)" aria-label="Refresh Table" id="refresh" style="cursor: pointer;">
+		    <i class="fa-solid fa-arrows-rotate" style="color: #000000;"></i>
+		</a>
 	</main>
