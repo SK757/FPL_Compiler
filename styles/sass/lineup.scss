@@ -52,7 +52,7 @@ body {
     width: 35px;
     height: 35px;
     display: inline-block;
-    border: 5px solid rgba(0,225,135, 0.1);
+    border: 5px solid rgba(0,225,135, 0.25);
     border-left-color: #00e187;
     border-top-color: #00e187;
     border-radius: 50%;
@@ -628,10 +628,5 @@ span.zero2 {
     }
     .player_modal__row {
 		border-top: 1px solid #343434;
-    }
-	.loading__anim {
-        border: 5px solid rgba(0,225,135, 0.25);
-        border-left-color: #00e187;
-        border-top-color: #00e187;
     }
 }

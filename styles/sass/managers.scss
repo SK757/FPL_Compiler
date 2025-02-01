@@ -7,11 +7,62 @@ body {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	margin: 8px auto;
 }
-.container {
+.update_area {
 	max-width: 65rem;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0 1rem;
+}
+
+/*
+//
+// LOADING
+// SCREEN
+//
+*/
+.loadWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 16px);
+    background-color: #37003c;
+}
+
+.loading {
+	display: flex;
+    width: 20%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    line-height: 1.4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.loading__anim {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border: 5px solid rgba(0,225,135, 0.25);
+    border-left-color: #00e187;
+    border-top-color: #00e187;
+    border-radius: 50%;
+    animation: rotate 600ms infinite linear;
+}
+@keyframes rotate {
+    to {
+        transform: rotate(1turn)
+    }
+}
+/*
+//
+//
+//
+//
+*/
+.container {
 
 	.auto-grid {
 		--auto-grid-min-size: 6rem;
@@ -362,6 +413,9 @@ td {
 	}
 	.player_modal__row {
 		border-top: 1px solid #343434;
+	}
+	.loadWrapper {
+	    background-color: #1f1f1f;
 	}
 	.loading__anim {
 	    border: 5px solid rgba(0,225,135, 0.25);
