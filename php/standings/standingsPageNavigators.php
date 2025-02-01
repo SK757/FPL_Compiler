@@ -44,6 +44,8 @@
                             echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">FH</span>';
                         } elseif ($transfers['active_chip'] === "3xc") {
                             echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">TC</span>';
+                        } elseif ($transfers['active_chip'] === "manager") {
+                            echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">MG</span>';
                         }
                         ?>
                     </td>

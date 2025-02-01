@@ -17,7 +17,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#37003c">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/managers.css?=0.002">
+    <link rel="stylesheet" type="text/css" href="styles/css/managers.css?=0.003">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -35,11 +35,12 @@
 			        return $number. $ends[$number % 10];
 			    }
 			}
+			$count = 1;
 			foreach($live['elements'] as $key=>$item1) {
                 foreach($data['elements'] as $key=>$item2) {
                 	if ($item1['id'] === $item2['id'] && $item2['element_type'] === 5) {
 						echo '<div class="container__item">';
-							echo '<div class="image" style="background-image: url(https://resources.premierleague.com/premierleague/photos/players/110x140/'. $item2['opta_code'] .'.png);">';
+							echo '<div class="image" style="background-image: url(https://resources.premierleague.com/premierleague/photos/players/110x140/'. $item2['opta_code'] .'.png), url(https://resources.premierleague.com/premierleague/photos/players/110x140/Photo-Missing.png);">';
 							$upcomingAndPastFixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api/element-summary/".$item1['id']."/"), true);
 							foreach($upcomingAndPastFixtures['history'] as $key=>$matchInfo) {
 								foreach($fixtures as $key=>$fixture) {
