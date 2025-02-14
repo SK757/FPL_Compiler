@@ -126,6 +126,12 @@ div {
 	overflow: visible;
 }
 
+.managerColumn {
+	border: 1px solid white;
+	border-bottom: none;
+	border-radius: .2rem;
+}
+
 .image {
 	position: relative;
 	background-color: #fff;
@@ -293,7 +299,7 @@ td {
 		}
 	}
 	&__content {
-		max-height: 84vh;
+		max-height: 79vh;
 		overflow-y: auto;
 	}
 	&__explain {
