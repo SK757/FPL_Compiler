@@ -50,7 +50,7 @@ if ($fix === 1 && $gameNotPlayed === true) {
     if ($stp === 1) {
         echo '<div class="stp">Still to play</div>';
     } elseif ($stp > 1) {
-        echo '<div class="stp">'. $stp .' Still to play</div>';
+        echo '<div class="stp"><span class="stpNumber">'. $stp .'</span> Still to play</div>';
     }
 } elseif ($fix === 1 && $gamePlayed === true && $startingXI === false) {
     echo '<div class="dnp">Not in 1st XI</div>';
@@ -58,7 +58,7 @@ if ($fix === 1 && $gameNotPlayed === true) {
     echo '<div class="dnp">Did not play</div>';
 }
 if ($fix === 2 && $gameNotPlayed === true) {
-    echo '<div class="stp">'. $stp .' Still to play</div>';
+    echo '<div class="stp"><span class="stpNumber">'. $stp .'</span> Still to play</div>';
 } elseif ($fix === 2 && $didNotPlay === true && $didPlay === false) {
     echo '<div class="dnp">Did not play</div>';
 }

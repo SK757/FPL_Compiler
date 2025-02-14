@@ -174,9 +174,11 @@
                 $('.total_points b').text(sum);
             });
             let stpSquad = $('.grid-container .column .stp').length;
-            if (stpSquad > 0) {
+            let stpNumber = $('.grid-container .column .stp .stpNumber').length;
+            stpFinal = stpSquad + stpNumber;
+            if (stpFinal > 0) {
                 $('.games_left').prepend("Still to Play");
-                $('.games_left b').append(stpSquad);
+                $('.games_left b').append(stpFinal);
             }
         }
         const elements = document.querySelectorAll('.stp');
