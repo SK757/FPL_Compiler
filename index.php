@@ -16,7 +16,7 @@
     <meta name="Description" content="FPL Hub">
     <meta name="theme-color" content="#02efff">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.129">
+    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.130">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -63,7 +63,7 @@
 				    	?>
 					</div>
 				</div>
-				<a href="lineup" target="_self"><h2 class="score"></h2><p>Lineup &rarr;</p></a>
+				<a href="lineup" target="_self"><h2 id="score" class="score"></h2><p>Lineup &rarr;</p></a>
 				<div class="sideStatsRight">
 				    <div class="sideStatsRightDetails">
 				    	<?php
@@ -187,10 +187,17 @@
             });
         }
 	    $(document).ready(function(){
-	        var sum = 0;
+			var sum = 0;
 	        $('.player_scores').each(function(){
 	            sum += parseFloat($(this).text());
 	        });
+	        var double = 'calc(102px + 3vw)';
+	        var triple = '10vmax';
+	        if (sum > 99) {
+	            $('.score').css('fontSize', triple);
+	        } else {
+	            $('.score').css('fontSize', double);
+	        }
 	        $('.score').text(sum);
 
 	        $('.table3').hide();

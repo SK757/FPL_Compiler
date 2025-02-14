@@ -135,7 +135,7 @@ body {
 			font-size: 30vmin;
 			margin: 0;
 			line-height: 0.9em;
-			font-size: calc(102px + 3vw);
+			// font-size: calc(102px + 3vw);
 		}
 		p {
 			margin: 0;
@@ -299,3 +299,29 @@ a:link, a:visited, a:hover, a:active {
 	text-align: center;
 	grid-area: title / title / table2_3 / table2_3;
 }
+
+// @media (prefers-color-scheme: dark) {
+// 	html {
+// 		background-color: #1f1f1f;
+// 		background-image: none;
+// 	}
+// 	.name, .points, .nav, .table1, .table2, .table3 {
+// 		background: hsla(0, 0%, 12%, .6);
+// 	}
+// 	.points {
+// 		.scoreContainer {
+// 			a {
+// 			    background: hsla(0, 0%, 12%, .6);
+// 			}
+// 			.sideStatsLeft, .sideStatsRight {
+// 				.sideStatsLeftDetails, .sideStatsRightDetails {
+// 					background: hsla(0, 0%, 12%, .6);
+// 				}
+// 			}
+// 		}
+// 	}
+// 	.comp, .managers, .bonus, .standings {
+// 	    background: hsla(0, 0%, 12%, .6);
+// 	}
+
+// }
