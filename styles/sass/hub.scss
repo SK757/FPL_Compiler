@@ -300,28 +300,64 @@ a:link, a:visited, a:hover, a:active {
 	grid-area: title / title / table2_3 / table2_3;
 }
 
-// @media (prefers-color-scheme: dark) {
-// 	html {
-// 		background-color: #1f1f1f;
-// 		background-image: none;
-// 	}
-// 	.name, .points, .nav, .table1, .table2, .table3 {
-// 		background: hsla(0, 0%, 12%, .6);
-// 	}
-// 	.points {
-// 		.scoreContainer {
-// 			a {
-// 			    background: hsla(0, 0%, 12%, .6);
-// 			}
-// 			.sideStatsLeft, .sideStatsRight {
-// 				.sideStatsLeftDetails, .sideStatsRightDetails {
-// 					background: hsla(0, 0%, 12%, .6);
-// 				}
-// 			}
-// 		}
-// 	}
-// 	.comp, .managers, .bonus, .standings {
-// 	    background: hsla(0, 0%, 12%, .6);
-// 	}
+@media (prefers-color-scheme: dark) {
+	html {
+		background-color: #1f1f1f;
+		background-image: none;
+		color: white;
+	}
+	.name, .points, .nav, .table1, .table2, .table3 {
+		background: hsla(0, 0%, 50%, .5);
+	}
+	.points {
+		.gwb, .gwdb {
+			margin: 0;
+			padding: .2rem .9rem;
+			background: #1f1f1f;
+			span {
+			    background-image: none;
+				background-clip: border-box;
+				-webkit-background-clip: border-box;
+				-webkit-text-fill-color: currentcolor;
+			}
+		}
+		.gwb {
+			.live {
+			    background-image: none;
+			    background-color: hsla(0,0%,100%,.6);
+			    color: white;
+			}
+		}
+		.gwdb {
+			border-radius: 15px 15px 0 0;
+		}
+		.scoreContainer {
+			a {
+			    background: hsla(0, 0%, 100%, .6);
+			    color: black;
+			}
+			a:visited {
+			    background: hsla(0, 0%, 100%, .6);
+			    color: black;
+			}
+			.sideStatsLeft, .sideStatsRight {
+				.sideStatsLeftDetails, .sideStatsRightDetails {
+					background: hsla(0, 0%, 100%, .6);
+					color: black;
+				}
+			}
+		}
+	}
+	.comp, .managers, .bonus, .standings {
+	    background: hsla(0, 0%, 100%, .6);
+	}
+	.table1, .table2, .table3, .table4 {
+	    li {
+			.player_score {
+				background: hsla(0, 0%, 100%, .6);
+				color: black;
+			}
+		}
+	}
 
-// }
+}

@@ -14,9 +14,10 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
     <meta name="Description" content="FPL Hub">
-    <meta name="theme-color" content="#02efff">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#02efff">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.130">
+    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.131">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
