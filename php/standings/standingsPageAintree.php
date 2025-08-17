@@ -23,8 +23,10 @@
                         <?PHP echo $ainS['rank'];
                         if($ainS['rank'] < $ainS['last_rank']) {
                             echo " <span><i class='fa-solid fa-circle-chevron-up' style='color:#00ff87;background-image:radial-gradient(at center, #37003c 40%, transparent 40%);'></i></span>";
-                        } elseif($ainS['rank'] > $ainS['last_rank']) {
+                        } elseif($navS['rank'] > $navS['last_rank'] && $navS['last_rank'] != 0) {
                             echo " <i class='fa-solid fa-circle-chevron-down' style='color:#e90052;background-image:radial-gradient(at center, #fff 40%, transparent 40%);'></i>";
+                        } elseif($navS['last_rank'] === 0) {
+                            echo " <i class='fa-solid fa-circle' style='color:rgba(255,255,255,.5);'></i>";
                         } else {
                             echo " <i class='fa-solid fa-circle' style='color:rgba(255,255,255,.5);'></i>";
                         } ?>
