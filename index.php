@@ -17,7 +17,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#02efff">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.131">
+    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.132">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -103,8 +103,8 @@
 			<div class="comp">
 				<a href="compiler" target="_self"><h3>Compiler</h3></a>
 			</div>
-			<div class="managers">
-				<a href="managers" target="_self"><h3>Managers</h3></a>
+			<div class="history">
+				<a href="history" target="_self"><h3>History</h3></a>
 			</div>
 			<div class="bonus">
 				<a href="bonusPage" target="_self"><h3>Bonus Points</h3></a>
