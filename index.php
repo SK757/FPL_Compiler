@@ -114,7 +114,7 @@
 			</div>
 		</div>
 		<div class="table1">
-			<h4><?PHP echo $leagues['leagues']['classic'][7]['name']; ?></h4>
+			<h4><?PHP echo $leagues['leagues']['classic'][8]['name']; ?></h4>
 			<ol>
 				<?php 
 				foreach($navStandings['standings']['results'] as $key=>$navS) {
