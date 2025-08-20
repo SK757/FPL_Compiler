@@ -1,7 +1,7 @@
 <?PHP
 echo 
 '<div class="column">
-	<div class="image" style="background-image: url(https://resources.premierleague.com/premierleague/photos/players/110x140/p' . $item2['code'] . '.png);">';
+	<div class="image" style="background-image: url(https://resources.premierleague.com/premierleague25/photos/players/110x140/' . $item2['code'] . '.png);">';
 if($item['multiplier'] === 2) {
 	echo '<span class="capt">C</span>';
 } elseif($item['multiplier'] === 3) {

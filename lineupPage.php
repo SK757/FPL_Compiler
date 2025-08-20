@@ -80,7 +80,7 @@
                     foreach($data['elements'] as $key=>$item2) {
                         if ($item['element'] === $item1['id'] && $item['element'] === $item2['id']) {
                             if($item['position'] >= 12 && $item['position'] < 16) {
-                                echo '<div class="column bench"><div class="image bench-image" style="background-image: url(https://resources.premierleague.com/premierleague/photos/players/110x140/p' . $item2['code'] . '.png);">';
+                                echo '<div class="column bench"><div class="image bench-image" style="background-image: url(https://resources.premierleague.com/premierleague25/photos/players/110x140/' . $item2['code'] . '.png);">';
                                 $upcomingAndPastFixtures = json_decode(file_get_contents("https://fantasy.premierleague.com/api/element-summary/".$item1['id']."/"), true);
 
                                 foreach($upcomingAndPastFixtures['history'] as $key=>$matchInfo) {
