@@ -170,7 +170,7 @@ body {
 	align-items: center;
 	flex-direction: column;
     border-radius: 3px;
-    overflow: scroll;
+    overflow-y: auto;
     z-index: 2;
 	text-transform: capitalize;
 
@@ -182,7 +182,7 @@ body {
     	margin: 0;
     	list-style-type: none;
     	padding: 0;
-    	overflow: scroll;
+    	overflow-y: auto;
     }
     li {
     	width: 42vmin;
