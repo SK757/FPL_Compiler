@@ -548,21 +548,18 @@ footer {
 }
 .t1 {
     background-color: #681616 !important;
-    color: #ffffff;
 }
 .t2 {
     background-color: #922020 !important;
-    color: #ffffff;
 }
 .t3 {
     background-color: #d12d2d !important;
-    color: #ffffff
 }
 .t4 {
     background-color: #e48080 !important;
 }
 .t5 {
-    background-color: #b4ac6d !important;
+    background-color: #01FC7A !important;
 }
 .t6 {
     background-color: #84d85a !important;
@@ -572,7 +569,6 @@ footer {
 }
 .t8 {
     background-color: #1f3f0f !important;
-    color: #ffffff;
 }
 
 // @media (prefers-color-scheme: dark) {
@@ -588,7 +584,10 @@ footer {
     #table_strength td:last-child {
         border-right: 1px solid #606060;
     }
-    .t4, .t5, .t6, .t7 {
+    .t1, .t2, .t3, .t4, .t7, .t8 {
+        color: #ffffff;
+    }
+    .t5, .t6 {
         color: #000 !important;
     }
 // }

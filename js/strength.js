@@ -23,7 +23,7 @@ for (i = 0; i < strengthRows.length; i++){cells = strengthRows[i].getElementsByT
     if (cells[5].innerHTML >= '4250' && cells[5].innerHTML < '4400') {
         strengthRows[i].className = "t7";
     }
-    if (cells[5].innerHTML >= '4000' && cells[5].innerHTML < '4250') {
+    if (cells[5].innerHTML < '4250') {
         strengthRows[i].className = "t8";
     }
 }

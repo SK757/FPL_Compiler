@@ -16,7 +16,7 @@
     <meta name="Description" content="FPL Team Strength">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#1f1f1f">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
-    <link rel="stylesheet" type="text/css" href="styles/css/main.css?=1.2">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css?=1.21">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous" SameSite="none Secure">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -75,6 +75,6 @@
         }
     </script>
 
-    <script src="js/strength.js?=0.90"></script>
+    <script src="js/strength.js?=0.91"></script>
 </body>
 </html>
