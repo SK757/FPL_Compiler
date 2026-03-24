@@ -171,10 +171,15 @@ function headers(x) {
 		$(".cre").html("<span>C </span>");
 		$(".thr").html("<span>T </span>");
 		$(".ict").html("<span>ICT<br></span>");
-		$(".basic").html("<span><b>Basic</b>");
-		$(".adv").html("<span><b>Advanced</b>");
+		$(".cbi").html("<span>C/B/I </span>");
+		$(".rec").html("<span>Rcv's </span>");
+		$(".tak").html("<span>Tkl's </span>");
+		$(".defcon").html("<span>Defcon </span>");
+		$(".defcon90").html("<span>DCP90 </span>");
 		$(".goals2").html("<span>G/A/CS");
 		$(".gwga").html("<span>GW G/A");
+		$(".basic").html("<span><b>Basic</b>");
+		$(".adv").html("<span><b>Advanced</b>");
 	} else {
 	// ===== Extend Headers if Large Viewport ====
 		$(".points").html("<span>Total Points </span>");
@@ -202,10 +207,15 @@ function headers(x) {
 		$(".cre").html("<span>Creativity </span>");
 		$(".thr").html("<span>Threat </span>");
 		$(".ict").html("<span>ICT Index </span>");
-		$(".basic").html("<span><b>Basic View</b>");
-		$(".adv").html("<span><b>Advanced View</b>");
+		$(".cbi").html("<span>Clr/Blk/Int </span>");
+		$(".rec").html("<span>Recoveries </span>");
+		$(".tak").html("<span>Tackles </span>");
+		$(".defcon").html("<span>Defensive Contributions </span>");
+		$(".defcon90").html("<span>DefCon Per 90</span>");
 		$(".goals2").html("<span>Goals/Assists/Clean Sheets");
 		$(".gwga").html("<span>Gameweek Goals/Assists");
+		$(".basic").html("<span><b>Basic View</b>");
+		$(".adv").html("<span><b>Advanced View</b>");
 	}
 }
 // function totalPoints() {

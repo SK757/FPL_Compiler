@@ -82,8 +82,13 @@
                         <th class="advanced bps"><span>BPS Score </span></th>
                         <th class="advanced inf"><span>Influence </span></th>
                         <th class="advanced cre"><span>Creativity </span></th>
-                        <th class="advanced thr"><span>Threat </span></th>    
+                        <th class="advanced thr"><span>Threat </span></th>
                         <th class="ict"><span>ICT Index </span></th>
+                        <th class="advanced CBI"><span>Clr/Blk/Int </span></th>
+                        <th class="advanced rec"><span>Recoveries </span></th>
+                        <th class="advanced tak"><span>Tackles </span></th>
+                        <th class="defcon"><span>Defensive Contributions </span></th>
+                        <th class="advanced defcon90"><span>DefCon Per 90 </span></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -123,6 +128,11 @@
                         <td class="advanced"><?PHP echo $item2['creativity']; ?></td>
                         <td class="advanced"><?PHP echo $item2['threat']; ?></td>
                         <td><?PHP echo $item2['ict_index']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['clearances_blocks_interceptions']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['recoveries']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['tackles']; ?></td>
+                        <td><?PHP echo $item2['defensive_contribution']; ?></td>
+                        <td class="advanced"><?PHP echo $item2['defensive_contribution_per_90']; ?></td>
                     </tr>
                 <?PHP
                     }   //if (++$i == 14) {break;}  
@@ -145,6 +155,6 @@
             });
         }
     </script>
-    <script src="js/javascript.js?=0.942"></script>
+    <script src="js/javascript.js?=0.943"></script>
 </body>
 </html>
