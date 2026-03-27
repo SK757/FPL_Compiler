@@ -1,10 +1,10 @@
 Fantasy Premier Compiler, Points, Team, Lineup, History and Strength.
 
-www.fpl.seankirk.co.uk/
-www.fpl.seankirk.co.uk/p
-www.fpl.seankirk.co.uk/team
-www.fpl.seankirk.co.uk/lineup
-www.fpl.seankirk.co.uk/history
-www.fpl.seankirk.co.uk/strength
-www.fpl.seankirk.co.uk/standings
-www.fpl.seankirk.co.uk/bonusPage
+fpl.seankirk.co.uk/
+fpl.seankirk.co.uk/p
+fpl.seankirk.co.uk/team
+fpl.seankirk.co.uk/lineup
+fpl.seankirk.co.uk/history
+fpl.seankirk.co.uk/strength
+fpl.seankirk.co.uk/standings
+fpl.seankirk.co.uk/bonusPage
