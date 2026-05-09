@@ -72,9 +72,9 @@
         <section class="flex-container">
 
             <?PHP
-            if ($picks['active_chip'] === 'manager') {
-                include 'php/lineup/managerSlot.php';
-            }
+            // if ($picks['active_chip'] === 'manager') {
+            //     include 'php/lineup/managerSlot.php';
+            // }
             foreach($picks['picks'] as $key=>$item) {
                 foreach($live['elements'] as $key=>$item1) {
                     foreach($data['elements'] as $key=>$item2) {
@@ -135,32 +135,13 @@
                 $('.total_points b').text(sum);
             });
             let stpSquad = $('.grid-container .column .stp').length;
+            let stpNumber = $('.grid-container .column .stp .stpNumber').length;
             let stpBench = $('.bench-container .column .stp').length;
-            stpBB = stpSquad + stpBench;
+            let stpBenchNumber = $('.bench-container .column .stp .stpNumber').length;
+            stpBB = stpSquad + stpNumber + stpBench + stpBenchNumber;
             if (stpBB > 0) {
                 $('.games_left').prepend("Still to Play");
                 $('.games_left b').append(stpBB);
-            }
-        } else if (document.getElementById("chip").innerText === '(manager)') {
-            $(function() {
-                var sum = 0;
-                $('.grid-container .p').each(function(){
-                    sum += parseInt(this.innerHTML, 10);
-                });
-                $('.bench-container .managerP').text(function(){
-                    sum += parseInt(this.innerHTML, 10);
-                });
-                $('.grid-container .points .bonusTotal').each(function(){
-                    sum += parseInt(this.innerHTML, 10);
-                });
-                $('.total_points b').text(sum);
-            });
-            let stpSquad = $('.grid-container .column .stp').length;
-            let stpMgr = $('.bench-container .managerColumn .stp').length;
-            stpManager = stpSquad + stpMgr;
-            if (stpManager > 0) {
-                $('.games_left').prepend("Still to Play");
-                $('.games_left b').append(stpManager);
             }
         } else {
             $(function() {

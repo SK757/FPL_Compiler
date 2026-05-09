@@ -18,12 +18,15 @@ foreach($item1['explain'] as $key=>$explain) {
                     $gameNotPlayed = true;
                     ++$stp;
                 }
-                if ($item1['stats']['minutes'] === 0 && $fixture['finished_provisional'] === false) {
+                //if player HASN'T STARTED the fixture
+                if ($item1['stats']['starts'] === 0 && $fixture['finished_provisional'] === false) {
                     $startingXI = false;
                 }
+                //if player HAS played
                 if ($fixture['finished_provisional'] === true && $item1['stats']['minutes'] > 0) {
                     $didPlay = true;
                 }
+                //if player HASN'T played
                 if ($fixture['finished_provisional'] === true && $item1['stats']['minutes'] === 0) {
                     $didNotPlay = true;
                 }
@@ -31,6 +34,7 @@ foreach($item1['explain'] as $key=>$explain) {
         }
     }++$fix;
 }
+//If player has a fixture and fixture has stared
 if ($fix > 0 && $gamePlayed === true) {
     if ($item['multiplier'] === 2 || $item['multiplier'] === 3) {
         echo '<b><p class="p" style="display:inline;">'.$item1['stats']['total_points'] * $item['multiplier'].'</p></b>';
@@ -40,28 +44,35 @@ if ($fix > 0 && $gamePlayed === true) {
     include 'php/lineup/bps2.php';
 }
 
+//If player doesn't have a fixture
 if(empty($item1['explain'])) {
     echo '<b><p class="p">-</p></b>';
 }
 
 echo '</div>';
 
-if ($fix === 1 && $gameNotPlayed === true) {
+//If player has at least 1 fixture and fixture hasn't started
+if ($fix > 0 && $gameNotPlayed === true) {
+    //If player has 1 fixture still to play
     if ($stp === 1) {
         echo '<div class="stp">Still to play</div>';
+    //If player more than 1 fixture still to play
     } elseif ($stp > 1) {
         echo '<div class="stp"><span class="stpNumber">'. $stp .'</span> Still to play</div>';
     }
-} elseif ($fix === 1 && $gamePlayed === true && $startingXI === false) {
+} elseif ($fix > 0 && $gamePlayed === true && $startingXI === false) {
     echo '<div class="dnp">Not in 1st XI</div>';
-} elseif ($fix === 1 && $didNotPlay === true && $didPlay === false) {
+} elseif ($fix > 0 && $didNotPlay === true && $didPlay === false) {
     echo '<div class="dnp">Did not play</div>';
 }
-if ($fix === 2 && $gameNotPlayed === true) {
-    echo '<div class="stp"><span class="stpNumber">'. $stp .'</span> Still to play</div>';
-} elseif ($fix === 2 && $didNotPlay === true && $didPlay === false) {
-    echo '<div class="dnp">Did not play</div>';
-}
+
+// if ($fix === 2 && $gameNotPlayed === true && $stp > 1) {
+//     echo '<div class="stp"><span class="stpNumber">'. $stp .'</span> Still to play</div>';
+// } if ($fix === 2 && $gameNotPlayed === true && $stp === 1) {
+//     echo '<div class="stp"> Still to play</div>';
+// } elseif ($fix === 2 && $didNotPlay === true && $didPlay === false) {
+//     echo '<div class="dnp">Did not play</div>';
+// }
 
 if(empty($item1['explain'])) {
     echo '<div class="dnp">No match</div>';
