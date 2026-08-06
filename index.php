@@ -17,7 +17,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#02efff">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1f1f1f">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.133">
+    <link rel="stylesheet" type="text/css" href="styles/css/hub.css?=0.134">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico?=0.4">
@@ -25,8 +25,11 @@
 </head>
 <body>
 	<main class="container">
-		<?php include 'php/dates.php';
+		<?php 
+		$leagues = json_decode(file_get_contents("https://fantasy.premierleague.com/api/entry/3115828/"), true);
+		$live = json_decode(file_get_contents("https://fantasy.premierleague.com/api/event/".$leagues['current_event']."/live/"), true);
 		if (is_array($live)) { ?>
+		<?php include 'php/dates.php'; ?>
 		<div class="title"><h1>FPL</h1></div>
 		<div class="name">
 			<h1><?php echo $leagues['name']; ?></h1>
@@ -114,7 +117,7 @@
 			</div>
 		</div>
 		<div class="table1">
-			<h4><?PHP echo $leagues['leagues']['classic'][8]['name']; ?></h4>
+			<h4><?PHP echo $leagues['leagues']['classic'][6]['name']; ?></h4>
 			<ol>
 				<?php 
 				foreach($navStandings['standings']['results'] as $key=>$navS) {
@@ -131,6 +134,27 @@
 			</ol>
 		</div>
 		<div class="table2">
+			<h4>Money League</h4>
+			<ol>
+				<?php
+				// $i = 0;
+				foreach($moneyStandings['standings']['results'] as $key=>$moneyS) {
+				?>
+					<li><span class="player"><?PHP echo $tasS['player_name']; ?></span><span class="player_score"><?php echo $tasS['total']; ?></span></li> 
+				<?php 
+					// if (++$i == 5) {
+					// 	break;
+					// }
+				}  
+				foreach($moneyStandings['new_entries']['results'] as $key=>$moneySnew) {
+				?>
+					<li><span class="player"><?PHP echo $moneySnew['player_first_name'] . " " . $moneySnew['player_last_name']; ?></span><span class="player_score">New</span></li> 
+				<?php
+				}
+				?>
+			</ol>
+		</div>
+		<div class="table3">
 			<h4>Ex-Taskers</h4>
 			<ol>
 				<?php
@@ -151,7 +175,7 @@
 				?>
 			</ol>
 		</div>
-		<div class="table3">
+		<div class="table4">
 			<h4>Aintree</h4>
 			<ol>
 				<?php
@@ -173,8 +197,9 @@
 			</ol>
 		</div>
 		<div class="table_select">
-			<span class="table_select_1 active">.</span>
-			<span class="table_select_2">.</span>
+			<span class="table_select_2 active">.</span>
+			<span class="table_select_3">.</span>
+			<span class="table_select_4">.</span>
 		</div>
 	<?php } else {
 		echo '<div class="offline"><h1>Gameweek is Being Updated</h1></div>';
@@ -202,19 +227,27 @@
 	        $('.score').text(sum);
 
 	        $('.table3').hide();
+	        $('.table4').hide();
 
 			$(".table2").click(function (e) {
 	        	$('.table2').hide();
 	        	$('.table3').show();
-			    $(".table_select_1").removeClass("active");
-			    $(".table_select_2").addClass("active");
+			    $(".table_select_2").removeClass("active");
+			    $(".table_select_3").addClass("active");
 			    e.stopPropagation();
 			});
 			$(".table3").click(function (e) {
 	        	$('.table3').hide();
+	        	$('.table4').show();
+			    $(".table_select_3").removeClass("active");
+			    $(".table_select_4").addClass("active");
+			    e.stopPropagation();
+			});
+			$(".table4").click(function (e) {
+	        	$('.table4').hide();
 	        	$('.table2').show();
-			    $(".table_select_2").removeClass("active");
-			    $(".table_select_1").addClass("active");
+			    $(".table_select_4").removeClass("active");
+			    $(".table_select_2").addClass("active");
 			    e.stopPropagation();
 			});
 

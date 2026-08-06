@@ -160,8 +160,8 @@ body {
 .table1 {
 	grid-area: table1;
 }
-.table2, .table3, .table4, .table_select, .table_select2, .table_select3 {
-	grid-area: table2_3;
+.table2, .table3, .table4, .table_select, .table_select2, .table_select3, .table_select4 {
+	grid-area: table2_4;
 }
 
 .table1, .table2, .table3, .table4 {
@@ -245,7 +245,7 @@ body {
 		[row5-start] ". . . ." 5px [row5-end]
 		[row6-start] "nav nav nav nav" auto [row6-end]
 		[row7-start] ". . . ." 5px [row7-end]
-		[row8-start] "table1 table1 table2_3 table2_3" 2fr [row8-end]
+		[row8-start] "table1 table1 table2_4 table2_4" 2fr [row8-end]
 		/ 1fr 1fr 1fr 1fr;
 	column-gap: 5px;
 }
@@ -297,7 +297,7 @@ a:link, a:visited, a:hover, a:active {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	grid-area: title / title / table2_3 / table2_3;
+	grid-area: title / title / table2_4 / table2_4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -306,7 +306,7 @@ a:link, a:visited, a:hover, a:active {
 		background-image: none;
 		color: white;
 	}
-	.name, .points, .nav, .table1, .table2, .table3 {
+	.name, .points, .nav, .table1, .table2, .table3, .table4 {
 		background: hsla(0, 0%, 50%, .5);
 	}
 	.points {
