@@ -140,7 +140,7 @@
 				// $i = 0;
 				foreach($moneyStandings['standings']['results'] as $key=>$moneyS) {
 				?>
-					<li><span class="player"><?PHP echo $tasS['player_name']; ?></span><span class="player_score"><?php echo $tasS['total']; ?></span></li> 
+					<li><span class="player"><?PHP echo $moneyS['player_name']; ?></span><span class="player_score"><?php echo $moneyS['total']; ?></span></li> 
 				<?php 
 					// if (++$i == 5) {
 					// 	break;
