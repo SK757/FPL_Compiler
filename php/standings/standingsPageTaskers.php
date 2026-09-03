@@ -88,9 +88,9 @@
                 }  
             ?></tbody>
         </table>
-        <div class="league_select">
-            <button id="home">Select League</button>
-        </div>
+    </div>
+    <div class="league_select">
+        <button id="home">Select League</button>
     </div>
     <!-- BACK TO HOME BUTTON -->
     <a href="/" aria-label="Return to home page" id="return-to-home">

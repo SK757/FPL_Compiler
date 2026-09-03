@@ -98,10 +98,11 @@
         .league_select {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: end;
+            margin-bottom: 13px;
         }
         #home {
-            margin: .5rem 0 0;
+            margin: .7rem 0 0;
         }
         /* Back to home button */
         #return-to-home {
