@@ -1,5 +1,5 @@
 <body>
-    <div style="overflow: visible;">
+    <div style="overflow: auto;">
         <table>
             <thead>
                 <tr>
@@ -23,9 +23,9 @@
                         <?PHP echo $ainS['rank'];
                         if($ainS['rank'] < $ainS['last_rank']) {
                             echo " <span><i class='fa-solid fa-circle-chevron-up' style='color:#00ff87;background-image:radial-gradient(at center, #37003c 40%, transparent 40%);'></i></span>";
-                        } elseif($navS['rank'] > $navS['last_rank'] && $navS['last_rank'] != 0) {
+                        } elseif($ainS['rank'] > $ainS['last_rank'] && $ainS['last_rank'] != 0) {
                             echo " <i class='fa-solid fa-circle-chevron-down' style='color:#e90052;background-image:radial-gradient(at center, #fff 40%, transparent 40%);'></i>";
-                        } elseif($navS['last_rank'] === 0) {
+                        } elseif($ainS['last_rank'] === 0) {
                             echo " <i class='fa-solid fa-circle' style='color:rgba(255,255,255,.5);'></i>";
                         } else {
                             echo " <i class='fa-solid fa-circle' style='color:rgba(255,255,255,.5);'></i>";
@@ -33,11 +33,7 @@
                     </td>
                     <td class="nameCol" style="text-transform:capitalize;">
                         <?PHP
-                        if (str_contains($ainS['player_name'], '-')) {
-                            echo '<span class="name" style="font-weight:bold;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-block;vertical-align:bottom;">J-R Richardson</span>';
-                        } else {
-                            echo '<span class="name" style="font-weight:bold;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-block;vertical-align:bottom;">'.$ainS['player_name'].'</span>';
-                        }
+                        echo '<span class="name" style="font-weight:bold;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-block;vertical-align:bottom;">'.$ainS['player_name'].'</span>';
                         if ($transfers['active_chip'] === "wildcard") {
                             echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">WC</span>';
                         } elseif ($transfers['active_chip'] === "bboost") {
@@ -46,8 +42,6 @@
                             echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">FH</span>';
                         } elseif ($transfers['active_chip'] === "3xc") {
                             echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">TC</span>';
-                        } elseif ($transfers['active_chip'] === "manager") {
-                            echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">MG</span>';
                         }
                         ?>
                     </td>

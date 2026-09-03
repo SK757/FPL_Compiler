@@ -1,5 +1,5 @@
 <body>
-    <div style="overflow: visible;">
+    <div style="overflow: auto;">
         <table>
             <thead>
                 <tr>
@@ -33,11 +33,7 @@
                     </td>
                     <td class="nameCol" style="text-transform:capitalize;">
                         <?PHP
-                        if (str_contains($navS['player_name'], '-')) {
-                            echo '<span class="name" style="font-weight:bold;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-block;vertical-align:bottom;">J-R Richardson</span>';
-                        } else {
-                            echo '<span class="name" style="font-weight:bold;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-block;vertical-align:bottom;">'.$navS['player_name'].'</span>';
-                        }
+                        echo '<span class="name" style="font-weight:bold;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-block;vertical-align:bottom;">'.$navS['player_name'].'</span>';
                         if ($transfers['active_chip'] === "wildcard") {
                             echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">WC</span>';
                         } elseif ($transfers['active_chip'] === "bboost") {
@@ -46,8 +42,6 @@
                             echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">FH</span>';
                         } elseif ($transfers['active_chip'] === "3xc") {
                             echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">TC</span>';
-                        } elseif ($transfers['active_chip'] === "manager") {
-                            echo ' <span class="chip" style="background:rgba(255,255,255,.6);font-weight:bold;border-radius:3px;padding:0 0.2rem;">MG</span>';
                         }
                         ?>
                     </td>

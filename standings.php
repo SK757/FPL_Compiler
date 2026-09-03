@@ -28,6 +28,12 @@
             background-image: linear-gradient(0deg, #00beff 0%, #02efff 100%);
             height: 100%;
         }
+        body {
+            grid-template-rows: none;
+        }
+        .update_area {
+            grid-template-rows: none;
+        }
         .loadWrapper {
             flex-direction: column;
             background: none;
@@ -53,10 +59,16 @@
             color: #37003c;
             table-layout: fixed;
             width: 100%;
+            position: relative;
+            border-collapse: collapse;
+            overflow: auto;
         }
         thead tr th {
             background: rgba(255,255,255,1);
             border-bottom: 1px solid black;
+            position: sticky;
+            top: 0;
+            z-index: 1;
         }
         td {
             vertical-align: middle;
@@ -133,6 +145,7 @@
 <body>
     <div class="loadWrapper">
         <button id="navigators">The Navigators</button>
+        <button id="money">Money</button>
         <button id="taskers">Taskers</button>
         <button id="aintree">Aintree</button>
         <!-- BACK TO HOME BUTTON -->
@@ -153,6 +166,16 @@
     $("#navigators").click(function() {
         $.ajax({
             url: "php/standings/standingsPageNavigators.php"
+        }).done(function(data) { // data what is sent back by the php page
+            $('.update_area').html(data); // display data
+            $(".loadWrapper").hide();
+            $(".update_area").show();
+        });
+    });
+    // Do an ajax request
+    $("#money").click(function() {
+        $.ajax({
+            url: "php/standings/standingsPageMoney.php"
         }).done(function(data) { // data what is sent back by the php page
             $('.update_area').html(data); // display data
             $(".loadWrapper").hide();
